@@ -5,10 +5,14 @@ chitoku-k/fzf-zsh-completions
 zpm-zsh/clipboard
 robbyrussell/oh-my-zsh path:plugins/autojump
 robbyrussell/oh-my-zsh path:plugins/vi-mode
+robbyrussell/oh-my-zsh path:plugins/colorize
 
 Tarrasch/zsh-autoenv
 zdharma/zsh-diff-so-fancy
+pkulev/zsh-rustup-completion
+docker/cli path:contrib/completion/zsh
 
 # these have to be last
 mafredri/zsh-async
 sindresorhus/pure
+zsh-users/zsh-syntax-highlighting
