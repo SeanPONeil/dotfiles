@@ -1,0 +1,458 @@
+[colors]
+background = ${xrdb:color0:#222}
+background-alt = ${xrdb:color3:#222}
+transparent = #00
+;background = ${colors.transparent}
+;background-alt = ${colors.transparent}
+foreground = ${xrdb:color7:#222}
+foreground-alt = ${xrdb:color7:#222}
+highlight = ${xrdb:color2:#222}
+primary = ${xrdb:color1:#222}
+secondary = $(xrdb:color2:#222)
+alert = ${xrdb:color4:#222}
+
+[base]
+monitor = ${env:MONITOR:}
+width = 100%
+radius = 0
+fixed-center = true
+
+enable-ipc = true
+
+wm-restack = bspwm
+
+background = ${colors.background}
+foreground = ${colors.foreground-alt}
+
+line-size = 3
+line-color =
+
+border-size = 0
+border-color =
+
+padding-right = 1
+
+module-margin = 1
+
+modules-left = bspwm
+modules-center = date
+modules-right = pulseaudio-control bluetooth backlight battery wlan powermenu
+
+# tray-position = right
+;tray-padding =
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/standard]
+inherit = base
+# dpi = 96
+dpi = 0
+height = 3%
+# font-0 = Proggy CleanTT Nerd Font Mono:size=14;2
+font-0 = TamzenForPowerline:size=13;2
+font-1 = boxicons:size=12;2
+
+[bar/retina]
+inherit = base
+# dpi = 144
+dpi = 0
+height = 2%
+font-0 = TamzenForPowerline:size=18;2
+font-1 = boxicons:size=18;5
+
+[module/pulseaudio-control]
+type = custom/script
+tail = true
+label=%output%
+# format-underline = ${colors.primary}
+
+exec = ~/.config/polybar/scripts/pulseaudio-control listen
+click-right = exec pavucontrol &
+click-left = ~/.config/polybar/scripts/pulseaudio-control togmute
+click-middle = ~/.config/polybar/scripts/pulseaudio-control next-sink
+scroll-up = ~/.config/polybar/scripts/pulseaudio-control up
+scroll-down = ~/.config/polybar/scripts/pulseaudio-control down
+label-padding = 2
+label-foreground = ${colors.foreground}
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+format = <label-state> <label-mode>
+fuzzy-match = true
+
+ws-icon-0 = slack;
+ws-icon-1 = firefox;
+ws-icon-2 = music;
+ws-icon-default = 
+
+label-focused = %name%
+; label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-foreground = ${colors.foreground}
+label-focused-padding = 1
+
+label-occupied = %name%
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.foreground}
+
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+
+label-empty = %name%
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+
+; The following labels will be used to indicate the layout/mode
+; for the focused workspace. Requires <label-mode>
+;
+; Available tokens:
+;   None
+label-monocle = monocle 
+label-tiled = tiled
+label-fullscreen = fullscreen 
+label-floating = floating 
+label-pseudotiled = pseudotiled 
+label-locked = locked 
+label-locked-foreground = #bd2c40
+label-sticky = sticky 
+label-sticky-foreground = #fba922
+label-private = private 
+label-private-foreground = #bd2c40
+label-marked = M
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected-font = 2
+format-connected = <ramp-signal>
+
+format-disconnected = <label-disconnected>
+label-disconnected = 
+
+ramp-signal-font = 2
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 95
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+; see "man date" for details on how to format the time string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+; Default: %H:%M:%S
+time-format = %H:%M
+
+; Available tags:
+;   <label-charging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-charging>
+format-charging = <label-charging>
+
+; Available tags:
+;   <label-discharging> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;   <animation-discharging>
+format-discharging = <label-discharging>
+
+; Available tags:
+;   <label-full> (default)
+;   <bar-capacity>
+;   <ramp-capacity>
+;format-full = <ramp-capacity> <label-full>
+
+; Available tokens:
+;   %percentage% (default)
+;   %time%
+;   %consumption% (shows current charge rate in watts)
+label-charging =  %percentage%%
+; Available tokens:
+;   %percentage% (default)
+;   %time%
+;   %consumption% (shows current discharge rate in watts)
+label-discharging =  %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+label-full = 
+label-full-font = 2
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-font = 2
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-font = 2
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-font = 2
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume> <label-volume>
+;format-volume-font = 2
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+;format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+;label-volume = %percentage%%
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-muted = 
+label-muted-font = 2
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-font = 2
+
+label-volume-font = 1
+
+; Right and Middle click (unreleased)
+click-right = exec pavucontrol &
+; click-middle = 
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+;format-prefix = 
+;format-prefix-font = 2
+format-padding = 2
+
+label = %date% %time%
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-font = 2
+;label-close = 
+label-close = cancel
+label-separator = |
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+menu-0-2 = log off
+menu-0-2-exec = menu-open-3
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = reboot
+
+menu-2-0 = power off
+menu-2-0-exec = poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+menu-3-0 = log off
+menu-3-0-exec = pkill -KILL -u $USER
+
+;[module/banner]
+;type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]")
+;exec = /home/stranger/Scripts/banner.sh
+
+
+; Will the script output continous content?
+; Default: false
+;tail = true
+
+; Seconds to sleep between updates
+; Default: 5 (0 if `tail = true`)
+;interval = 0.5
+
+;format-background = #A07354
+;format-padding = 4
+
+[module/mpd]
+type = internal/mpd
+
+; Host where mpd is running (either ip or domain name)
+; Can also be the full path to a unix socket where mpd is running.
+host = 127.0.0.1
+port = 6600
+
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 2
+
+; Available tags:
+;   <label-song> (default)
+;   <label-time>
+;   <bar-progress>
+;   <toggle> - gets replaced with <icon-(pause|play)>
+;   <toggle-stop> - gets replaced with <icon-(stop|play)>
+;   <icon-random>
+;   <icon-repeat>
+;   <icon-repeatone> (deprecated)
+;   <icon-single> - Toggle playing only a single song. Replaces <icon-repeatone>
+;   <icon-consume>
+;   <icon-prev>
+;   <icon-stop>
+;   <icon-play>
+;   <icon-pause>
+;   <icon-next>
+;   <icon-seekb>
+;   <icon-seekf>
+format-online = <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+;format-playing = ${self.format-online}
+;format-paused = ${self.format-online}
+;format-stopped = ${self.format-online}
+
+; Available tags:
+;   <label-offline>
+;format-offline = <label-offline>
+
+
+; Available tokens:
+;   %artist%
+;   %album-artist%
+;   %album%
+;   %date%
+;   %title%
+; Default: %artist% - %title%
+label-song = 𝄞 %artist% - %title%
+
+; Available tokens:
+;   %elapsed%
+;   %total%
+; Default: %elapsed% / %total%
+;label-time = %elapsed% / %total%
+
+; Available tokens:
+;   None
+label-offline = 🎜 mpd is offline
+
+; Only applies if <icon-X> is used
+icon-font = 2
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
+; Used to display the state of random/repeat/repeatone/single
+; Only applies if <icon-[random|repeat|repeatone|single]> is used
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+
+; Only applies if <bar-progress> is used
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
+
+[module/backlight]
+type = internal/xbacklight
+enable-scroll = true
+
+[module/nordvpn]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/vpn-nordvpn-status.sh
+
+[module/bluetooth]
+type = custom/script
+exec = rofi-bluetooth --status
+interval = 1
+click-left = rofi-bluetooth &
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+# vim: set ft=dosini :
