@@ -48,7 +48,9 @@ wal(){
   if [[ $(uname) == "Darwin" ]]; then
     /usr/local/bin/wal $@
     if [ "$#" -ge 2 ]; then
-      $HOME/bin/alacritty_color_scheme
+      if [[ "$TERM" == "xterm-kitty" ]]; then
+        kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
+      fi
       brew services restart spacebar
       brew services restart yabai
     fi
