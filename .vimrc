@@ -7,10 +7,10 @@ Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}} 
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
-Plug 'preservim/nerdcommenter' 
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Don't complain about node version
@@ -75,6 +75,8 @@ set splitbelow
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
 set expandtab
+" On pressing tab, insert spaces or tabs to go to the next indent
+set smarttab
 " show existing tab with 2 spaces width
 set tabstop=2
 set softtabstop=2
