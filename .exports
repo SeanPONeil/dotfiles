@@ -51,3 +51,7 @@ export PATH=$HOME/.cargo/bin:$PATH                      # rust scripts
 export PATH=$GOBIN:$PATH                                # go binaries
 export PATH="$(ruby -e 'puts Gem.user_dir')/bin":$PATH  # RubyGems
 export PATH=".:$PATH"                                   # gradle completion
+
+
+export NEO4J_HOME="/usr/local/opt/neo4j"
+export PATH="/usr/local/opt/neo4j/bin:$PATH"
