@@ -1,11 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-name = Sean O'Neil
-email = oneilse14@gmail.com
+	name = Sean O'Neil
+	email = oneilse14@gmail.com
 [pull]
-  rebase = true
+	rebase = true
 [alias]
-  patch = !git --no-pager diff --no-color
+	patch = !git --no-pager diff --no-color
 [color]
-  ui = true
+	ui = true
