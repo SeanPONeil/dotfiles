@@ -46,7 +46,7 @@ fs(){
 
 wal(){
   if [[ $(uname) == "Darwin" ]]; then
-    /usr/local/bin/wal $@
+    command wal $@
     if [ "$#" -ge 2 ]; then
       if [[ "$TERM" == "xterm-kitty" ]]; then
         kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
@@ -55,7 +55,7 @@ wal(){
       brew services restart yabai
     fi
   else
-    /usr/bin/wal $@
+    command wal $@
   fi
 }
 
