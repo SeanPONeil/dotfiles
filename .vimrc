@@ -71,6 +71,8 @@ nnoremap <c-ENTER> :vsplit<CR>
 " all extra windows pop up at the bottom
 set splitbelow
 
+" Copy indent from current line when starting a new line
+set autoindent
 " set tab as 2 spaces
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
@@ -79,7 +81,7 @@ set expandtab
 set smarttab
 " show existing tab with 2 spaces width
 set tabstop=2
-set softtabstop=2
+set softtabstop=0
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
 
