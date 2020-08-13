@@ -5,6 +5,13 @@ export DOCKER_REPO_PREFIX=jess
 #
 # Helper Functions
 #
+dbash(){
+  docker exec -it $1 bash -c "stty cols $COLUMNS rows $LINES && bash";
+}
+
+dsh(){
+  docker exec -it $1 sh -c "stty cols $COLUMNS rows $LINES && sh";
+}
 dcleanup() {
   for container in $(docker ps -aq 2>/dev/null); do
     $(docker rm "$container" 2>/dev/null)
