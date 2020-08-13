@@ -8,10 +8,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 " Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
 call plug#end()
+
+" Use vim settings instead of vi settings
+set nocompatible
 
 " Don't complain about node version
 let g:coc_disable_startup_warning = 1
@@ -33,7 +36,7 @@ let g:lightline = {
 colorscheme wal
 
 filetype on
-filetype indent on
+filetype plugin indent on
 syntax on
 set modeline
 
@@ -88,6 +91,9 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+
+set autoindent
+set smartindent
 
 
 
