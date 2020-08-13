@@ -8,14 +8,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-Plug 'sheerun/vim-polyglot'
-Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
+" Plug 'sheerun/vim-polyglot'
+" Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " Don't complain about node version
 let g:coc_disable_startup_warning = 1
-let g:coc_global_extensions = [ 'coc-emoji', 'coc-eslint', 'coc-prettier','coc-tsserver', 'coc-tslint', 'coc-tslint-plugin','coc-css', 'coc-json', 'coc-pyls', 'coc-yaml', 'coc-sh', 'coc-go', 'coc-java', 'coc-git' ]
 
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
@@ -32,13 +31,18 @@ let g:lightline = {
       \ }
 
 colorscheme wal
+
+filetype on
+filetype indent on
+syntax on
+set modeline
+
 set noshowmode
 set showcmd
 
 " enable line numbers
 set number
 
-set colorcolumn=80
 
 " Treat long lines as break lines (useful when moving around in them)
 nmap j gj
@@ -68,28 +72,24 @@ nnoremap <c-p> :Files<CR>
 " Map ctrl + enter to new vsplit
 nnoremap <c-ENTER> :vsplit<CR>
 
-" all extra windows pop up at the bottom
-set splitbelow
+set list  " Display whitespace characters
+set splitbelow " `:split`'s appear below
+set splitright " `:vsplit`'s appear right
 
-" Copy indent from current line when starting a new line
-set autoindent
-" set tab as 2 spaces
-filetype plugin indent on
-" On pressing tab, insert 2 spaces
-set expandtab
-" On pressing tab, insert spaces or tabs to go to the next indent
-set smarttab
-" show existing tab with 2 spaces width
-set tabstop=2
-set softtabstop=0
-" when indenting with '>', use 2 spaces width
+set nofoldenable " Don't automatically fold everything when opening a file
+
+" Set automatic case sensitive search
+" /test - case insensitive
+" /Test - case sensitive
+set smartcase
+
+" 1 tab = 2 spaces
 set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set expandtab
 
-syntax on
-set modeline
-filetype plugin indent on
 
-set nofoldenable
 
 " Escape
 inoremap jk <esc>
