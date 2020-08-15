@@ -7,6 +7,7 @@ Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
+Plug 'fatih/vim-go'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'sheerun/vim-polyglot'
 " Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
