@@ -71,7 +71,10 @@ set noswapfile
 set nowritebackup
 
 " Map fzf to ctrl + p
-nnoremap <c-p> :Files<CR>
+nnoremap <c-p> :FZF<CR>
+
+" Fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
+" nnoremap <c-p> :Commands<CR>
 
 " Map ctrl + enter to new vsplit
 nnoremap <c-ENTER> :vsplit<CR>
