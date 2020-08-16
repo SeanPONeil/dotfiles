@@ -15,12 +15,13 @@ meh - k : yabai -m window --focus north
 meh - l : yabai -m window --focus east
 
 # move window
-meh + shift - 0x21 : yabai -m window --warp prev
-meh + shift - 0x1E : yabai -m window --warp next
-meh + shift - h : yabai -m window --warp west
-meh + shift - j : yabai -m window --warp south
-meh + shift - k : yabai -m window --warp north
-meh + shift - l : yabai -m window --warp east
+meh + shift - h : yabai -m window --swap west
+meh + shift - j : yabai -m window --swap south
+meh + shift - k : yabai -m window --swap north
+meh + shift - l : yabai -m window --swap east
+
+# close window
+meh - w : yabai -m window --close
 
 # fast focus desktop
 meh - 0x21 : yabai -m space --focus prev
