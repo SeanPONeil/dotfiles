@@ -75,3 +75,9 @@ json(){
     return 1
   fi
 }
+
+exportenv() {
+  set -a
+  . $1
+  set +a
+}
