@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Bash wrappers for docker run commands
 
 export DOCKER_REPO_PREFIX=jess
@@ -51,36 +51,22 @@ drmi() {
   done
 }
 
+
 kali() {
   # Attach bash shell to network
   docker run --rm -it \
     --mount src=kali-root,dst=/root \
     --mount src=kali-postgres,dst=/var/lib/postgresql \
     --name kali \
-    sean/kali:latest
+    kalilinux/kali-rolling
 }
 
-hollywood() {
-  docker run --rm -it \
-    --name hollywood \
-    ${DOCKER_REPO_PREFIX}/hollywood
+cypher-shell() {
+docker exec -it \
+  $(docker container ls | grep 'neo4j' | awk '{print $1}') \
+  cypher-shell
 }
 
-#cheese() {
-#  del_stopped cheese
-#
-#  docker run --rm -d \
-#    -v /etc/localtime:/etc/localtime:ro \
-#    -v /tmp/.X11-unix:/tmp/.X11-unix \
-#    -e "DISPLAY=unix${DISPLAY}" \
-#    -v "${HOME}/Pictures:/root/Pictures" \
-#    -v /run/udev/data:/run/udev/data:ro \
-#    --device=/dev/video0 \
-#    --device=/dev/snd \
-#    --device=/dev/dri \
-#    --name cheese \
-#    sean/cheese
-#}
 # volume(){
 #   docker run -it --rm \
 #     -v $1:/$1 \
