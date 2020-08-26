@@ -42,7 +42,3 @@ else
 fi
 
 $HOME/bin/bar.go
-
-if [[ $(pidof dunst) ]]; then
-  notify-send "BSPWM configured for $autorandr_current"
-fi
