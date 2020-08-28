@@ -64,7 +64,7 @@ kali() {
 cypher-shell() {
 docker exec -it \
   $(docker container ls | grep 'neo4j' | awk '{print $1}') \
-  cypher-shell
+  cypher-shell -u neo4j -p $NEO4J_PASSWORD
 }
 
 # volume(){
