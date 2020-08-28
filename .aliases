@@ -72,7 +72,7 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
-alias tmux="tmux -f ~/.config/tmux/tmux.conf"
+# alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 alias emu="$ANDROID_HOME/emulator/emulator"
 alias emulator="$ANDROID_HOME/emulator/emulator"
 alias mitmproxy="mitmproxy --set confdir=$HOME/.config/mitmproxy"
