@@ -14,10 +14,6 @@ if [[ -n "$DP2" ]]; then
   bspc monitor eDP1 -d 9 10
   bspc monitor DP2 -d 1 2 3 4 5 6 7 8
 
-  feh --bg-scale --no-fehbg \
-    /home/sean/wallpapers/sphere_2560x1440.png \
-    /home/sean/wallpapers/sphere_2560x1440.png
-
 elif [[ -n "$eDP1" ]]; then
   echo "Only the internal display was found."
 
@@ -26,9 +22,6 @@ elif [[ -n "$eDP1" ]]; then
   bspc wm --reorder-monitors eDP1
   bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
 
-
-  feh --bg-scale --no-fehbg \
-    /home/sean/wallpapers/sphere_2560x1440.png
 
 else
   echo "No external monitors are plugged in."
@@ -39,3 +32,5 @@ fi
 bspc config window_gap 10
 
 /home/sean/bin/bar.go
+
+~/.fehbg
