@@ -14,6 +14,9 @@ source ~/.cache/wal/colors.sh
 export PURE_PROMPT_SYMBOL=">"
 export PURE_PROMPT_VICMD_SYMBOL="<"
 
+# ZSH completion
+autoload -Uz compinit && compinit
+
 # Load antibody plugins
 # export NVM_LAZY_LOAD=true
 # export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn')
@@ -21,11 +24,6 @@ export PURE_PROMPT_VICMD_SYMBOL="<"
 export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins
-
-# autoload -U promptinit; promptinit
-
-# ZSH completion
-autoload -Uz compinit && compinit
 
 setopt null_glob
 source $HOME/.exports
