@@ -27,14 +27,17 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus', 'kitestatus' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'cocstatus': 'coc#status'
+      \   'gitbranch':  'fugitive#head',
+      \   'cocstatus':  'coc#status',
+      \   'kitestatus': 'kite#statusline'
       \ },
       \ }
 
+" Always show last status
+set laststatus=2
 
 " Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
