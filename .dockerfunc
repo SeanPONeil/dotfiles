@@ -61,10 +61,21 @@ kali() {
     kalilinux/kali-rolling
 }
 
-cypher-shell() {
+function cypher-shell() {
 docker exec -it \
   $(docker container ls | grep 'neo4j' | awk '{print $1}') \
-  cypher-shell -u neo4j -p $NEO4J_PASSWORD
+  cypher-shell -u neo4j -p $NEO4J_PASSWORD "$@"
+}
+
+cypher-shell-system() {
+docker exec -it \
+  $(docker container ls | grep 'neo4j' | awk '{print $1}') \
+  cypher-shell -u neo4j -p $NEO4J_PASSWORD -d system "$@"
+}
+
+dbreset() {
+  cypher-shell-system "drop database \`logicgate-localhost\`;"
+  cypher-shell-system "create database \`logicgate-localhost\`;"
 }
 
 # volume(){
