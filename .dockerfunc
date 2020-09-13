@@ -51,14 +51,43 @@ drmi() {
   done
 }
 
+create_kali_container() {
+
+  install=(
+    "apt-get --yes update; "
+    "apt-get --yes dist-upgrade; "
+    "apt-get --yes autoremove; "
+    "apt-get --yes clean; "
+    "apt-get --yes install kali-tools-top10; "
+    "apt-get --yes install kali-tools-information-gathering; "
+    "apt-get --yes install kali-tools-social-engineering; "
+    "apt-get --yes install kali-tools-web; "
+    "apt-get --yes install vim; "
+    "apt-get --yes install man-db; "
+    "apt-get --yes install exploitdb; "
+  )
+
+  docker pull kalilinux/kali-rolling
+
+  echo "Installing kali tools..."
+  docker run -it --name kali \
+    kalilinux/kali-rolling \
+    /bin/bash -c "$(echo $install)"
+
+  echo "Committing container to image"
+  docker commit kali kali
+  docker container rm -f kali
+}
+
 
 kali() {
   # Attach bash shell to network
   docker run --rm -it \
+    --privileged \
     --mount src=kali-root,dst=/root \
     --mount src=kali-postgres,dst=/var/lib/postgresql \
     --name kali \
-    kalilinux/kali-rolling
+    kali /bin/bash
 }
 
 function cypher-shell() {
