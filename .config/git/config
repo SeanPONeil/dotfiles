@@ -8,3 +8,5 @@
   patch = !git --no-pager diff --no-color
 [color]
   ui = true
+[core]
+	excludesfile = ~/.config/git/gitignore_global

@@ -1,0 +1,14 @@
+# Ignore Direnv files globally
+.direnv
+.envrc
+
+# Hate OS generated files
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Hate editor temp files
+*~
+*.swp
+*.swo
