@@ -93,7 +93,7 @@ kali() {
 function cypher-shell() {
 docker exec -it \
   $(docker container ls | grep 'neo4j' | awk '{print $1}') \
-  cypher-shell -u neo4j -p $NEO4J_PASSWORD "$@"
+  cypher-shell -u neo4j -p $NEO4J_PASSWORD -d logicgate-localhost  "$@"
 }
 
 cypher-shell-system() {
