@@ -79,11 +79,11 @@ set nobackup
 set noswapfile
 set nowritebackup
 
-" Map fzf to ctrl + p
-nnoremap <c-p> :FZF<CR>
+" Map fzf to ctrl - space
+nnoremap <C-@> :FZF<CR>
 
-" Fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
-" nnoremap <c-p> :Commands<CR>
+" Fuzzy find Vim commands with alt - space
+nnoremap <A-@> :Commands<CR>
 
 " Map ctrl + enter to new vsplit
 nnoremap <c-ENTER> :vsplit<CR>
