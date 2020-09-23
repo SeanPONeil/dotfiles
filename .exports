@@ -22,6 +22,8 @@ export PYTHONUSERBASE=$HOME/.local
 
 export PLATFORM=$(uname)
 
+export KITTY_REMOTE=/tmp/kitty_remote
+
 
 export EDITOR=vim
 export SYSTEMD_EDITOR=vim
