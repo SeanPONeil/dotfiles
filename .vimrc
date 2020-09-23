@@ -45,6 +45,9 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 colorscheme wal
 
+set endofline
+set fixendofline
+
 filetype on
 filetype plugin indent on
 syntax on
@@ -88,9 +91,10 @@ nnoremap <A-@> :Commands<CR>
 " Map ctrl + enter to new vsplit
 nnoremap <c-ENTER> :vsplit<CR>
 
-set list  " Display whitespace characters
-set splitbelow " `:split`'s appear below
-set splitright " `:vsplit`'s appear right
+set list          " Display whitespace characters
+set splitbelow    " `:split`'s appear below
+set splitright    " `:vsplit`'s appear right
+set scrolloff=20  " always show 20 lines below my cursor
 
 set nofoldenable " Don't automatically fold everything when opening a file
 
@@ -110,7 +114,7 @@ set smartindent
 
 
 
-" Escape
+" map smashing jk to escape
 inoremap jk <esc>
 inoremap JK <esc>
 inoremap Jk <esc>
@@ -118,8 +122,12 @@ vnoremap jk <esc>
 vnoremap JK <esc>
 vnoremap Jk <esc>
 
-" window switching
+" window switching with ctrl - h/j/k/l
 noremap <c-h> <c-w>h
 noremap <c-j> <c-w>j
 noremap <c-k> <c-w>k
 noremap <c-l> <c-w>l
+
+" tab switching with ctrl - left/right
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
