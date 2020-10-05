@@ -9,25 +9,25 @@ lazynvm(){
   fi
 }
 
-nvm(){
-  lazynvm
-  nvm $@
-}
-
-node() {
-  lazynvm
-  node $@
-}
-
-npm() {
-  lazynvm
-  npm $@
-}
-
-npx() {
-  lazynvm
-  npx $@
-}
+# nvm(){
+#   lazynvm
+#   nvm $@
+# }
+# 
+# node() {
+#   lazynvm
+#   node $@
+# }
+# 
+# npm() {
+#   lazynvm
+#   npm $@
+# }
+# 
+# npx() {
+#   lazynvm
+#   npx $@
+# }
 
 # Determine size of a file or total size of a directory
 fs(){
