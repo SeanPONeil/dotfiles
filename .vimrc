@@ -60,12 +60,6 @@ set showcmd
 set number
 
 
-" Treat long lines as break lines (useful when moving around in them)
-nmap j gj
-nmap k gk
-vmap j gj
-vmap k gk
-
 " :W sudo saves the file
 " (useful for handling the permission-denied error)
 command! W w !sudo tee % > /dev/null
@@ -116,11 +110,7 @@ set smartindent
 
 " map smashing jk to escape
 inoremap jk <esc>
-inoremap JK <esc>
-inoremap Jk <esc>
 vnoremap jk <esc>
-vnoremap JK <esc>
-vnoremap Jk <esc>
 
 " window switching with ctrl - h/j/k/l
 noremap <c-h> <c-w>h
