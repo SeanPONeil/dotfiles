@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/local/bin/zsh
 # Bash wrappers for docker run commands
 
 export DOCKER_REPO_PREFIX=jess
@@ -10,7 +10,7 @@ dbash(){
 }
 
 dsh(){
-  docker exec -it $1 sh -c "stty cols $COLUMNS rows $LINES && sh";
+  docker exec -it $1 bash -c "stty cols $COLUMNS rows $LINES && bash";
 }
 dcleanup() {
   for container in $(docker ps -aq 2>/dev/null); do
@@ -90,21 +90,43 @@ kali() {
     kali /bin/bash
 }
 
-function cypher-shell() {
-docker exec -it \
+_neo4j_container() {
+  echo "$(docker container ls -q --filter 'name=neo4j')"
+}
+
+local-cypher-shell() {
+docker exec $run_options \
   $(docker container ls | grep 'neo4j' | awk '{print $1}') \
   cypher-shell -u neo4j -p $NEO4J_PASSWORD -d logicgate-localhost  "$@"
 }
 
-cypher-shell-system() {
-docker exec -it \
-  $(docker container ls | grep 'neo4j' | awk '{print $1}') \
-  cypher-shell -u neo4j -p $NEO4J_PASSWORD -d system "$@"
+dbreset() {
+  local-cypher-shell -d system "drop database \`logicgate-localhost\`;"
+  local-cypher-shell -d system "create database \`logicgate-localhost\`;"
 }
 
-dbreset() {
-  cypher-shell-system "drop database \`logicgate-localhost\`;"
-  cypher-shell-system "create database \`logicgate-localhost\`;"
+function macos-x11() {
+  ip=$(ifconfig | grep -E 'inet.*broad' | awk  '{ print $2; }')
+  open -a XQuartz &
+  #Find good port
+  p=0;for port in $(seq 0 10);do echo "Check :$((6000+$p)) (:$p)";  nc -w0 127.0.0.1 $((6000+$p)) && DISPLAY="$IP:$p"; let p=p+1;  done;
+  #add xhost
+  echo "DISPLAY IS $DISPLAY";
+  /opt/X11/bin/xhost + $IP
+
+  export DISPLAY=$DISPLAY
+}
+
+signal() {
+  ip=$(ifconfig | grep 'inet ' | grep -v '127.0.0.1' | head -1|awk '{print $2}')
+  socat TCP-LISTEN:6001,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
+  SOCAT_PGM_PID=$!
+  docker run --rm \
+    -e HOME \
+    -e XAUTHORITY=/tmp/xauth -v ~/.Xauthority:/tmp/xauth \
+    -e DISPLAY=$_my_ip:1 --net host -v $HOME:$HOME \
+    ${1+"$@"} kayvan/signal
+  kill $SOCAT_PGM_PID
 }
 
 # volume(){
