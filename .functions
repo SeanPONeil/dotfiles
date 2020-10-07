@@ -1,34 +1,5 @@
 #!/usr/bin/env bash
 
-lazynvm(){
-  unset -f nvm node npm npx
-  export NVM_DIR=~/.nvm
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  if [ -f "$NVM_DIR/bash_completion" ]; then
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-  fi
-}
-
-# nvm(){
-#   lazynvm
-#   nvm $@
-# }
-# 
-# node() {
-#   lazynvm
-#   node $@
-# }
-# 
-# npm() {
-#   lazynvm
-#   npm $@
-# }
-# 
-# npx() {
-#   lazynvm
-#   npx $@
-# }
-
 # Determine size of a file or total size of a directory
 fs(){
   if du -b /dev/null > /dev/null 2>&1; then

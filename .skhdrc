@@ -1,5 +1,5 @@
 # open terminal
-meh - return : kitty -1 -d=$HOME/logicgate
+meh - return : kitty -1 -d=$HOME
 
 # open floating terminal
 meh + shift - return :  \
