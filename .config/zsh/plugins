@@ -1,7 +1,4 @@
 lukechilds/zsh-nvm
-zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
-chitoku-k/fzf-zsh-completions
 
 zpm-zsh/clipboard
 robbyrussell/oh-my-zsh path:plugins/autojump
@@ -16,6 +13,9 @@ pkulev/zsh-rustup-completion
 docker/cli path:contrib/completion/zsh
 
 # these have to be last
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+chitoku-k/fzf-zsh-completions
 mafredri/zsh-async
 sindresorhus/pure
 zsh-users/zsh-syntax-highlighting

@@ -1,9 +1,6 @@
 #!/usr/bin/env zsh
 
-# Autoload zsh modules when they are referenced
-# zmodload zsh/zprof
-
-setopt histignorealldups sharehistory nomatch autocd
+setopt histignorealldups sharehistory
 
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
@@ -14,7 +11,20 @@ done
 unset file
 unsetopt null_glob
 
+autoload -Uz compinit
+
 . $ZDOTDIR/antibody
+source $ZDOTDIR/.plugins.sh
+
+# Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
+  compinit -i;
+else
+  compinit -i -C;
+fi;
+
+# load completion.zsh after autocomplete loads
+source $ZDOTDIR/completion.zsh
 
 # PyWal
 source ~/.cache/wal/colors.sh
@@ -23,4 +33,3 @@ source ~/.cache/wal/colors.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
-# zprof
