@@ -15,12 +15,12 @@ unsetopt null_glob
 . $ZDOTDIR/antibody
 source $ZDOTDIR/.plugins.sh
 
-autoload -Uz compinit compdef && compinit
+autoload -Uz compinit compdef && compinit -i
 # Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
 # if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
-#   compinit;
+#   compinit -i;
 # else
-#   compinit -C;
+#   compinit -i -C;
 # fi;
 
 # PyWal
