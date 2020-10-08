@@ -40,15 +40,11 @@ rmctr() {
 }
 
 dstopall() {
-  for container in $(docker ps -q 2>/dev/null); do
-    docker stop $container 2>/dev/null
-  done
+  docker stop $(docker ps -a -q)
 }
 
 drmi() {
-  for container in $(docker ps -aq 2>/dev/null); do
-    docker rm $container 2>/dev/null
-  done
+  docker rm $(docker ps -a -q)
 }
 
 create_kali_container() {
