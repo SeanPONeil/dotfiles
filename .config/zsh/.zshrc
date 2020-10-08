@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 source $ZDOTDIR/completion.zsh
-setopt correct_all auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
+setopt auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
