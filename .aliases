@@ -90,5 +90,3 @@ alias dss="docker stack services"
 alias dsps="docker stack ps --no-trunc"
 alias dsls="docker stack ls"
 alias dsrm="docker stack rm"
-
-alias git="lab"
