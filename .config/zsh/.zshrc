@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-source $ZDOTDIR/completion.zsh
-setopt auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
+setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
@@ -14,14 +13,17 @@ unsetopt null_glob
 
 . $ZDOTDIR/antibody
 source $ZDOTDIR/.plugins.sh
+source $ZDOTDIR/completion.zsh
 
-autoload -Uz compinit compdef && compinit -i
+autoload -Uz compinit
 # Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
-# if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' $ZDOTDIR/.zcompdump) ]; then
-#   compinit -i;
-# else
-#   compinit -i -C;
-# fi;
+if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
+  echo "Recompiling zcompdump"
+  compinit -i
+  compdump
+else
+  compinit -i -C
+fi
 
 # PyWal
 source ~/.cache/wal/colors.sh
