@@ -63,6 +63,8 @@ export PATH=$HOME/.fzf/bin:$PATH                        # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                      # rust scripts
 export PATH=$GOBIN:$PATH                                # go binaries
 export PATH=".:$PATH"                                   # gradle completion
+export PATH=$HOME/.local/share/language-servers/kotlin-language-server/server/build/install/server/bin:$PATH
+
 
 export NEO4J_HOME="/usr/local/opt/neo4j"
 export PATH="/usr/local/opt/neo4j/bin:$PATH"
