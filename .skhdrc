@@ -1,11 +1,10 @@
 # open terminal
 meh - return : kitty -1 -d=$HOME
 
-# open floating terminal
-meh + shift - return :  \
-  yabai -m signal --add label=float_next_window_created event=window_created action='yabai -m signal --remove float_next_window_created; yabai -m signal --remove float_next_application_launched; yabai -m window $YABAI_WINDOW_ID --toggle float' ; \
-  yabai -m signal --add label=float_next_application_launched event=application_launched action='yabai -m signal --remove float_next_window_created; yabai -m signal --remove float_next_application_launched; yabai -m query --windows | jq -r ".[] | select(.pid == $YABAI_PROCESS_ID).id" | xargs -I{} yabai -m window {} --toggle float' ; \
-  kitty -1 -d=$HOME
+# open floating terminal and place in center of screen
+meh + shift - return :  yabai -m signal --add label=float_next_window_created event=window_created action='yabai -m signal --remove float_next_window_created; yabai -m signal --remove float_next_application_launched; yabai -m window $YABAI_WINDOW_ID --toggle float; yabai -m window $YABAI_WINDOW_ID --grid 4:4:1:1:2:2;'; \
+yabai -m signal --add label=float_next_application_launched event=application_launched action='yabai -m signal --remove float_next_window_created; yabai -m signal --remove float_next_application_launched; yabai -m query --windows | jq -r ".[] | select(.pid == $YABAI_PROCESS_ID).id" | xargs -I{} sh -c "yabai -m window {} --toggle float; yabai -m window {} --grid 4:4:1:1:2:2;"'; \
+kitty -1 -d=$HOME
 
 # restart yabai and skhd
 meh - escape : \
@@ -104,11 +103,14 @@ alt - x : yabai -m space --mirror x-axis
 # toggle desktop offset
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 
+# toggle window float
+alt - f : yabai -m window --toggle float
+
 # toggle window fullscreen
-alt - f : yabai -m window --toggle zoom-fullscreen
+shift + alt - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
-shift + alt - f : yabai -m window --toggle native-fullscreen
+# shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # toggle window border
 shift + alt - b : yabai -m window --toggle border
