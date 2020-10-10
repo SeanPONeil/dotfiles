@@ -11,12 +11,12 @@ CNORM=$(echo $color1 | sed 's/#//')
 CINSE=$(echo $foreground | sed 's/#//')
 
 # global settings
-yabai -m config mouse_follows_focus          off 
+yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          autofocus
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
+yabai -m config window_topmost               on
 yabai -m config window_opacity               off
-yabai -m config window_shadow                off
+yabai -m config window_shadow                float
 yabai -m config window_border                on
 yabai -m config window_border_width          1
 yabai -m config active_window_border_color   0xffeff0eb
