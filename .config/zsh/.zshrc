@@ -13,7 +13,6 @@ unsetopt null_glob
 
 . $ZDOTDIR/antibody
 source $ZDOTDIR/.plugins.sh
-source $ZDOTDIR/completion.zsh
 
 autoload -Uz compinit
 # Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/

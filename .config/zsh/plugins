@@ -1,6 +1,6 @@
+~/.config/zsh/completions         kind:fpath
 lukechilds/zsh-nvm
 zpm-zsh/clipboard
-
 
 ohmyzsh/ohmyzsh                   path:plugins/vi-mode
 ohmyzsh/ohmyzsh                   path:plugins/autojump
@@ -8,9 +8,7 @@ ohmyzsh/ohmyzsh                   path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh                   path:plugins/dotenv
 ohmyzsh/ohmyzsh                   path:plugins/pipenv
 ohmyzsh/ohmyzsh                   path:plugins/brew
-# ohmyzsh/ohmyzsh                   path:plugins/docker-compose kind:fpath
 
-# docker/cli                        path:contrib/completion/zsh kind:fpath
 Tarrasch/zsh-autoenv
 zdharma/zsh-diff-so-fancy
 pkulev/zsh-rustup-completion
