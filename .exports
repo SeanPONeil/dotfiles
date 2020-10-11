@@ -18,6 +18,7 @@ export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 export ANDROID_SDK=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
