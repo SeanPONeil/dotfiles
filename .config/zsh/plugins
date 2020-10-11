@@ -8,6 +8,7 @@ ohmyzsh/ohmyzsh                   path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh                   path:plugins/dotenv
 ohmyzsh/ohmyzsh                   path:plugins/pipenv
 ohmyzsh/ohmyzsh                   path:plugins/brew
+ohmyzsh/ohmyzsh                   path:plugins/pip
 
 Tarrasch/zsh-autoenv
 zdharma/zsh-diff-so-fancy

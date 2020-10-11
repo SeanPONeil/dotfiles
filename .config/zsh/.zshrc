@@ -12,6 +12,7 @@ unset file
 unsetopt null_glob
 
 . $ZDOTDIR/antibody
+source $ZDOTDIR/completion.zsh
 source $ZDOTDIR/.plugins.sh
 
 autoload -Uz compinit
