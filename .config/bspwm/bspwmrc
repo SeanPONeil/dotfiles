@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr &
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Fix Java programs that assume they are in a reparenting window manager
-wmname compiz
+wmname LG3D
 
 # Create desktops based on autorandr profile
 bspc config border_width         2
