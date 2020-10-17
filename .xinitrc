@@ -44,6 +44,7 @@ for dir in /usr/share/fonts ; do
   fi
 done
 
+xset +fp /usr/share/fonts/local/
 xset +fp $HOME/.local/share/fonts/
 
 xset fp rehash
