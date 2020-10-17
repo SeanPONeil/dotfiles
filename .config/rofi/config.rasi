@@ -1,0 +1,7 @@
+configuration {
+  theme: "~/.cache/wal/colors-rofi-light.rasi";
+  font: "TamzenForPowerline 12";
+}
+
+
+/* vim:ft=css
