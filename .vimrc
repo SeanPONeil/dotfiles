@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 " Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 " Use vim settings instead of vi settings
@@ -106,6 +107,20 @@ set expandtab
 set autoindent
 set smartindent
 
+" https://vim.fandom.com/wiki/Fix_syntax_highlighting
+autocmd BufEnter * :syntax sync fromstart
+autocmd FileType javascript syn sync ccomment javaScriptComment
+set redrawtime=10000
+
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 
 " map smashing jk to escape
