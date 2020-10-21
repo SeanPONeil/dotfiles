@@ -33,4 +33,3 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
-eval "$(navi widget zsh)"
