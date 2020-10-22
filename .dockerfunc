@@ -39,6 +39,10 @@ rmctr() {
   docker rm -f $@ 2>/dev/null || true
 }
 
+dstartall() {
+  docker start $(docker ps -a -q)
+}
+
 dstopall() {
   docker stop $(docker ps -a -q)
 }
