@@ -14,6 +14,7 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
 Plug 'vim-test/vim-test'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 " Use vim settings instead of vi settings
