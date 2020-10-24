@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-# PyWal
-source ~/.cache/wal/colors.sh
-(cat ~/.cache/wal/sequences &)
-
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
@@ -29,7 +25,11 @@ else
   compinit -i -C
 fi
 
+# PyWal
+source ~/.cache/wal/colors.sh
+(/bin/cat ~/.cache/wal/sequences &)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"
