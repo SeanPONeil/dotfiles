@@ -22,7 +22,6 @@ wal(){
       if [[ "$TERM" == "xterm-kitty" ]]; then
         kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
       fi
-      brew services restart spacebar
       brew services restart yabai
     fi
   else

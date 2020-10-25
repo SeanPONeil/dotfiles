@@ -41,6 +41,10 @@ meh - 8 : yabai -m space --focus 8
 meh - 9 : yabai -m space --focus 9
 meh - 0 : yabai -m space --focus 10
 
+# fast focus monitor
+meh + shift - 0x21 : yabai -m display --focus prev
+meh + shift - 0x1E : yabai -m display --focus next
+
 # send wndow to desktop and follow focus
 #  
 # meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
