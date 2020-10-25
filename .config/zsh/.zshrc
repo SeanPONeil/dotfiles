@@ -27,7 +27,7 @@ fi
 
 # PyWal
 source ~/.cache/wal/colors.sh
-(/bin/cat ~/.cache/wal/sequences &)
+(\cat ~/.cache/wal/sequences &)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
