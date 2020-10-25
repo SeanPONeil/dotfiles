@@ -31,5 +31,6 @@ source ~/.cache/wal/colors.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+eval "$(jenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
