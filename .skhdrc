@@ -44,6 +44,7 @@ meh - 0 : yabai -m space --focus 10
 # fast focus monitor
 meh + shift - 0x21 : yabai -m display --focus west
 meh + shift - 0x1E : yabai -m display --focus east
+meh - 0x2A : yabai -m display --focus recent
 
 # send wndow to desktop and follow focus
 #  

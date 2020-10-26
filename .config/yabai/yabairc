@@ -40,7 +40,6 @@ yabai -m config window_gap                   10
 # application rules
 # yabai -m rule --add app="Firefox" opacity=1.0
 yabai -m rule --add app="kitty" opacity=0.95
-yabai -m rule --add app="Slack"
 
 # automatically focus the window below the cursor after a window/application is closed.
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
