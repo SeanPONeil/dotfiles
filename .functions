@@ -16,16 +16,13 @@ fs(){
 }
 
 wal(){
+  command wal $@
+  pywalfox update
+  if [[ "$TERM" == "xterm-kitty" ]]; then
+    kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
+  fi
   if [[ $(uname) == "Darwin" ]]; then
-    command wal $@
-    if [ "$#" -ge 2 ]; then
-      if [[ "$TERM" == "xterm-kitty" ]]; then
-        kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
-      fi
-      brew services restart yabai
-    fi
-  else
-    command wal $@
+    cp $HOME/.cache/wal/colors-simplebar.js $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar/lib/styles/Pywal.js
   fi
 }
 

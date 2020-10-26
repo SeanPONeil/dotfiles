@@ -41,9 +41,9 @@ export SYSTEMD_EDITOR=vim
 export VISUAL=vim
 
 if [[ $PLATFORM == "Darwin" ]]; then
-  export PAGER=/usr/local/bin/less
+  export PAGER="/usr/local/bin/less +G -R"
 else
-  export PAGER=/usr/bin/less
+  export PAGER="/usr/bin/less +G -R"
 fi
 
 # fzf customization
