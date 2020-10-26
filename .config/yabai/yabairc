@@ -23,6 +23,7 @@ yabai -m config auto_balance                 on
 yabai -m config mouse_modifier               ctrl + alt
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
+yabai -m config mouse_drop_action            swap
 
 # add 25 padding to the top and bottom of all spaces regardless of the display it belongs to
 yabai -m config external_bar all:25:0
@@ -39,6 +40,7 @@ yabai -m config window_gap                   10
 # application rules
 # yabai -m rule --add app="Firefox" opacity=1.0
 yabai -m rule --add app="kitty" opacity=0.95
+yabai -m rule --add app="Slack"
 
 # automatically focus the window below the cursor after a window/application is closed.
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
