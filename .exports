@@ -23,6 +23,7 @@ export ANDROID_SDK_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
+export JAVA_HOME=$(jenv javahome)
 
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
@@ -45,7 +46,7 @@ export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 
 # fzf customization
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --preview='head -$LINES {}'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # setup PATH
@@ -73,3 +74,10 @@ export PURE_PROMPT_VICMD_SYMBOL="<"
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn', 'vim', 'idea', 'studio', 'code')
+
+# zlib stuff
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+

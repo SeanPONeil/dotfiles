@@ -2,6 +2,8 @@
 
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
+eval "$(jenv init -)"
+
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
   if [[ -f "$file" ]] && [[ -f "$file" ]]; then
@@ -31,6 +33,5 @@ source ~/.cache/wal/colors.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval "$(jenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
