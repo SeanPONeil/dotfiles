@@ -5,7 +5,7 @@
 
 # terminal emulator
 super + Return
-  termite 
+	kitty
 
 # firefox
 super + {shift + Return}
