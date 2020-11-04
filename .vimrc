@@ -16,7 +16,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
-
+Plug 'chrisbra/Colorizer'
 call plug#end()
 
 " Use vim settings instead of vi settings
@@ -24,6 +24,9 @@ set nocompatible
 
 " Don't complain about node version
 let g:coc_disable_startup_warning = 1
+
+" colorize hex values automatically
+let g:colorizer_auto_color = 1
 
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
