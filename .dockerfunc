@@ -129,9 +129,8 @@ signal() {
   kill $SOCAT_PGM_PID
 }
 
-# volume(){
-#   docker run -it --rm \
-#     -v $1:/$1 \
-#     --log-driver none \
-#     bash bash -c "apk add --no-cache vim; bash"
-#   }
+volume(){
+  docker run -it --rm \
+    --mount source=$1,destination=/data \
+    ubuntu
+  }

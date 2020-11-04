@@ -1,10 +1,8 @@
-call plug#begin()
+call plug#begin("~/.vim/plugged")
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
-Plug 'tpope/vim-vinegar'  " tpope enhanced netrw
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'dylanaraps/wal.vim'  " pywal colorscheme
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go'
@@ -15,6 +13,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-test/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'powerman/vim-plugin-AnsiEsc'
+
 call plug#end()
 
 " Use vim settings instead of vi settings
@@ -138,6 +140,12 @@ noremap <c-l> <c-w>l
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+" let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+
+" display hidden files by default in ranger
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+
 "
 "
 "  coc.nvim
@@ -220,7 +228,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -277,6 +285,9 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Format current buffer with Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that

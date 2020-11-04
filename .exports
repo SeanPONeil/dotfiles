@@ -23,8 +23,6 @@ export ANDROID_SDK_ROOT=$ANDROID_SDK
 export ANDROID_HOME=$ANDROID_SDK
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-export JAVA_HOME=$(jenv javahome)
-
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 
@@ -41,13 +39,9 @@ export EDITOR=vim
 export SYSTEMD_EDITOR=vim
 export VISUAL=vim
 
-export LESS="-R"
-export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-
 # fzf customization
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
-export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --preview='head -$LINES {}'"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_COMPLETION_OPTS="+c -x"
+export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
 
 # setup PATH
 export PATH=/usr/local/sbin:$PATH
@@ -55,7 +49,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$ANDROID_SDK/platform-tools:$PATH
 export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH
-export PATH=$HOME/.jenv/bin:$PATH                       # jenv Java environment manager
 export PATH=$HOME/.fzf/bin:$PATH                        # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                      # rust scripts
 export PATH=$GOBIN:$PATH                                # go binaries
@@ -73,11 +66,13 @@ export PURE_PROMPT_VICMD_SYMBOL="<"
 # nvm-zsh customization
 export NVM_COMPLETION=true
 export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn', 'vim', 'idea', 'studio', 'code')
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('yarn', 'nvim', 'vim', 'idea', 'studio', 'code')
 
 # zlib stuff
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+
+export PAGER="less -r"
 

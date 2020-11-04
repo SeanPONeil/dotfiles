@@ -2,8 +2,6 @@
 
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
-eval "$(jenv init -)"
-
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
   if [[ -f "$file" ]] && [[ -f "$file" ]]; then
@@ -32,6 +30,10 @@ source ~/.cache/wal/colors.sh
 (\cat ~/.cache/wal/sequences &)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
