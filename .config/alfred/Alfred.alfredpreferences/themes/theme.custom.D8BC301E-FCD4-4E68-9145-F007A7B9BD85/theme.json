@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 8,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#839496FF",
+        "font" : "GohuFont",
+        "color" : "#586E75FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#B5891BFF",
+        "font" : "GohuFont",
+        "color" : "#B5891BFF"
+      },
+      "backgroundSelected" : "#063642E5",
+      "text" : {
+        "size" : 20,
+        "colorSelected" : "#B5891BFF",
+        "font" : "GohuFont",
+        "color" : "#93A1A1FF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 8,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 2,
+      "background" : "#063642E5",
+      "spacing" : 10,
+      "text" : {
+        "size" : 27,
+        "colorSelected" : "#032B36FF",
+        "font" : "GohuFont",
+        "color" : "#B5891BFF"
+      },
+      "backgroundSelected" : "#93A1A1FF"
+    },
+    "window" : {
+      "color" : "#032832E5",
+      "paddingHorizontal" : 10,
+      "width" : 620,
+      "borderPadding" : 10,
+      "borderColor" : "#032B363F",
+      "blur" : 40,
+      "roundness" : 12,
+      "paddingVertical" : 10
+    },
+    "credit" : "Sean",
+    "separator" : {
+      "color" : "#063642FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#063642FF",
+      "thickness" : 2
+    },
+    "name" : "Solarized Dark (Rofi)"
+  }
+}
