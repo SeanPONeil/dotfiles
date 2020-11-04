@@ -101,16 +101,15 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: TamzenForPowerline
-    style: Regular
+    family: Tamsyn7x14
+    # style: Regular
 
   bold:
-    family: TamzenForPowerline
+    family: Tamsyn7x14
     style: Regular
 
-
   # Point size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -139,10 +138,12 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
+
+debug.persistent_logging: true
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -169,23 +170,23 @@ draw_bold_text_with_bright_colors: false
 #    white: '#073642'
 colors:
   primary:
-    background: '#2E3440'
-    foreground: '#E5E9F0'
+    background: '#151515'
+    foreground: '#D0D0D0'
   normal:
-    black: '#2E3440'
-    red: '#88C0D0'
-    green: '#BF616A'
-    yellow: '#5E81AC'
-    blue: '#EBCB8B'
-    magenta: '#A3BE8C'
-    cyan: '#D08770'
-    white: '#E5E9F0'
+    black: '#151515'
+    red: '#AC4142'
+    green: '#90A959'
+    yellow: '#F4BF75'
+    blue: '#6A9FB5'
+    magenta: '#AA759F'
+    cyan: '#75B5AA'
+    white: '#D0D0D0'
   bright:
-    black: '#4C566A'
-    red: '#88C0D0'
-    green: '#BF616A'
-    yellow: '#5E81AC'
-    blue: '#EBCB8B'
-    magenta: '#A3BE8C'
-    cyan: '#D08770'
-    white: '#8FBCBB'
+    black: '#505050'
+    red: '#AC4142'
+    green: '#90A959'
+    yellow: '#F4BF75'
+    blue: '#6A9FB5'
+    magenta: '#AA759F'
+    cyan: '#75B5AA'
+    white: '#F5F5F5'
