@@ -109,7 +109,7 @@ font:
     style: Regular
 
   # Point size
-  size: 14.0
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -170,23 +170,23 @@ debug.persistent_logging: true
 #    white: '#073642'
 colors:
   primary:
-    background: '#073642'
-    foreground: '#fdf6e3'
+    background: '#0b1c2c'
+    foreground: '#cbd6e2'
   normal:
-    black: '#073642'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#eee8d5'
+    black: '#0b1c2c'
+    red: '#bf8b56'
+    green: '#56bf8b'
+    yellow: '#8bbf56'
+    blue: '#8b56bf'
+    magenta: '#bf568b'
+    cyan: '#568bbf'
+    white: '#cbd6e2'
   bright:
-    black: '#6c7c80'
-    red: '#dc322f'
-    green: '#859900'
-    yellow: '#b58900'
-    blue: '#268bd2'
-    magenta: '#d33682'
-    cyan: '#2aa198'
-    white: '#eee8d5'
+    black: '#627e99'
+    red: '#bf8b56'
+    green: '#56bf8b'
+    yellow: '#8bbf56'
+    blue: '#8b56bf'
+    magenta: '#bf568b'
+    cyan: '#568bbf'
+    white: '#f7f9fb'

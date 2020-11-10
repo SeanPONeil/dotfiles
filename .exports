@@ -35,9 +35,9 @@ export PLATFORM=$(uname)
 
 export KITTY_REMOTE=/tmp/kitty_remote
 
-export EDITOR=vim
-export SYSTEMD_EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export SYSTEMD_EDITOR=nvim
+export VISUAL=nvim
 
 # fzf customization
 export FZF_COMPLETION_OPTS="+c -x"

@@ -3,7 +3,7 @@
     "result" : {
       "textSpacing" : 8,
       "subtext" : {
-        "size" : 11,
+        "size" : 10,
         "colorSelected" : "#839496FF",
         "font" : "Tamsyn10x20",
         "color" : "#586E75FF"

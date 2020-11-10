@@ -1,8 +1,10 @@
 call plug#begin("~/.vim/plugged")
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
+Plug 'tpope/vim-vinegar'  " better netrw
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'dylanaraps/wal.vim'  " pywal colorscheme
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go'
@@ -13,7 +15,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-test/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
@@ -84,7 +85,7 @@ set noswapfile
 set nowritebackup
 
 " Map fzf to ctrl - space
-nnoremap <C-@> :FZF<CR>
+nnoremap <silent> <C-p> :FZF<CR>
 
 " Fuzzy find Vim commands with alt - space
 nnoremap <A-@> :Commands<CR>
@@ -130,8 +131,8 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 
 " map smashing jk to escape
-inoremap jk <esc>
-vnoremap jk <esc>
+" inoremap jk <esc>
+" vnoremap jk <esc>
 
 " window switching with ctrl - h/j/k/l
 noremap <c-h> <c-w>h
