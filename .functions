@@ -15,16 +15,11 @@ fs(){
   fi
 }
 
-wal(){
-  command wal $@
-  pywalfox update
-  if [[ "$TERM" == "xterm-kitty" ]]; then
-    kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
-  elif [[ "$TERM" == "alacritty" ]]; then
-    alacritty_color_scheme
-  fi
+wal() {
   if [[ $(uname) == "Darwin" ]]; then
-    cp $HOME/.cache/wal/colors-simplebar.js $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar/lib/styles/Pywal.js
+    command wal -e -s -t -o wal-set $@
+  else
+    command wal -o wal-set $@
   fi
 }
 

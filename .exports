@@ -40,6 +40,7 @@ export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
 
 # fzf customization
+export FZF_DEFAULT_COMMAND='ag -l -g ""'
 export FZF_COMPLETION_OPTS="+c -x"
 export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
 
@@ -76,3 +77,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 export PAGER="less -r"
 
+export LG="$HOME/logicgate"
+
+
+# vim: filetype=bash
