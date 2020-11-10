@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
+alacritty_color_scheme
+pywalfox update
+
+if [[ $(uname) == "Darwin" ]]; then
+  cp $HOME/.cache/wal/colors-simplebar.js $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar/lib/styles/Pywal.js
+fi
