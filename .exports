@@ -26,12 +26,8 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 
-export N_PREFIX=$XDG_DATA_HOME/n
-
 # Make `pip3 install --user` install packages to .local on os x`
 export PYTHONUSERBASE=$HOME/.local
-
-export PLATFORM=$(uname)
 
 export KITTY_REMOTE=/tmp/kitty_remote
 
@@ -45,16 +41,18 @@ export FZF_COMPLETION_OPTS="+c -x"
 export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
 
 # setup PATH
+export PATH=$HOME/.local/share/language-servers/kotlin-language-server/server/build/install/server/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$ANDROID_SDK/platform-tools:$PATH
-export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH
-export PATH=$HOME/.fzf/bin:$PATH                        # fzf fuzzy finder
-export PATH=$HOME/.cargo/bin:$PATH                      # rust scripts
-export PATH=$GOBIN:$PATH                                # go binaries
-export PATH=".:$PATH"                                   # gradle completion
-export PATH=$HOME/.local/share/language-servers/kotlin-language-server/server/build/install/server/bin:$PATH
+
+export PATH=$ANDROID_SDK/platform-tools:$PATH                   # Android platform tools
+export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # use `gsed` as `sed`
+export PATH=$HOME/.fzf/bin:$PATH                                # fzf fuzzy finder
+export PATH=$HOME/.cargo/bin:$PATH                              # rust scripts
+export PATH=$GOBIN:$PATH                                        # go binaries
+export PATH=".:$PATH"                                           # gradle completion
 
 
 export NEO4J_HOME="/usr/local/opt/neo4j"
