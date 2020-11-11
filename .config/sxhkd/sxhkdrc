@@ -5,11 +5,11 @@
 
 # terminal emulator
 super + Return
-	kitty
+	termite
 
 # firefox
 super + {shift + Return}
-	firefox-developer-edition
+	firefox
 
 # program launcher
 super + @space
