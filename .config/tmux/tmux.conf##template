@@ -11,12 +11,12 @@ set -g @plugin 'tmux-plugins/tmux-sidebar'
 set -g @plugin 'tmux-plugins/tmux-urlview'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 
+{% if yadm.os == "Darwin" %}
 # fix weird osx issues
 # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 #
-# TODO: this shouldn't be here on linux
-#
-# set-option -g default-command "reattach-to-user-namespace -l zsh"
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+{% endif %}
 
 # increase scroll-back history
 set -g history-limit 50000
@@ -58,3 +58,5 @@ bind-key a send-prefix
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
+
+# vim: filetype=bash
