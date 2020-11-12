@@ -2,12 +2,10 @@
 
 if [[ -z "$SSH_CLIENT" ]]; then
   xsettingsd &
-  picom -b --dbus
-  lxpolkit &
+  picom -b
   libinput-gestures-setup start
   unclutter &
   dunst &
   networkd-notify &
-  monitor-hotplug &
   wal -R &
 fi
