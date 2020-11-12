@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>darkthemeuid</key>
+	<string>600E9174-0B91-415F-ABF9-8A453A5D7E90</string>
 	<key>lightthemeuid</key>
 	<string>600E9174-0B91-415F-ABF9-8A453A5D7E90</string>
 </dict>
