@@ -18,7 +18,39 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
+Plug 'beeender/Comrade'           " intellij neovim link
+Plug 'francoiscabrol/ranger.vim'
 call plug#end()
+
+let g:coc_global_extensions = [ 
+      \ 'coc-json',
+      \ 'coc-git',
+      \ 'coc-actions',
+      \ 'coc-html',
+      \ 'coc-angular',
+      \ 'coc-tsserver',
+      \ 'coc-yaml',
+      \ 'coc-template',
+      \ 'coc-fzf-preview',
+      \ 'coc-groovy',
+      \ 'coc-sh',
+      \ 'coc-toml',
+      \ 'coc-docker',
+      \ 'coc-xml',
+      \ 'coc-go',
+      \ 'coc-snippets',
+      \ 'coc-highlight',
+      \ 'coc-python',
+      \ 'coc-markdownlint',
+      \ 'coc-template',
+      \ 'coc-vimlsp',
+      \ 'coc-sql',
+      \ 'coc-yank',
+      \ 'coc-css'
+      \]
+
+" mouse support because I suck
+set mouse=a
 
 " Use vim settings instead of vi settings
 set nocompatible
@@ -145,8 +177,10 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
 " let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
-let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+" let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 
+let g:ranger_map_keys = 0
+map <leader>r :Ranger<CR>
 " display hidden files by default in ranger
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 

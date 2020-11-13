@@ -103,6 +103,9 @@ docker exec $run_options \
 dbreset() {
   local-cypher-shell -d system "drop database \`logicgate-localhost\`;"
   local-cypher-shell -d system "create database \`logicgate-localhost\`;"
+  
+  local-cypher-shell -d system "drop database \`lgtest\`;"
+  local-cypher-shell -d system "create database \`lgtest\`;"
 }
 
 function macos-x11() {
