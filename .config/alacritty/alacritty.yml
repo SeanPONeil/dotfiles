@@ -99,6 +99,7 @@ font:
 
   bold:
     family: ProggyCleanTT Nerd Font Mono
+    style: Book
 
   # Point size
   size: 12.0
@@ -133,7 +134,7 @@ font:
   use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 debug.persistent_logging: true
 
