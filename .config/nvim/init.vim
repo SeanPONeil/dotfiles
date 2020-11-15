@@ -1,1 +1,1 @@
-/Users/seanoneil/.vimrc
+../../.vimrc
