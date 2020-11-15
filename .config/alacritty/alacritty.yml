@@ -34,11 +34,11 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 10
-    y: 10
+    x: 5
+    y: 1
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -85,7 +85,7 @@ scrolling:
 
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
-  multiplier: 3
+  multiplier: 5
 
   # dpi:
   # x: 96
@@ -93,23 +93,15 @@ scrolling:
 
 # Font configuration
 font:
-  # Normal (roman) font face
   normal:
-    # Font family
-    #
-    # Default:
-    #   - (macOS) Menlo
-    #   - (Linux/BSD) monospace
-    #   - (Windows) Consolas
-    family: Tamsyn7x14
-    # style: Regular
+    # family: BigBlue_TerminalPlus Nerd Font Mono 
+    family: ProggyCleanTT Nerd Font Mono
 
   bold:
-    family: Tamsyn7x14
-    style: Regular
+    family: ProggyCleanTT Nerd Font Mono
 
   # Point size
-  size: 14
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -141,7 +133,7 @@ font:
   use_thin_strokes: false
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 debug.persistent_logging: true
 
@@ -170,23 +162,23 @@ debug.persistent_logging: true
 #    white: '#073642'
 colors:
   primary:
-    background: '#0b1c2c'
-    foreground: '#cbd6e2'
+    background: '#181818'
+    foreground: '#d8d8d8'
   normal:
-    black: '#0b1c2c'
-    red: '#bf8b56'
-    green: '#56bf8b'
-    yellow: '#8bbf56'
-    blue: '#8b56bf'
-    magenta: '#bf568b'
-    cyan: '#568bbf'
-    white: '#cbd6e2'
+    black: '#181818'
+    red: '#ab4642'
+    green: '#a1b56c'
+    yellow: '#f7ca88'
+    blue: '#7cafc2'
+    magenta: '#ba8baf'
+    cyan: '#86c1b9'
+    white: '#d8d8d8'
   bright:
-    black: '#627e99'
-    red: '#bf8b56'
-    green: '#56bf8b'
-    yellow: '#8bbf56'
-    blue: '#8b56bf'
-    magenta: '#bf568b'
-    cyan: '#568bbf'
-    white: '#f7f9fb'
+    black: '#585858'
+    red: '#ab4642'
+    green: '#a1b56c'
+    yellow: '#f7ca88'
+    blue: '#7cafc2'
+    magenta: '#ba8baf'
+    cyan: '#86c1b9'
+    white: '#f8f8f8'
