@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
 if [[ -z "$SSH_CLIENT" ]]; then
+  /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
   xsettingsd &
   picom -b
   libinput-gestures-setup start
   unclutter &
   dunst &
   networkd-notify &
+  monitor-hotplug &
   wal -R &
 fi
