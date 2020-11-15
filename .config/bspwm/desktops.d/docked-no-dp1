@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Configuring bspwm desktops for docked setup"
-
-bspc wm --reorder-monitors DP2
-
-bspc monitor DP2 -d 1 2 3 4 5 6 7 8 9 10
-
-bspc config window_gap 10
