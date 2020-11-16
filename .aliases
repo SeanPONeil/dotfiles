@@ -95,3 +95,6 @@ alias mux="tmuxinator"
 alias cat="ccat"
 
 alias vim="nvim"
+
+# osx only
+alias bluetooth="blueutil"
