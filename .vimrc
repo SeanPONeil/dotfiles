@@ -22,6 +22,7 @@ Plug 'beeender/Comrade'           " intellij neovim link
 Plug 'francoiscabrol/ranger.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'hunner/vim-plist'
 call plug#end()
 
 " Install vim-plug if not found

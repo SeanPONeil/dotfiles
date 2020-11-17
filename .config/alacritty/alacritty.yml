@@ -1,16 +1,11 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
-# Any items in the `env` entry below will be added as
-# environment variables. Some entries may override variables
-# set by alacritty itself.
-# env:
-  # TERM variable
-  #
-  # This value is used to set the `$TERM` environment variable for
-  # each instance of Alacritty. If it is not present, alacritty will
-  # check the local terminfo database and use `alacritty` if it is
-  # available, otherwise `xterm-256color` is used.
-  # TERM: xterm-256color
+cursor:
+  style: Block
+
+env:
+  TERM: alacritty
+  WINIT_X11_SCALE_FACTOR: "1.0"
 
 window:
   # Window dimensions (changes require restart)
@@ -60,10 +55,12 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Windowed
 
   # Window title
   #title: Alacritty
+
+  dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
@@ -76,7 +73,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  #gtk_theme_variant: None
+  gtk_theme_variant: dark 
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -87,9 +84,9 @@ scrolling:
   # scrollback is enabled (history > 0).
   multiplier: 5
 
-  # dpi:
-  # x: 96
-  # y: 96
+  dpi:
+    x: 192
+    y: 192
 
 # Font configuration
 font:
@@ -102,7 +99,7 @@ font:
     style: Book
 
   # Point size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -131,12 +128,10 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: false
+  use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
-
-debug.persistent_logging: true
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -162,24 +157,25 @@ debug.persistent_logging: true
 #    cyan: '#2aa198'
 #    white: '#073642'
 colors:
+
   primary:
-    background: '#181818'
-    foreground: '#d8d8d8'
+    background: '#0b1c2c'
+    foreground: '#cbd6e2'
   normal:
-    black: '#181818'
-    red: '#ab4642'
-    green: '#a1b56c'
-    yellow: '#f7ca88'
-    blue: '#7cafc2'
-    magenta: '#ba8baf'
-    cyan: '#86c1b9'
-    white: '#d8d8d8'
+    black: '#0b1c2c'
+    red: '#bf8b56'
+    green: '#56bf8b'
+    yellow: '#8bbf56'
+    blue: '#8b56bf'
+    magenta: '#bf568b'
+    cyan: '#568bbf'
+    white: '#cbd6e2'
   bright:
-    black: '#585858'
-    red: '#ab4642'
-    green: '#a1b56c'
-    yellow: '#f7ca88'
-    blue: '#7cafc2'
-    magenta: '#ba8baf'
-    cyan: '#86c1b9'
-    white: '#f8f8f8'
+    black: '#627e99'
+    red: '#bf8b56'
+    green: '#56bf8b'
+    yellow: '#8bbf56'
+    blue: '#8b56bf'
+    magenta: '#bf568b'
+    cyan: '#568bbf'
+    white: '#f7f9fb'
