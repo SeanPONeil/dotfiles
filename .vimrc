@@ -43,6 +43,7 @@ let g:coc_global_extensions = [
       \ 'coc-html',
       \ 'coc-angular',
       \ 'coc-tsserver',
+      \ 'coc-tslint',
       \ 'coc-yaml',
       \ 'coc-template',
       \ 'coc-fzf-preview',
