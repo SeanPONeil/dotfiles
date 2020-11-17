@@ -47,9 +47,13 @@ yabai -m config insert_feedback_color      $CINSE
 
 # application rules
 
-# float system preferences
 yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="kitty" opacity=0.95
+yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
+yabai -m rule --add app="^Firefox$" opacity=1.0
+yabai -m rule --add app="^Chrome$" opacity=1.0
+
+killall limelight &> /dev/null
+limelight &> /dev/null &
 
 # # automatically focus the window below the cursor after a window/application is closed.
 # yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
