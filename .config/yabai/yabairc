@@ -39,12 +39,6 @@ yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.9
 
-# border
-yabai -m config window_border on
-yabai -m config active_window_border_color $CACTV
-yabai -m config normal_window_border_color $CNORM
-yabai -m config insert_feedback_color      $CINSE
-
 # application rules
 
 yabai -m rule --add app="^System Preferences$" manage=off
@@ -52,6 +46,7 @@ yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
 yabai -m rule --add app="^Firefox$" opacity=1.0
 yabai -m rule --add app="^Chrome$" opacity=1.0
 
+# border
 killall limelight &> /dev/null
 limelight &> /dev/null &
 
