@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+yabai -m query --spaces --display | jq 'map(select(."focused" == 1))[0].display'

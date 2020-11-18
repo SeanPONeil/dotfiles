@@ -39,16 +39,13 @@ meh - 9 : yabai -m space --focus 9
 meh - 0 : yabai -m space --focus 10
 
 # fast focus monitor
-meh + shift - 0x21 : yabai -m display --focus west
-meh + shift - 0x1E : yabai -m display --focus east
-meh - 0x2A : index="$(focused_yabai_monitor)" && \
+meh - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
                     other="$((index % 2 +1))" && \
                     yabai -m display --focus $other
 
 # send wndow to desktop and follow focus
 #  
 # meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
-
 meh + shift - 1 : yabai -m window --space  1;
 meh + shift - 2 : yabai -m window --space  2;
 meh + shift - 3 : yabai -m window --space  3;
@@ -61,12 +58,10 @@ meh + shift - 9 : yabai -m window --space  9;
 meh + shift - 0 : yabai -m window --space 10;
 
 # send window to monitor and follow focus
-ctrl + cmd - 0x21  : yabai -m window --display prev; yabai -m display --focus prev
-ctrl + cmd - 0x1E  : yabai -m window --display next; yabai -m display --focus next
-ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
-ctrl + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
-ctrl + cmd - 3  : yabai -m window --display 3; yabai -m display --focus 3
-ctrl + cmd - 4  : yabai -m window --display 4; yabai -m display --focus 4
+meh + shift - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
+                        other="$((index % 2 +1))" && \
+                        yabai -m window --display $other && \
+                        yabai -m display --focus $other
 
 # move window
 shift + ctrl - a : yabai -m window --move -20:0
