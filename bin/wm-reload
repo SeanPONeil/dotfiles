@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-launchctl kickstart -k "gui/501/homebrew.mxcl.yabai"
-launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
-launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"
+kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
+alacritty_color_scheme
+pywalfox update
+
+if [[ $(uname) == "Darwin" ]]; then
+  cp $HOME/.cache/wal/colors-simplebar.js $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar/lib/styles/Pywal.js
+  launchctl kickstart -k "gui/501/homebrew.mxcl.yabai"
+  launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
+  launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"
+fi

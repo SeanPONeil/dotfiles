@@ -17,9 +17,9 @@ fs(){
 
 wal() {
   if [[ $(uname) == "Darwin" ]]; then
-    command wal -e -s -t -o wal-set $@
+    command wal -e -s -t -o wm-reload $@
   else
-    command wal -o wal-set $@
+    command wal -o wm-reload $@
   fi
 }
 

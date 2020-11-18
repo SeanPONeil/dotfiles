@@ -4,7 +4,7 @@ Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
 Plug 'tpope/vim-vinegar'  " better netrw
 Plug 'tpope/vim-fugitive' " git functions
 Plug 'itchyny/lightline.vim' " status bar
-Plug 'dylanaraps/wal.vim'  " pywal colorscheme
+Plug 'seanponeil/wal.vim'  " pywal colorscheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'chrisbra/unicode.vim'
@@ -82,6 +82,7 @@ let g:colorizer_auto_color = 1
 let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
 
+colorscheme wal
 let g:lightline = {
       \ 'colorscheme': 'wal',
       \ 'active': {
@@ -95,7 +96,6 @@ let g:lightline = {
       \ },
       \ }
 
-colorscheme wal
 
 " Always show last status
 set laststatus=2
