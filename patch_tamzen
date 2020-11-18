@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -e
+
+nerd_fonts=$HOME/github/nerd-fonts
+patcher=$nerd_fonts/font-patcher
+font=$HOME/github/tamzen-font/ttf/Tamzen8x16r.ttf
+boxicons=$HOME/.fonts/boxicons/fonts/boxicons.ttf
+glyphs_dir=$nerd_fonts/src/glyphs
+
+mkdir -p $glyphs_dir
+cp $boxicons $glyphs_dir
+
+
+if [[ ! -e "$boxicons" ]]; then
+  echo "boxicons does not exist"
+  exit 1
+fi
+
+rm -rf /tmp/font-patcher
+mkdir -p /tmp/font-patcher
+
+fontforge -script $patcher \
+  --progressbars \
+  --careful \
+  --custom boxicons.ttf \
+  --extension ttf \
+  --out /tmp/font-patcher \
+  $font
+
+cp -rf /tmp/font-patcher/ ~/Library/Fonts
+cp -rf /tmp/font-patcher/ ~/.fonts
