@@ -9,14 +9,18 @@ CACTV=$(echo $color3 | sed 's/#//')
 CNORM=$(echo $color1 | sed 's/#//')
 CINSE=$(echo $foreground | sed 's/#//')
 
-spacebar -m config status_bar_text_font         "TamzenForPowerline:Regular:14.0"
-spacebar -m config status_bar_icon_font         "ProggyCleanTT Nerd Font Mono:Book:14.0"
+spacebar -m config status_bar_text_font         "Tamzen Nerd Font:Medium:14.0"
+spacebar -m config status_bar_icon_font         "Tamzen Nerd Font:Medium:12.0"
 spacebar -m config status_bar_background_color  0xff$CBACK
 spacebar -m config status_bar_foreground_color  0xff$CFORE
-spacebar -m config status_bar_space_icon_strip 1 2 3 4 5 6 7 8 9 10 
-spacebar -m config status_bar_power_icon_strip   
-spacebar -m config status_bar_space_icon        
+# spacebar -m config status_bar_space_icon_strip 1 2 3 4 5 6 7 8 9 10
+
+spacebar -m config status_bar_power_icon_strip     
+
+# spacebar -m config status_bar_space_icon        
+
 spacebar -m config status_bar_clock_icon        
+
 spacebar -m config status_bar_clock_format      "%d/%m/%y %R"
 
 echo "spacebar configuration loaded.."

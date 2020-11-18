@@ -91,14 +91,13 @@ scrolling:
 font:
   normal:
     # family: BigBlue_TerminalPlus Nerd Font Mono 
-    family: ProggyCleanTT Nerd Font Mono
+    family: Tamzen Nerd Font
 
   bold:
-    family: ProggyCleanTT Nerd Font Mono
-    style: Book
+    family: Tamzen Nerd Font
 
   # Point size
-  size: 14.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -158,23 +157,23 @@ draw_bold_text_with_bright_colors: true
 colors:
 
   primary:
-    background: '#090300'
-    foreground: '#a5a2a2'
+    background: '#181818'
+    foreground: '#d8d8d8'
   normal:
-    black: '#090300'
-    red: '#db2d20'
-    green: '#01a252'
-    yellow: '#fded02'
-    blue: '#01a0e4'
-    magenta: '#a16a94'
-    cyan: '#b5e4f4'
-    white: '#a5a2a2'
+    black: '#181818'
+    red: '#ab4642'
+    green: '#a1b56c'
+    yellow: '#f7ca88'
+    blue: '#7cafc2'
+    magenta: '#ba8baf'
+    cyan: '#86c1b9'
+    white: '#d8d8d8'
   bright:
-    black: '#5c5855'
-    red: '#db2d20'
-    green: '#01a252'
-    yellow: '#fded02'
-    blue: '#01a0e4'
-    magenta: '#a16a94'
-    cyan: '#b5e4f4'
-    white: '#f7f7f7'
+    black: '#585858'
+    red: '#ab4642'
+    green: '#a1b56c'
+    yellow: '#f7ca88'
+    blue: '#7cafc2'
+    magenta: '#ba8baf'
+    cyan: '#86c1b9'
+    white: '#f8f8f8'
