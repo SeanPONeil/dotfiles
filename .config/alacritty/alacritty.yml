@@ -4,8 +4,7 @@ cursor:
   style: Block
 
 env:
-  TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: "1.0"
+  WINIT_X11_SCALE_FACTOR: '1.0'
 
 window:
   # Window dimensions (changes require restart)
@@ -73,7 +72,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  gtk_theme_variant: dark 
+  gtk_theme_variant: dark
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -159,23 +158,23 @@ draw_bold_text_with_bright_colors: true
 colors:
 
   primary:
-    background: '#0b1c2c'
-    foreground: '#cbd6e2'
+    background: '#090300'
+    foreground: '#a5a2a2'
   normal:
-    black: '#0b1c2c'
-    red: '#bf8b56'
-    green: '#56bf8b'
-    yellow: '#8bbf56'
-    blue: '#8b56bf'
-    magenta: '#bf568b'
-    cyan: '#568bbf'
-    white: '#cbd6e2'
+    black: '#090300'
+    red: '#db2d20'
+    green: '#01a252'
+    yellow: '#fded02'
+    blue: '#01a0e4'
+    magenta: '#a16a94'
+    cyan: '#b5e4f4'
+    white: '#a5a2a2'
   bright:
-    black: '#627e99'
-    red: '#bf8b56'
-    green: '#56bf8b'
-    yellow: '#8bbf56'
-    blue: '#8b56bf'
-    magenta: '#bf568b'
-    cyan: '#568bbf'
-    white: '#f7f9fb'
+    black: '#5c5855'
+    red: '#db2d20'
+    green: '#01a252'
+    yellow: '#fded02'
+    blue: '#01a0e4'
+    magenta: '#a16a94'
+    cyan: '#b5e4f4'
+    white: '#f7f7f7'
