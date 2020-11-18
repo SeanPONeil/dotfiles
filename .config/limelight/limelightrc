@@ -13,6 +13,6 @@ CINSE=$(echo $foreground | sed 's/#//')
 limelight -m config debug_output on
 limelight -m config width 1
 limelight -m config radius 0
-limelight -m config placement exterior
+limelight -m config placement interior
 limelight -m config active_color "AA${CFORE}"
 limelight -m config normal_color "AA${CBACK}"
