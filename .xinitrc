@@ -63,6 +63,8 @@ export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 # run local xhost
 xhost local:root
 
+xlayoutdisplay
+
 session=${1:-bspwm}
 
 case $session in
