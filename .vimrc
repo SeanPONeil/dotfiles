@@ -2,6 +2,7 @@ call plug#begin("~/.vim/plugged")
 Plug 'tpope/vim-sensible' " sets some normal standards
 Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
 Plug 'tpope/vim-vinegar'  " better netrw
+Plug 'tpope/vim-fugitive' " git functions
 Plug 'itchyny/lightline.vim' " status bar
 Plug 'dylanaraps/wal.vim'  " pywal colorscheme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -19,11 +20,13 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
 Plug 'beeender/Comrade'           " intellij neovim link
-Plug 'francoiscabrol/ranger.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
+Plug 'vim-scripts/PreserveNoEOL'
 call plug#end()
+
+
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -80,7 +83,7 @@ let g:python3_host_prog = "/usr/local/bin/python3"
 let g:python_host_prog = "/usr/local/bin/python2"
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'wal',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus', 'kitestatus' ] ]
@@ -92,13 +95,14 @@ let g:lightline = {
       \ },
       \ }
 
+colorscheme wal
+
 " Always show last status
 set laststatus=2
 
 " Use autocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
-colorscheme wal
 
 set endofline
 set fixendofline
@@ -130,6 +134,9 @@ endif
 set nobackup
 set noswapfile
 set nowritebackup
+
+" prefix all fzf commands with 'Fzf', e.g. :FzfFiles, :FzfAg, etc.
+let g:fzf_command_prefix = 'Fzf'
 
 " Map fzf to ctrl - space
 nnoremap <silent> <C-p> :FZF<CR>
@@ -194,10 +201,6 @@ nnoremap <C-Right> :tabnext<CR>
 " let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
 " let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 
-let g:ranger_map_keys = 0
-map <leader>r :Ranger<CR>
-" display hidden files by default in ranger
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 
 "
 "
