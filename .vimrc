@@ -84,7 +84,7 @@ let g:python_host_prog = "/usr/local/bin/python2"
 
 colorscheme wal
 let g:lightline = {
-      \ 'colorscheme': 'wal',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus', 'kitestatus' ] ]
@@ -284,7 +284,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-" autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
