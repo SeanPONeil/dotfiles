@@ -24,6 +24,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
+Plug 'glench/vim-jinja2-syntax'
 call plug#end()
 
 
