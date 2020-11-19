@@ -40,12 +40,16 @@ meh - 0 : yabai -m space --focus 10
 
 # fast focus monitor
 meh - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
-                    other="$((index % 2 +1))" && \
+                    other="$((index % 2 + 1))" && \
                     yabai -m display --focus $other
 
-# send wndow to desktop and follow focus
+# send window to desktop and follow focus
 #  
 # meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
+hyper - 0x21 : yabai -m window --space prev && \
+                      yabai -m space --focus prev
+hyper - 0x1E : yabai -m window --space next && \
+                      yabai -m space --focus next
 meh + shift - 1 : yabai -m window --space  1;
 meh + shift - 2 : yabai -m window --space  2;
 meh + shift - 3 : yabai -m window --space  3;
