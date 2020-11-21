@@ -4,13 +4,13 @@ import:
 cursor:
   style: Block
 
-env:
-  WINIT_X11_SCALE_FACTOR: '1.0'
+# env:
+  # WINIT_X11_SCALE_FACTOR: '1.0'
 
 window:
   dynamic_padding: true
   decorations: none
-  startup_mode: Windowed
+  # startup_mode: Windowed
   dynamic_title: true
   gtk_theme_variant: dark
   padding:
@@ -26,10 +26,10 @@ scrolling:
 
 font:
   normal:
-    family: Tamzen Nerd Font
+    family: Tamzen8x16r Nerd Font Complete
   bold:
-    family: Tamzen Nerd Font
-  size: 16.0
+    family: Tamzen8x16r Nerd Font Complete
+  size: 16
   use_thin_strokes: true
 
 draw_bold_text_with_bright_colors: true
