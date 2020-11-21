@@ -23,8 +23,9 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            stack
 
-# add 25 padding to the top and bottom of all spaces regardless of the display it belongs to
-yabai -m config external_bar all:25:0
+# spacebar_height=$(spacebar -m config height)
+spacebar_height=26
+yabai -m config external_bar all:26:0
 
 # general space settings
 yabai -m config layout                       bsp
