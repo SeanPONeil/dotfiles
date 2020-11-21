@@ -3,22 +3,22 @@
     "result" : {
       "textSpacing" : 8,
       "subtext" : {
-        "size" : 10,
+        "size" : 11,
         "colorSelected" : "#839496FF",
-        "font" : "Tamsyn10x20",
+        "font" : "Tamzen Nerd Font",
         "color" : "#586E75FF"
       },
       "shortcut" : {
         "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamsyn10x20",
+        "font" : "Tamzen Nerd Font",
         "color" : "#B5891BFF"
       },
       "backgroundSelected" : "#063642E5",
       "text" : {
-        "size" : 20,
+        "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamsyn10x20",
+        "font" : "Tamzen Nerd Font",
         "color" : "#93A1A1FF"
       },
       "iconPaddingHorizontal" : 5,
@@ -30,9 +30,9 @@
       "background" : "#063642E5",
       "spacing" : 10,
       "text" : {
-        "size" : 36,
+        "size" : 32,
         "colorSelected" : "#032B36FF",
-        "font" : "Tamsyn10x20",
+        "font" : "Tamzen Nerd Font",
         "color" : "#B5891BFF"
       },
       "backgroundSelected" : "#93A1A1FF"
@@ -41,8 +41,8 @@
       "color" : "#032832E5",
       "paddingHorizontal" : 10,
       "width" : 620,
-      "borderPadding" : 10,
-      "borderColor" : "#032B363F",
+      "borderPadding" : 17,
+      "borderColor" : "#06364219",
       "blur" : 40,
       "roundness" : 12,
       "paddingVertical" : 10
