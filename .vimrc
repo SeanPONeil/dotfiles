@@ -25,6 +25,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
 Plug 'glench/vim-jinja2-syntax'
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
 
@@ -65,7 +66,8 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ 'coc-sql',
       \ 'coc-yank',
-      \ 'coc-css'
+      \ 'coc-css',
+      \ 'coc-solargraph'
       \]
 
 " mouse support because I suck
@@ -173,17 +175,6 @@ set smartindent
 autocmd BufEnter * :syntax sync fromstart
 autocmd FileType javascript syn sync ccomment javaScriptComment
 set redrawtime=10000
-
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
 
 " map smashing jk to escape
 " inoremap jk <esc>
