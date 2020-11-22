@@ -1,5 +1,5 @@
 # open terminal
-meh - return : cd $HOME && alacritty 
+meh - return : $XDG_CONFIG_HOME/alacritty/launch.sh
 
 # open floating terminal and place in center of screen
 # TODO
