@@ -143,3 +143,6 @@ ctrl + alt - d : yabai -m space --layout float
 
 # toggle window between tiling and floating
 meh - t : ~/.config/yabai/scripts/toggle_layout
+
+# toggle visibility of spacebar
+meh - b : ~/.config/spacebar/scripts/toggle

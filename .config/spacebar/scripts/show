@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+spacebar -m config height 22
+yabai -m config external_bar all:22:0

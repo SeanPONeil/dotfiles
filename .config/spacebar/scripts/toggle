@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+current=$(spacebar -m config height)
+new=$(( $current - 22 ))
+new="${new#-}"
+
+
+spacebar -m config height $new
+yabai -m config external_bar all:$new:0
