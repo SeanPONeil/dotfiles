@@ -24,8 +24,8 @@ yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            stack
 
 # spacebar_height=$(spacebar -m config height)
-spacebar_height=26
-yabai -m config external_bar all:26:0
+spacebar_height=22
+yabai -m config external_bar all:$spacebar_height:0
 
 # general space settings
 yabai -m config layout                       bsp
