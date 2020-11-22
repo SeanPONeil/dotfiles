@@ -1,14 +1,7 @@
 #!/usr/bin/env sh
 
 # get color values from pywal
-source $HOME/.cache/wal/colors.sh
-
-# yabai template colours
-CBACK=$(echo $background | sed 's/#//')
-CFORE=$(echo $foreground | sed 's/#//')
-CACTV=$(echo $color3 | sed 's/#//')
-CNORM=$(echo $color1 | sed 's/#//')
-CINSE=$(echo $foreground | sed 's/#//')
+source $HOME/.cache/wal/colors-yabai.sh
 
 # global settings
 yabai -m config debug_output                 on
@@ -38,7 +31,7 @@ yabai -m config window_gap                   0
 # window opacity
 yabai -m config window_opacity on
 yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity 0.9
+yabai -m config normal_window_opacity $alpha
 
 # application rules
 

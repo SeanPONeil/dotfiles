@@ -3,22 +3,22 @@
     "result" : {
       "textSpacing" : 8,
       "subtext" : {
-        "size" : 11,
+        "size" : 12,
         "colorSelected" : "#839496FF",
-        "font" : "Tamzen Nerd Font",
+        "font" : "Tamzen6x12r Nerd Font Complete",
         "color" : "#586E75FF"
       },
       "shortcut" : {
         "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamzen Nerd Font",
+        "font" : "Tamzen8x16r Nerd Font Complete",
         "color" : "#B5891BFF"
       },
-      "backgroundSelected" : "#063642E5",
+      "backgroundSelected" : "#063642FF",
       "text" : {
         "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamzen Nerd Font",
+        "font" : "Tamzen8x16r Nerd Font Complete",
         "color" : "#93A1A1FF"
       },
       "iconPaddingHorizontal" : 5,
@@ -32,7 +32,7 @@
       "text" : {
         "size" : 32,
         "colorSelected" : "#032B36FF",
-        "font" : "Tamzen Nerd Font",
+        "font" : "Tamzen8x16r Nerd Font Complete",
         "color" : "#B5891BFF"
       },
       "backgroundSelected" : "#93A1A1FF"

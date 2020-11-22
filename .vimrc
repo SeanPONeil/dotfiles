@@ -87,25 +87,37 @@ let g:python_host_prog = "/usr/local/bin/python2"
 
 colorscheme wal
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'wal',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'cocstatus', 'kitestatus' ] ]
+      \   'left': [
+      \     [ 'mode', 'paste' ],
+      \     [ 'git', 'diagnostic', 'cocstatus', 'filename', 'method' ]
+      \   ],
+      \   'right': [
+      \     [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
+      \     [ 'blame' ]
+      \   ],
       \ },
       \ 'component_function': {
-      \   'gitbranch':  'fugitive#head',
       \   'cocstatus':  'coc#status',
-      \   'kitestatus': 'kite#statusline'
+      \   'blame': 'LightlineGitBlame',
       \ },
-      \ }
+    \ }
 
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction
 
 " Always show last status
 set laststatus=2
 
 " Use autocmd to force lightline update.
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+autocmd User CocGitStatusChange,CocStatusChange,CocDiagnosticChange call lightline#update()
 
+" Resize vim panes when host terminal is resized
+autocmd VimResized * wincmd =
 
 set endofline
 set fixendofline
@@ -177,8 +189,14 @@ autocmd FileType javascript syn sync ccomment javaScriptComment
 set redrawtime=10000
 
 " map smashing jk to escape
-" inoremap jk <esc>
-" vnoremap jk <esc>
+inoremap jk <esc>
+vnoremap jk <esc>
+inoremap kj <esc>
+vnoremap kj <esc>
+
+set ttimeout
+set ttimeoutlen=100
+set timeoutlen=3000
 
 " window switching with ctrl - h/j/k/l
 noremap <c-h> <c-w>h
@@ -255,6 +273,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Use `[G` and `]G` to navigate git hunks
+nmap <silent> [G <Plug>(coc-git-prevchunk)
+nmap <silent> ]G <Plug>(coc-git-nextchunk)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -359,3 +381,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" Show git lists
+nnoremap <silent><nowait> <space>g  :<C-u>CocList --normal gstatus<CR>
