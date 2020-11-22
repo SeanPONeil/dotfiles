@@ -1,35 +1,4 @@
 import:
   - .cache/wal/colors-alacritty.yml
-
-cursor:
-  style: Block
-
-# env:
-  # WINIT_X11_SCALE_FACTOR: '1.0'
-
-window:
-  dynamic_padding: true
-  decorations: none
-  # startup_mode: Windowed
-  dynamic_title: true
-  gtk_theme_variant: dark
-  padding:
-    x: 5
-    y: 1
-
-scrolling:
-  history: 30000
-  multiplier: 5
-  dpi:
-    x: 192
-    y: 192
-
-font:
-  normal:
-    family: Tamzen8x16r Nerd Font Complete
-  bold:
-    family: Tamzen8x16r Nerd Font Complete
-  size: 16
-  use_thin_strokes: true
-
-draw_bold_text_with_bright_colors: true
+  - .config/alacritty/config.d/common.yml
+  - .config/alacritty/config.d/font-default.yml

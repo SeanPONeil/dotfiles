@@ -5,7 +5,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	pushd $HOME && alacritty
 
 # firefox
 super + {shift + Return}
