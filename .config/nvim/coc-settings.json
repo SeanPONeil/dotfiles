@@ -2,6 +2,9 @@
   "tsserver.trace.server": "verbose",
   "coc.preferences.formatOnType": true,
   "coc.preferences.extensionUpdateCheck": "daily",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G",
+  "java.trace.server": "verbose",
+  "java.import.gradle.enabled": true,
   "python.pythonPath": "python3",
   "languageserver": {
     "golang": {
@@ -9,11 +12,6 @@
       "rootPatterns": ["go.mod"],
       "disableWorkspaceFolders": true,
       "filetypes": ["go"]
-    },
-    "groovy": {
-      "command": "java",
-      "args" : ["-jar", "~/.lsp/groovy/groovy-language-server-all.jar"],
-      "filetypes": ["groovy"]
     },
     "kotlin": {
       "command": "~/.lsp/kotlin/server/bin/kotlin-language-server",

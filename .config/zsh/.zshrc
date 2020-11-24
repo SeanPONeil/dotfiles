@@ -33,6 +33,7 @@ source ~/.cache/wal/colors.sh
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export JDK_HOME="${JAVA_HOME}"
 
 
 eval "$(direnv hook zsh)"

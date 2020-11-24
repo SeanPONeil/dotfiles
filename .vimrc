@@ -42,6 +42,8 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 endif
 
 let g:coc_global_extensions = [ 
+      \ 'coc-java',
+      \ 'coc-java-lombok',
       \ 'coc-json',
       \ 'coc-git',
       \ 'coc-actions',
@@ -52,7 +54,6 @@ let g:coc_global_extensions = [
       \ 'coc-yaml',
       \ 'coc-template',
       \ 'coc-fzf-preview',
-      \ 'coc-groovy',
       \ 'coc-sh',
       \ 'coc-toml',
       \ 'coc-docker',
