@@ -16,6 +16,7 @@ Tarrasch/zsh-autoenv
 zdharma/zsh-diff-so-fancy
 pkulev/zsh-rustup-completion
 g-plane/zsh-yarn-autocompletions
+gradle/gradle-completion
 
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
