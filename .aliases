@@ -102,3 +102,5 @@ alias bluetooth="blueutil"
 # Make `pip3 install --user` install packages to .local on os x`
 alias pip3="python3 -m pip"
 alias pip2="python2 -m pip"
+
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
