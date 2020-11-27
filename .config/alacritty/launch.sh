@@ -11,7 +11,7 @@ display=$(yabai -m query --displays | jq ".[] | select(.index == $display_index)
 uuid=$(echo $display | jq -r '.uuid')
 
 if [[ $uuid == $MBP_RETINA ]]; then
-  cd $HOME && alacritty --config-file $HOME/.config/alacritty/alacritty-retina.yml
+  cd $HOME && alacritty --config-file $HOME/.config/alacritty/alacritty-retina.yml --print-events
 else
   cd $HOME && alacritty
 fi

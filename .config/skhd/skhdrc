@@ -1,11 +1,11 @@
 # open terminal
-meh - return : $XDG_CONFIG_HOME/alacritty/launch.sh
+meh - return : kitty --single-instance --directory=$HOME &
 
 # open floating terminal and place in center of screen
 # TODO
 
 # reload skhd config
-meh - escape : wm-reload
+meh - escape : $HOME/bin/wm-reload
 
 # focus window
 meh - h : yabai -m window --focus west

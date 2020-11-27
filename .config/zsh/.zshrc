@@ -25,6 +25,9 @@ else
   compinit -i -C
 fi
 
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 # PyWal
 source ~/.cache/wal/colors.sh
 (\cat ~/.cache/wal/sequences &)
