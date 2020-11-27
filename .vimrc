@@ -25,6 +25,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
 Plug 'glench/vim-jinja2-syntax'
+Plug 'tfnico/vim-gradle'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
@@ -68,7 +69,10 @@ let g:coc_global_extensions = [
       \ 'coc-sql',
       \ 'coc-yank',
       \ 'coc-css',
-      \ 'coc-solargraph'
+      \ 'coc-solargraph',
+      \ 'coc-lists',
+      \ 'coc-pairs',
+      \ 'coc-explorer'
       \]
 
 " mouse support because I suck
@@ -366,6 +370,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
+" Show lists
+nnoremap <silent><nowait> <space>l :<C-u>CocList<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
