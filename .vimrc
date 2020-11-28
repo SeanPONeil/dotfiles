@@ -19,7 +19,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
-Plug 'beeender/Comrade'           " intellij neovim link
+" Plug 'beeender/Comrade'           " intellij neovim link
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
