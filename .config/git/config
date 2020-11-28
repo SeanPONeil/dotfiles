@@ -10,6 +10,7 @@
   ui = true
 [core]
 	excludesfile = ~/.config/git/gitignore_global
+	pager = less -+$LESS -RS
 [diff]
   tool = kitty
   guitool = kitty.gui
