@@ -30,6 +30,7 @@ kitty + complete setup zsh | source /dev/stdin
 
 # PyWal
 source ~/.cache/wal/colors.sh
+source ~/.cache/wal/colors-tty.sh
 (\cat ~/.cache/wal/sequences &)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
