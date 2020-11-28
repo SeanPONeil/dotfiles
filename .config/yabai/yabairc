@@ -5,8 +5,8 @@ source $HOME/.cache/wal/colors-yabai.sh
 
 # global settings
 yabai -m config debug_output                 on
-yabai -m config mouse_follows_focus          on
-yabai -m config focus_follows_mouse          autofocus
+yabai -m config mouse_follows_focus          off
+yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               on
 yabai -m config split_ratio                  0.5
@@ -35,6 +35,7 @@ yabai -m config normal_window_opacity $alpha
 
 # application rules
 
+yabai -m rule --add app="^IntelliJ IDEA$" title="^Preferences$" manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
 yabai -m rule --add app="^Firefox$" opacity=1.0
