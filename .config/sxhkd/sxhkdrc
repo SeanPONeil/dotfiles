@@ -5,7 +5,10 @@
 
 # terminal emulator
 super + Return
-	pushd $HOME && alacritty
+  kitty \
+    --single-instance \
+    --directory=$HOME \
+    --listen-on=unix:/tmp/kitty
 
 # firefox
 super + {shift + Return}
