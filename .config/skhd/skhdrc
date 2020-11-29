@@ -1,5 +1,8 @@
 # open terminal
-meh - return : kitty --single-instance --directory=$HOME &
+meh - return : kitty \
+                --single-instance \
+                --directory=$HOME \
+                --listen-on=unix:/tmp/kitty
 
 # open floating terminal and place in center of screen
 # TODO
