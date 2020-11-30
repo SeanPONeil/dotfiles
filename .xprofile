@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  exit 0
+fi
+
 if [[ -z "$SSH_CLIENT" ]]; then
   /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
   xsettingsd &

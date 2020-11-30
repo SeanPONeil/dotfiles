@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  exit 0
+fi
+
 user_resources=$HOME/.Xresources
 pywal_resources=$HOME/.cache/wal/colors.Xresources
 user_modmap=$HOME/.Xmodmap
