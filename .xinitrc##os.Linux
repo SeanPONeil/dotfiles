@@ -37,15 +37,25 @@ fi
 for dir in /usr/share/fonts ; do
   if [ -d "$dir"  ]; then
     pushd $dir
-    mkfontdir
     mkfontscale
+    mkfontdir
     xset +fp "$PWD"
     popd
   fi
 done
 
 xset +fp /usr/share/fonts/local/
+
+pushd $HOME/.local/share/fonts
+mkfontscale
+mkfontdir
 xset +fp $HOME/.local/share/fonts/
+
+pushd $HOME/.fonts
+mkfontscale
+mkfontdir
+xset +fp $HOME/.fonts
+
 
 xset fp rehash
 
