@@ -5,8 +5,8 @@ source $HOME/.cache/wal/colors-yabai.sh
 
 spacebar -m config height             22
 spacebar -m config position           top
-spacebar -m config text_font          "Tamzen8x16r Nerd Font Complete:Medium:12.0"
-spacebar -m config icon_font          "Tamzen6x12r Nerd Font Complete:Medium:12.0"
+spacebar -m config text_font          "Tamzen Nerd Font:Medium:14.0"
+spacebar -m config icon_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config background_color   $background
 spacebar -m config foreground_color   $foreground
 # spacebar -m config space_icon_strip 1 2 3 4 5 6 7 8 9 10
