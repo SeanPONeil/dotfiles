@@ -43,8 +43,6 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 endif
 
 let g:coc_global_extensions = [ 
-      \ 'coc-java',
-      \ 'coc-java-lombok',
       \ 'coc-json',
       \ 'coc-git',
       \ 'coc-actions',
@@ -367,7 +365,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show lists
