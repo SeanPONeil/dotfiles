@@ -92,7 +92,7 @@ alias dsls="docker stack ls"
 alias dsrm="docker stack rm"
 
 alias mux="tmuxinator"
-alias cat="ccat"
+alias cat="bat"
 alias icat="kitty +kitten icat"
 
 alias vim="nvim"
