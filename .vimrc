@@ -26,6 +26,7 @@ Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'tfnico/vim-gradle'
+Plug 'udalov/kotlin-vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
