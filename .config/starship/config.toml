@@ -7,6 +7,9 @@ full_symbol = ""
 charging_symbol = ""
 discharging_symbol = ""
 
+[character]
+success_symbol = "❯(bold green)"
+
 [conda]
 symbol = " "
 
