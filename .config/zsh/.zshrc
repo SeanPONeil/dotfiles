@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+# PyWal
+source ~/.cache/wal/colors.sh
+source ~/.cache/wal/colors-tty.sh
+(cat ~/.cache/wal/sequences &)
+
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
@@ -27,11 +32,6 @@ fi
 
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
-
-# PyWal
-source ~/.cache/wal/colors.sh
-source ~/.cache/wal/colors-tty.sh
-(\cat ~/.cache/wal/sequences &)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
