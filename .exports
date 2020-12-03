@@ -32,7 +32,8 @@ export KITTY_REMOTE=/tmp/kitty_remote
 export EDITOR=nvim
 export SYSTEMD_EDITOR=nvim
 export VISUAL=nvim
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export MANPAGER="nvim -c 'set ft=man' -"
 
 # fzf customization
 export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git'
