@@ -8,3 +8,8 @@ if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
 fi
+
+# workaround for `nice(5) failed: operation not permitted`
+#
+# https://github.com/microsoft/WSL/issues/1887
+unsetopt BG_NICE
