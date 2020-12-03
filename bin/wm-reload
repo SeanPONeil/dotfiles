@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 launchctl kickstart -k "gui/501/homebrew.mxcl.yabai"
-launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
-launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"
+# launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
+# launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"

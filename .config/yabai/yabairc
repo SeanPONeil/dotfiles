@@ -1,12 +1,32 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # get color values from pywal
 source $HOME/.cache/wal/colors-yabai.sh
 
+# yabai-aware status bar
+# spacebar() {
+#   spacebar 
+#   spacebar_height=$(spacebar -m config height)
+# echo "spacebar height: $spacebar_height"
+# if [[ "$(spacebar -m config position)" == "bottom" ]]; then
+#   yabai -m config external_bar all:0:$spacebar_height
+# else
+#   yabai -m config external_bar all:$spacebar_height:0
+# fi
+# 
+# }
+# 
+killall spacebar
+spacebar &
+
+# hotkey daemon
+killall skhd
+skhd &
+
 # global settings
 yabai -m config debug_output                 on
 yabai -m config mouse_follows_focus          on
-yabai -m config focus_follows_mouse          autofocus
+yabai -m config focus_follows_mouse          autoraise
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               on
 yabai -m config split_ratio                  0.5
@@ -15,10 +35,6 @@ yabai -m config mouse_modifier               ctrl
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            stack
-
-# spacebar_height=$(spacebar -m config height)
-spacebar_height=22
-yabai -m config external_bar all:$spacebar_height:0
 
 # general space settings
 yabai -m config layout                       bsp
@@ -41,9 +57,6 @@ yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
 yabai -m rule --add app="^Firefox$" opacity=1.0
 yabai -m rule --add app="^Chrome$" opacity=1.0
 
-# border
-killall limelight &> /dev/null
-limelight &> /dev/null &
 
 # # automatically focus the window below the cursor after a window/application is closed.
 # yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"

@@ -1,10 +1,13 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # get colors from pywal
 source $HOME/.cache/wal/colors-yabai.sh
 
-spacebar -m config height             22
-spacebar -m config position           top
+height=22
+position=top
+
+spacebar -m config height             $height
+spacebar -m config position           $position
 spacebar -m config text_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config icon_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config background_color   $background
@@ -20,3 +23,13 @@ spacebar -m config foreground_color   $foreground
 spacebar -m config clock_format      "%a %d %b %R"
 
 echo "spacebar configuration loaded.."
+
+
+if [[ "$position" == "bottom" ]]; then
+  echo "yabai config for bottom"
+  yabai -m config external_bar all:0:$height
+else
+  echo "yabai config for top"
+  yabai -m config external_bar all:$height:0
+fi
+

@@ -15,4 +15,4 @@ limelight -m config width 1
 limelight -m config radius 0
 limelight -m config placement interior
 limelight -m config active_color "AA${CFORE}"
-limelight -m config normal_color "AA${CBACK}"
+# limelight -m config normal_color "AA${CBACK}"
