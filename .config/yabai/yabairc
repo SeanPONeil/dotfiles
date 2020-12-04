@@ -16,12 +16,12 @@ source $HOME/.cache/wal/colors-yabai.sh
 # 
 # }
 # 
-killall spacebar
-spacebar &
+# killall spacebar
+# spacebar &
 
 # hotkey daemon
-killall skhd
-skhd &
+# killall skhd
+# skhd &
 
 # global settings
 yabai -m config debug_output                 on
