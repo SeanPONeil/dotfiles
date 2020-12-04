@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
-launchctl kickstart -k "gui/501/homebrew.mxcl.yabai"
-# launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
-# launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"
+for service in yabai spacebar skhd; do
+  if pgrep -q "${service}"; then
+    launchctl kickstart -k "gui/501/homebrew.mxcl.${service}"
+  else
+    brew services start "${service}"
+  fi
+done
