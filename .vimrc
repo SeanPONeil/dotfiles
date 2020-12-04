@@ -44,6 +44,8 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 endif
 
 let g:coc_global_extensions = [ 
+      \ 'coc-groovy',
+      \ 'coc-marketplace',
       \ 'coc-json',
       \ 'coc-git',
       \ 'coc-actions',
