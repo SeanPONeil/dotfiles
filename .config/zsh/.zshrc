@@ -5,6 +5,10 @@ source ~/.cache/wal/colors.sh
 source ~/.cache/wal/colors-tty.sh
 (cat ~/.cache/wal/sequences &)
 
+# GPG pinentry
+GPG_TTY=$(tty)
+export GPG_TTY
+
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
