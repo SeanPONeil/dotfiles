@@ -8,7 +8,7 @@ source ~/.cache/wal/colors-tty.sh
 setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
-for file in ~/.{exports,aliases,path,dockerfunc,extra,functions}; do
+for file in ~/.{exports,aliases,path,dockerfunc,extra,functions,encrypted}; do
   if [[ -f "$file" ]] && [[ -f "$file" ]]; then
     source "$file"
   fi
