@@ -61,8 +61,11 @@ yabai -m config insert_feedback_color       $foreground
 yabai -m rule --add app="^IntelliJ IDEA$" title="^Preferences$" manage=off
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
-yabai -m rule --add app="^Firefox$" opacity=1.0
+yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
+yabai -m rule --add app="^Firefox Developer Edition$" border=off
 yabai -m rule --add app="^Chrome$" opacity=1.0
+yabai -m rule --add app="^Chrome$" border=off
+yabai -m rule --add app="^IntelliJ IDEA$" border=off
 
 
 # # automatically focus the window below the cursor after a window/application is closed.
