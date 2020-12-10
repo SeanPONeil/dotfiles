@@ -49,9 +49,10 @@ inherit = base
 # dpi = 96
 # dpi = 0
 height = 3%
-font-0 = Proggy CleanTT Nerd Font Mono:size=12;2
+font-0 = Tamzen8x16r Nerd Font Complete:size=12;2
 # font-0 = TamzenForPowerline:size=13;2
-font-1 = boxicons:size=12;2
+# font-1 = boxicons:size=12;2
+font-1 = Tamzen8x16r Nerd Font Complete:size=12;2
 
 [bar/retina]
 inherit = base
