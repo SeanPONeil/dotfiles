@@ -66,6 +66,7 @@ yabai -m rule --add app="^Firefox Developer Edition$" border=off
 yabai -m rule --add app="^Chrome$" opacity=1.0
 yabai -m rule --add app="^Chrome$" border=off
 yabai -m rule --add app="^IntelliJ IDEA$" border=off
+yabai -m rule --add app="^Slack$" opacity=1.0
 
 
 # # automatically focus the window below the cursor after a window/application is closed.
