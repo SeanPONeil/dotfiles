@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # get color values from pywal
-source $HOME/.cache/wal/colors-yabai.sh
+source $HOME/.cache/wal/colors-yabai-rgba.sh
 
 # yabai-aware status bar
 # spacebar() {
