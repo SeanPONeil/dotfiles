@@ -108,6 +108,6 @@ alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # pbcopy on linux
 if [[ $(uname) == "Linux" ]]; then
-  alias pbcopy="xsel --clipboard --input"
-  alias pbpaste="xsel --clipboard --output"
+  alias pbcopy="xclip -selection clipboard"
+  alias pbpaste="xclip -selection clipboard -o"
 fi
