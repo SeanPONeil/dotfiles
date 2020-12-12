@@ -105,3 +105,9 @@ alias pip3="python3 -m pip"
 alias pip2="python2 -m pip"
 
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+
+# pbcopy on linux
+if [[ $(uname) == "Linux" ]]; then
+  alias pbcopy="xsel --clipboard --input"
+  alias pbpaste="xsel --clipboard --output"
+fi
