@@ -1,0 +1,12 @@
+{
+	"sudoloop": true,
+	"timeupdate": false,
+	"devel": true,
+	"upgrademenu": true,
+	"cleanmenu": true,
+	"diffmenu": true,
+	"editmenu": true,
+	"combinedupgrade": true,
+	"useask": false,
+	"batchinstall": false
+}
