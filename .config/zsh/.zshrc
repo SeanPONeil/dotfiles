@@ -44,5 +44,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export JDK_HOME="${JAVA_HOME}"
 
 
+eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
