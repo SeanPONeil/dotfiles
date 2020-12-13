@@ -73,7 +73,8 @@ let g:coc_global_extensions = [
       \ 'coc-solargraph',
       \ 'coc-lists',
       \ 'coc-pairs',
-      \ 'coc-explorer'
+      \ 'coc-explorer',
+      \ 'coc-snippets'
       \]
 
 " mouse support because I suck
