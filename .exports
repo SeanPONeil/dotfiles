@@ -52,6 +52,7 @@ export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # use `gsed` as 
 export PATH=$HOME/.fzf/bin:$PATH                                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                              # rust scripts
 export PATH=$GOBIN:$PATH                                        # go binaries
+# export PATH="$(gem env gemdir):$PATH"                             # ruby gems
 export PATH=".:$PATH"                                           # gradle completion
 
 
