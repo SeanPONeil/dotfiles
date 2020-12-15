@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 current=$(spacebar -m config height)
-new=$(( $current - 22 ))
+new=$(( $current - 20 ))
 new="${new#-}"
 
 

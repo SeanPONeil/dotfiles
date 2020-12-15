@@ -20,16 +20,8 @@ done
 unset file
 unsetopt null_glob
 
-# Nerd Font Icon names in shell
-setopt null_glob
-for file in ~/.local/share/fonts/*.sh; do
-  if [[ -f "$file" ]] && [[ -f "$file" ]]; then
-    source "$file"
-  fi
-done
-unset file
-unsetopt null_glob
-
+# Nerd Font symbol env vars
+source $HOME/.local/share/fonts/i_all.sh
 
 . $ZDOTDIR/antibody
 source $ZDOTDIR/completion.zsh

@@ -1,48 +1,67 @@
 #!/usr/bin/env bash
 
-# get colors from pywal
 source $HOME/.cache/wal/colors-yabai.sh
+source $HOME/.local/share/fonts/i_all.sh
 
+height=${BAR_HEIGHT:-20}
+position=${BAR_POSITION:-"top"}
 
-# Nerd Font Icon names in shell
-for file in ~/.local/share/fonts/*.sh; do
-  if [[ -f "$file" ]] && [[ -f "$file" ]]; then
-    source "$file"
-  fi
-done
+text_font=${BAR_TEXT_FONT:-"Tamzen:Medium:14.0"}
+icon_font=${BAR_ICON_FONT:-"3270Medium Nerd Font:Medium:16.0"}
 
+icon_style=${BAR_ICON_STYLE:-"fill"}
 
-
-height=22
-position=top
 
 spacebar -m config height             $height
 spacebar -m config position           $position
 spacebar -m config spacing_left       15
-spacebar -m config text_font          "Tamzen Nerd Font:Medium:14.0"
-spacebar -m config icon_font          "Tamzen Nerd Font:Medium:14.0"
+spacebar -m config spacing_right      20
+spacebar -m config text_font          "${text_font}"
+spacebar -m config icon_font          "${icon_font}"
 spacebar -m config background_color   $background
 spacebar -m config foreground_color   $color3
-# spacebar -m config space_icon_strip 
+spacebar -m config power_icon_color   $color3
+spacebar -m config battery_icon_color $color3
+spacebar -m config space_icon_color   $foreground
+spacebar -m config clock_icon_color   $color3
 
-# spacebar -m config power_icon_strip
 
-spacebar -m config space_icon_strip   $i_mdi_numeric_1_box \
-                                      $i_mdi_numeric_2_box \
-                                      $i_mdi_numeric_3_box \
-                                      $i_mdi_numeric_4_box \
-                                      $i_mdi_numeric_5_box \
-                                      $i_mdi_numeric_6_box \
-                                      $i_mdi_numeric_7_box \
-                                      $i_mdi_numeric_8_box \
-                                      $i_mdi_numeric_9_box
+if [[ $icon_style == "fill" ]]; then
+  spacebar -m config space_icon_strip \
+    $i_mdi_numeric_1_box \
+    $i_mdi_numeric_2_box \
+    $i_mdi_numeric_3_box \
+    $i_mdi_numeric_4_box \
+    $i_mdi_numeric_5_box \
+    $i_mdi_numeric_6_box \
+    $i_mdi_numeric_7_box \
+    $i_mdi_numeric_8_box \
+    $i_mdi_numeric_9_box
 
-# spacebar -m config clock_icon        
+  spacebar -m config space_icon $i_mdi_numeric_9_plus_box
+  spacebar -m config clock_icon $i_mdi_clock
+  spacebar -m config power_icon_strip $i_mdi_battery $i_mdi_battery_charging
+else
+  spacebar -m config space_icon_strip \
+    $i_mdi_numeric_1_box_outline \
+    $i_mdi_numeric_2_box_outline \
+    $i_mdi_numeric_3_box_outline \
+    $i_mdi_numeric_4_box_outline \
+    $i_mdi_numeric_5_box_outline \
+    $i_mdi_numeric_6_box_outline \
+    $i_mdi_numeric_7_box_outline \
+    $i_mdi_numeric_8_box_outline \
+    $i_mdi_numeric_9_box_outline
+
+  spacebar -m config space_icon $i_mdi_numeric_9_plus_box_outline
+  spacebar -m config clock_icon $i_mdi_clock
+  spacebar -m config power_icon_strip $i_mdi_battery_outline $i_mdi_battery_charging
+fi
+
 
 spacebar -m config clock_format      "%a %d %b %R"
 
 echo "spacebar configuration loaded.."
-
 
 if [[ "$position" == "bottom" ]]; then
   echo "yabai config for bottom"
