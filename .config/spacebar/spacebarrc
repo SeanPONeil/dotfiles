@@ -3,6 +3,16 @@
 # get colors from pywal
 source $HOME/.cache/wal/colors-yabai.sh
 
+
+# Nerd Font Icon names in shell
+for file in ~/.local/share/fonts/*.sh; do
+  if [[ -f "$file" ]] && [[ -f "$file" ]]; then
+    source "$file"
+  fi
+done
+
+
+
 height=22
 position=top
 
@@ -13,11 +23,19 @@ spacebar -m config text_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config icon_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config background_color   $background
 spacebar -m config foreground_color   $color3
-# spacebar -m config space_icon_strip 1 2 3 4 5 6 7 8 9 10
+# spacebar -m config space_icon_strip 
 
 # spacebar -m config power_icon_strip
 
-# spacebar -m config space_icon        
+spacebar -m config space_icon_strip   $i_mdi_numeric_1_box \
+                                      $i_mdi_numeric_2_box \
+                                      $i_mdi_numeric_3_box \
+                                      $i_mdi_numeric_4_box \
+                                      $i_mdi_numeric_5_box \
+                                      $i_mdi_numeric_6_box \
+                                      $i_mdi_numeric_7_box \
+                                      $i_mdi_numeric_8_box \
+                                      $i_mdi_numeric_9_box
 
 # spacebar -m config clock_icon        
 
