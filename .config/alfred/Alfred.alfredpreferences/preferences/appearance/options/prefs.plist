@@ -6,7 +6,11 @@
 	<true/>
 	<key>hidemenu</key>
 	<true/>
+	<key>hidesubtext</key>
+	<integer>1</integer>
 	<key>showOnScreen</key>
-	<integer>2</integer>
+	<integer>1</integer>
+	<key>visibleresults</key>
+	<integer>3</integer>
 </dict>
 </plist>
