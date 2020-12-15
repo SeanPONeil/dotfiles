@@ -60,8 +60,8 @@ export NEO4J_HOME="/usr/local/opt/neo4j"
 export PATH="/usr/local/opt/neo4j/bin:$PATH"
 
 # Pure prompt customization
-export PURE_PROMPT_SYMBOL=">"
-export PURE_PROMPT_VICMD_SYMBOL="<"
+export PURE_PROMPT_SYMBOL=$i_mdi_chevron_right
+export PURE_PROMPT_VICMD_SYMBOL=$i_mdi_chevron_left
 
 # nvm-zsh customization
 export NVM_COMPLETION=true
