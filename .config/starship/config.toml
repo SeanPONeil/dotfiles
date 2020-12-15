@@ -19,6 +19,10 @@ symbol = " "
 [docker]
 symbol = " "
 
+[docker_context]
+disabled = false
+only_with_files = false
+
 [elixir]
 symbol = " "
 
@@ -77,3 +81,13 @@ symbol = " "
 
 [swift]
 symbol = "ﯣ "
+
+[env_var]
+variable = "SPRING_PROFILES_ACTIVE"
+style = "bold yellow"
+format = "using [$env_value]($style)"
+
+# [[env_var]]
+# variable = "NEO4J_DATABASE"
+# style = "bold cyan"
+# format = "db [$env_value]($style)"
