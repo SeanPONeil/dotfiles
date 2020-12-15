@@ -8,10 +8,11 @@ position=top
 
 spacebar -m config height             $height
 spacebar -m config position           $position
+spacebar -m config spacing_left       15
 spacebar -m config text_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config icon_font          "Tamzen Nerd Font:Medium:14.0"
 spacebar -m config background_color   $background
-spacebar -m config foreground_color   $foreground
+spacebar -m config foreground_color   $color3
 # spacebar -m config space_icon_strip 1 2 3 4 5 6 7 8 9 10
 
 # spacebar -m config power_icon_strip
