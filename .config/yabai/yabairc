@@ -8,7 +8,7 @@ source $HOME/.cache/wal/colors-yabai.sh
 transparent=0xFF
 
 # global settings
-yabai -m config debug_output                 off
+yabai -m config debug_output                 on
 yabai -m config mouse_follows_focus          on
 yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
@@ -54,12 +54,11 @@ yabai -m rule --add app="^Slack$" opacity=1.0
 
 # automatically focus the window below the cursor after a window/application is closed.
 focus_below_cursor="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-events=(window_destroyed application_terminated display_changed)
+events=(window_destroyed application_terminated)
 
 for event in "${events[@]}"; do
   yabai -m signal --add \
     event="${event}" \
     action="${focus_below_cursor}"
 done
-
 echo "yabai configuration loaded.."

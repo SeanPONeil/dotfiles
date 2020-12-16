@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+focused=$(yabai -m query --spaces | jq 'map(select(."focused" == 1))[0]')
+current=$(~/.config/yabai/bin/focused_monitor)
+
+echo "focused: $focused"
+
+focused_display=$(echo "${focused}" | jq '.display')
+unfocused_display=$((focused_display % 2 + 1))
+echo "focused_display: $focused_display"
+echo "unfocused_display: $unfocused_display"
+
+yabai -m space --display $unfocused_display;
+yabai -m display --focus $unfocused_display;
+

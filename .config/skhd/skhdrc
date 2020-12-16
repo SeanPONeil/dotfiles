@@ -74,10 +74,7 @@ meh + shift - 9 : yabai -m window --space  9;
 meh + shift - 0 : yabai -m window --space 10;
 
 # send desktop to monitor and follow focus
-meh + shift - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
-                        other="$((index % 2 +1))" && \
-                        yabai -m space --display $other && \
-                        yabai -m display --focus $other
+meh + shift - 0x2A : $HOME/.config/yabai/bin/move_space_to_other_desktop
 
 # move window
 shift + ctrl - a : yabai -m window --move -20:0
