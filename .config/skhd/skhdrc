@@ -26,12 +26,13 @@ meh + shift - l : yabai -m window --swap east
 meh - w : skhd --key "cmd - w"
 
 # create and destroy desktop
-meh - 0x18: yabai -m space --create
+meh - 0x18: yabai -m space --create && \
+            yabai -m space --focus next
 meh - 0x1B: yabai -m space --destroy
 
 # create desktop, send and follow focused window
 hyper - 0x18: yabai -m space --create && \
-                last=$($HOME/.config/skhd/scripts/last_desktop_on_focused_monitor) && \
+                last=$($HOME/.config/yabai/bin/last_desktop_on_focused_monitor) && \
                 yabai -m window --space $last && \
                 yabai -m space --focus $last
 
@@ -50,7 +51,7 @@ meh - 9 : yabai -m space --focus 9
 meh - 0 : yabai -m space --focus 10
 
 # fast focus monitor
-meh - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
+meh - 0x2A : index="$($HOME/.config/yabai/bin/focused_monitor)" && \
                     other="$((index % 2 + 1))" && \
                     yabai -m display --focus $other
 

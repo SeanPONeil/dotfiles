@@ -22,11 +22,11 @@ yabai -m config mouse_drop_action            stack
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  5
-yabai -m config bottom_padding               5
-yabai -m config left_padding                 5
-yabai -m config right_padding                5
-yabai -m config window_gap                   10
+yabai -m config top_padding                  0
+yabai -m config bottom_padding               0
+yabai -m config left_padding                 0
+yabai -m config right_padding                0
+yabai -m config window_gap                   0
 
 # window opacity
 yabai -m config window_opacity on
@@ -54,7 +54,7 @@ yabai -m rule --add app="^Slack$" opacity=1.0
 
 # automatically focus the window below the cursor after a window/application is closed.
 focus_below_cursor="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-events=(window_destroyed application_terminated space_changed display_changed)
+events=(window_destroyed application_terminated display_changed)
 
 for event in "${events[@]}"; do
   yabai -m signal --add \

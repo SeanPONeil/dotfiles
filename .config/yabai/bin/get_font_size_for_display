@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+res=$(system_profiler SPDisplaysDataType | grep Resolution)
