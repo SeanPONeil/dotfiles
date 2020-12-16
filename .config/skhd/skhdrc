@@ -72,10 +72,10 @@ meh + shift - 8 : yabai -m window --space  8;
 meh + shift - 9 : yabai -m window --space  9;
 meh + shift - 0 : yabai -m window --space 10;
 
-# send window to monitor and follow focus
+# send desktop to monitor and follow focus
 meh + shift - 0x2A : index="$($HOME/.config/skhd/scripts/focused_yabai_monitor)" && \
                         other="$((index % 2 +1))" && \
-                        yabai -m window --display $other && \
+                        yabai -m space --display $other && \
                         yabai -m display --focus $other
 
 # move window
@@ -149,3 +149,6 @@ meh - t : ~/.config/yabai/scripts/toggle_layout
 
 # toggle visibility of spacebar
 meh - b : ~/.config/spacebar/scripts/toggle
+
+# toggle gaps and padding
+meh - g : toggle_gaps

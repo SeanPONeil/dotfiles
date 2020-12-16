@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source $HOME/.cache/wal/colors-yabai.sh
+source $HOME/.cache/wal/colors-yabai-argb.sh
 source $HOME/.local/share/fonts/i_all.sh
 
 height=${BAR_HEIGHT:-20}
@@ -18,7 +19,7 @@ spacebar -m config spacing_left       15
 spacebar -m config spacing_right      20
 spacebar -m config text_font          "${text_font}"
 spacebar -m config icon_font          "${icon_font}"
-spacebar -m config background_color   $background
+spacebar -m config background_color   $background_argb
 spacebar -m config foreground_color   $color3
 spacebar -m config power_icon_color   $color3
 spacebar -m config battery_icon_color $color3
