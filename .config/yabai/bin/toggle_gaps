@@ -1,0 +1,4 @@
+yabai -m space --toggle padding && \
+  yabai -m space --toggle gap
+
+# vim: filetype=zsh
