@@ -151,4 +151,4 @@ meh - t : ~/.config/yabai/scripts/toggle_layout
 meh - b : ~/.config/spacebar/scripts/toggle
 
 # toggle gaps and padding
-meh - g : toggle_gaps
+meh - g : ~/.config/yabai/bin/toggle_gaps
