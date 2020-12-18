@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -x
 
 source $HOME/.cache/wal/colors-yabai.sh
 source $HOME/.cache/wal/colors-yabai-argb.sh
@@ -12,14 +13,13 @@ icon_font=${BAR_ICON_FONT:-"3270Medium Nerd Font:Medium:16.0"}
 
 icon_style=${BAR_ICON_STYLE:-"fill"}
 
-
 spacebar -m config height             $height
 spacebar -m config position           $position
 spacebar -m config spacing_left       15
 spacebar -m config spacing_right      20
 spacebar -m config text_font          "${text_font}"
 spacebar -m config icon_font          "${icon_font}"
-spacebar -m config background_color   $background_argb
+spacebar -m config background_color   $background
 spacebar -m config foreground_color   $color3
 spacebar -m config power_icon_color   $color3
 spacebar -m config battery_icon_color $color3
@@ -71,4 +71,3 @@ else
   echo "yabai config for top"
   yabai -m config external_bar all:$height:0
 fi
-
