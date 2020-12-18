@@ -4,8 +4,7 @@ meh - return : kitty \
                 --directory=$HOME \
                 --listen-on=unix:/tmp/kitty
 
-# open floating terminal and place in center of screen
-# TODO
+meh + shift - return : open -a Firefox\ Developer\ Edition
 
 # reload skhd config
 meh - escape : $HOME/bin/wm-reload

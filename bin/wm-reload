@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 for service in yabai spacebar seanponeil/formulae/skhd; do
-  PID=$(launchctl list | grep "${service}")
+  PID=$(launchctl list | grep $(basename $service))
   if [[ -n "${PID}" ]]; then
     # Kickstarting active Homebrew services is faster
     # than a full restart
-    launchctl kickstart -k "gui/501/homebrew.mxcl.${service}"
+    launchctl kickstart -k "gui/501/homebrew.mxcl.$(basename $service)"
   else
     brew services start "${service}"
   fi
