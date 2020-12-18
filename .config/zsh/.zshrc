@@ -9,7 +9,7 @@ source ~/.cache/wal/colors-tty.sh
 GPG_TTY=$(tty)
 export GPG_TTY
 
-setopt extendedglob auto_menu listpacked alwaystoend no_nomatch histignorealldups sharehistory
+setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory
 
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions,encrypted}; do
