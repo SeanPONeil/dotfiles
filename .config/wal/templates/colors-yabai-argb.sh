@@ -3,6 +3,7 @@
 wallpaper={wallpaper}
 
 # Special
+background_transparent=0x00{background.strip}
 background_argb=0x{background.argb_strip}
 foreground_argb=0x{foreground.argb_strip}
 cursor_argb=0x{cursor.strip}
