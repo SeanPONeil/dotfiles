@@ -16,11 +16,12 @@ fs(){
 }
 
 wal() {
-  if [[ $(uname) == "Darwin" ]]; then
-    command wal -e -s -t -o ~/bin/wal-set $@
-  else
-    command wal -o wal-set $@
-  fi
+#  if [[ $(uname) == "Darwin" ]]; then
+#   command wal -e -s -t -o ~/bin/wal-set $@
+#  else
+#    command wal -o wal-set $@
+#  fi
+  command wal -o $HOME/.config/wal/bin/post $@
 }
 
 timeshell(){
