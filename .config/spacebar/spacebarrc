@@ -9,7 +9,7 @@ height=${BAR_HEIGHT:-20}
 position=${BAR_POSITION:-"top"}
 
 text_font=${BAR_TEXT_FONT:-"Tamzen:Medium:14.0"}
-icon_font=${BAR_ICON_FONT:-"3270Medium Nerd Font:Medium:16.0"}
+icon_font=${BAR_ICON_FONT:-"Symbols Nerd Font:1000-em:16.0"}
 
 icon_style=${BAR_ICON_STYLE:-"fill"}
 

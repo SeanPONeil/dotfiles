@@ -17,8 +17,8 @@ pkulev/zsh-rustup-completion
 g-plane/zsh-yarn-autocompletions
 gradle/gradle-completion
 
+mafredri/zsh-async
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 chitoku-k/fzf-zsh-completions
-mafredri/zsh-async
 zsh-users/zsh-syntax-highlighting
