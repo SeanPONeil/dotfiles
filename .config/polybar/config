@@ -49,10 +49,10 @@ inherit = base
 # dpi = 96
 # dpi = 0
 height = 2%
-font-0 = Tamzen:size=10;2
+font-0 = Tamzen:pixelsize=10;0
 # font-0 = TamzenForPowerline:size=13;2
 # font-1 = boxicons:size=12;2
-font-1 = Tamzen:size=10;2
+font-1 = Tamzen:pixelsize=10;0
 
 [bar/retina]
 inherit = base
