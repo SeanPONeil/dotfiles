@@ -1,7 +1,6 @@
+/** Basic config file **/
+
 configuration {
-  theme: "~/.cache/wal/colors-rofi-light.rasi";
-  font: "TamzenForPowerline 12";
+  show-icons:         true;
+  icon-theme:         "Papirus";
 }
-
-
-/* vim:ft=css

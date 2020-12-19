@@ -2,6 +2,7 @@
 meh - return : kitty \
                 --single-instance \
                 --directory=$HOME \
+                --override font_size=16 \
                 --listen-on=unix:/tmp/kitty
 
 # meh + shift - return : PATH="/usr/local/bin:$PATH" open -a Firefox\ Developer\ Edition

@@ -46,6 +46,7 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
+export PATH=$HOME/.config/rofi/bin:$PATH                        # rofi scripts
 export PATH=$ANDROID_SDK/platform-tools:$PATH                   # Android platform tools
 export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # use `gsed` as `sed`
@@ -57,6 +58,9 @@ export PATH=".:$PATH"                                           # gradle complet
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="$HOME/.config/yabai/bin:$PATH"                # yabai scripts
 fi
+
+
+# export PATH="$(gem env gemdir):$PATH"                             # ruby gems
 
 
 export NEO4J_HOME="/usr/local/opt/neo4j"

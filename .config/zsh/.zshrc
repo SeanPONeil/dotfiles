@@ -38,7 +38,9 @@ else
 fi
 
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+if [[ $TERM == "xterm-kitty" ]]; then
+  kitty + complete setup zsh | source /dev/stdin
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

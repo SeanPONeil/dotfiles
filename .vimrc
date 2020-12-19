@@ -63,7 +63,7 @@ let g:coc_global_extensions = [
       \ 'coc-go',
       \ 'coc-snippets',
       \ 'coc-highlight',
-      \ 'coc-python',
+      \ 'coc-pyright',
       \ 'coc-markdownlint',
       \ 'coc-template',
       \ 'coc-vimlsp',

@@ -8,6 +8,7 @@ super + Return
   kitty \
     --single-instance \
     --directory=$HOME \
+    --override font_size=12 \
     --listen-on=unix:/tmp/kitty
 
 # firefox

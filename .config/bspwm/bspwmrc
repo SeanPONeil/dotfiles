@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-xsetroot -cursor_name left_ptr &
-# setxkbmap -option caps:super
+# Set wallpaper
+$HOME/.fehbg
 
 # Fixes IntelliJ gray screen issue
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -28,7 +28,6 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc config focus_follows_pointer true
-bspc config focus_follows_monitor true
 
 bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true

@@ -63,7 +63,7 @@ xset +fp $HOME/.fonts
 
 xset fp rehash
 
-xrandr
+xrandr --auto
 sleep 1
 
 [ -f /etc/xprofile ] && . /etc/xprofile
@@ -77,12 +77,12 @@ export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 # run local xhost
 xhost local:root
 
-xlayoutdisplay
+# xlayoutdisplay
 
 session=${1:-bspwm}
 
 case $session in
-  bspwm           ) exec bspwm >> ~/.bspwm/logfile 2>&1;;
+  bspwm           ) exec bspwm ;;
   plasma          ) exec startplasma-x11;;
   # No known session, try to run it as a command
   *               ) exec $1;;

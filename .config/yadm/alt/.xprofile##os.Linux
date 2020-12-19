@@ -5,6 +5,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 fi
 
 if [[ -z "$SSH_CLIENT" ]]; then
+  xsetroot -cursor_name left_ptr
   /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
   xsettingsd &
   picom -b
@@ -12,6 +13,6 @@ if [[ -z "$SSH_CLIENT" ]]; then
   unclutter &
   dunst &
   networkd-notify &
-  monitor-hotplug &
+  # monitor-hotplug &
   wal -R &
 fi
