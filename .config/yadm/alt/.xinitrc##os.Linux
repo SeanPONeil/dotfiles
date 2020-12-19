@@ -60,7 +60,6 @@ mkfontscale
 mkfontdir
 xset +fp $HOME/.fonts
 
-
 xset fp rehash
 
 xrandr --auto

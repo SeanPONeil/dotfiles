@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+polybar-msg cmd quit
+
+echo "---" | tee -a /tmp/polybar.log > /dev/null
+
+for monitor in $(polybar --list-monitors | cut -d':' -f1); do
+  MONITOR="${monitor}" polybar standard &> /tmp/polybar.log &
+done

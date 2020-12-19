@@ -12,7 +12,7 @@ secondary = $(xrdb:color2:#222)
 alert = ${xrdb:color4:#222}
 
 [base]
-monitor = ${env:MONITOR:}
+monitor = ${env:MONITOR:eDP1}
 width = 100%
 radius = 0
 fixed-center = true
@@ -45,23 +45,23 @@ cursor-scroll = ns-resize
 
 [bar/standard]
 inherit = base
-# monitor = ${env:MONITOR:eDP1}
+monitor = ${env:MONITOR:eDP1}
 # dpi = 96
 # dpi = 0
 height = 2%
-font-0 = Tamzen:pixelsize=10;0
+font-0 = monospace:pixelsize=12;1
 # font-0 = TamzenForPowerline:size=13;2
 # font-1 = boxicons:size=12;2
-font-1 = Tamzen:pixelsize=10;0
+font-1 = monospace:pixelsize=12;1
 
 [bar/retina]
 inherit = base
 monitor = ${env:MONITOR:DP1}
 # dpi = 144
 dpi = 0
-height = 2%
-font-0 = TamzenForPowerline:size=18;2
-font-1 = boxicons:size=18;5
+height = 1%
+font-0 = monospace:size=16;2
+font-1 = boxicons:size=16;5
 
 [module/pulseaudio-control]
 type = custom/script

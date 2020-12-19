@@ -1,15 +1,10 @@
-#!/bin/bash
 #
 # wm independent hotkeys
 #
 
 # terminal emulator
 super + Return
-  kitty \
-    --single-instance \
-    --directory=$HOME \
-    --override font_size=12 \
-    --listen-on=unix:/tmp/kitty
+  kitty --single-instance --directory=$HOME
 
 # firefox
 super + {shift + Return}

@@ -39,8 +39,4 @@ else
   sxhkd &
 fi
 
-if pgrep polybar; then
-  pkill polybar
-fi
-
-polybar standard &
+$HOME/.config/polybar/launch
