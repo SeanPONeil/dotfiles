@@ -2,6 +2,8 @@
 meh - return : kitty \
                 --single-instance \
                 --directory=$HOME \
+                --config="$HOME/.config/kitty/kitty.conf" \
+                --config="$HOME/.config/kitty/font_macos.conf" \
                 --override font_size=16 \
                 --listen-on=unix:/tmp/kitty
 
