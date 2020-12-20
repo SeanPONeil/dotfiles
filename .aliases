@@ -104,12 +104,15 @@ alias bluetooth="blueutil"
 alias pip3="python3 -m pip"
 alias pip2="python2 -m pip"
 
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+# alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # pbcopy on linux
 if [[ $(uname) == "Linux" ]]; then
   alias pbcopy="xclip -selection clipboard"
   alias pbpaste="xclip -selection clipboard -o"
+  
+  alias polybar-launch="$HOME/.config/polybar/launch"
+  alias bspwmrc="$HOME/.config/bspwm/bspwmrc"
 fi
 
 alias kittyssh="kitty +kitten ssh "

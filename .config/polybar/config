@@ -1,12 +1,12 @@
 [colors]
 background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color3:#222}
+background-alt = ${xrdb:color7:#222}
 transparent = #00
 ;background = ${colors.transparent}
 ;background-alt = ${colors.transparent}
-foreground = ${xrdb:color7:#222}
-foreground-alt = ${xrdb:color7:#222}
-highlight = ${xrdb:color2:#222}
+foreground = ${xrdb:color2:#222}
+foreground-alt = ${xrdb:color3:#222}
+highlight = ${xrdb:color4:#222}
 primary = ${xrdb:color1:#222}
 secondary = $(xrdb:color2:#222)
 alert = ${xrdb:color4:#222}
@@ -24,12 +24,13 @@ wm-restack = bspwm
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 1
 line-color = ${colors.foreground}
 
 border-size = 0
 border-color = ${colors.foreground-alt}
 
+padding-top   = 1
 padding-right = 1
 
 module-margin = 1
@@ -38,30 +39,17 @@ modules-left = bspwm
 modules-center = date
 modules-right = pulseaudio-control bluetooth backlight battery wlan powermenu
 
-# tray-position = right
-;tray-padding =
-cursor-click = pointer
-cursor-scroll = ns-resize
+cursor-click = default
+cursor-scroll = default
 
 [bar/standard]
 inherit = base
 monitor = ${env:MONITOR:eDP1}
-# dpi = 96
-# dpi = 0
-height = 2%
-font-0 = monospace:pixelsize=12;1
-# font-0 = TamzenForPowerline:size=13;2
-# font-1 = boxicons:size=12;2
-font-1 = monospace:pixelsize=12;1
-
-[bar/retina]
-inherit = base
-monitor = ${env:MONITOR:DP1}
-# dpi = 144
-dpi = 0
-height = 1%
-font-0 = monospace:size=16;2
-font-1 = boxicons:size=16;5
+dpi-x   = 0
+dpi-y   = 0
+height  = 2%
+font-0  = monospace:size=12;1
+font-1  = Symbols Nerd Font:size=12;1
 
 [module/pulseaudio-control]
 type = custom/script
@@ -92,19 +80,19 @@ ws-icon-default = 
 label-focused = %name%
 ; label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-padding = 1
 
 label-occupied = %name%
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.foreground}
+label-occupied-foreground = ${colors.foreground-alt}
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
+; label-empty-foreground = ${colors.foreground}
 label-empty-padding = 1
 
 

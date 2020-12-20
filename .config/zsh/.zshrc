@@ -24,7 +24,7 @@ unsetopt null_glob
 source $HOME/.local/share/fonts/i_all.sh
 
 . $ZDOTDIR/antibody
-source $ZDOTDIR/completion.zsh
+# source $ZDOTDIR/completion.zsh
 source $ZDOTDIR/.plugins.sh
 
 autoload -Uz compinit

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-polybar-msg cmd quit
+if pgrep polybar; then
+  polybar-msg cmd quit
+fi
 
 echo "---" | tee -a /tmp/polybar.log > /dev/null
 
