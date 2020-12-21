@@ -19,10 +19,14 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
-export ANDROID_SDK=$HOME/Android/Sdk
-export ANDROID_SDK_ROOT=$ANDROID_SDK
-export ANDROID_HOME=$ANDROID_SDK
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+if [[ -e "${HOME}/Android/Sdk" ]]; then
+  export ANDROID_SDK=$HOME/Android/Sdk
+  export ANDROID_SDK_ROOT=$ANDROID_SDK
+  export ANDROID_HOME=$ANDROID_SDK
+  export PATH=$ANDROID_SDK/platform-tools:$PATH                   # Android platform tools
+  export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
+fi
 
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
@@ -47,8 +51,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$HOME/.config/rofi/bin:$PATH                        # rofi scripts
-export PATH=$ANDROID_SDK/platform-tools:$PATH                   # Android platform tools
-export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # use `gsed` as `sed`
 export PATH=$HOME/.fzf/bin:$PATH                                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                              # rust scripts
