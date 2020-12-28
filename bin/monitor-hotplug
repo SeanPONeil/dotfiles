@@ -5,32 +5,27 @@ DP1=$(xrandr -q | grep -w "DP1 connected")
 eDP1=$(xrandr -q | grep -w "eDP1 connected")
 
 if [[ -n "$DP2" ]]; then
-  echo "DP2 is plugged in."
+  echo "Configuring displays for DP2 as primary"
+  xrandr \
+    --dpi 156 \
+    --output DP2 --mode 3840x2160 --rate 60 --primary \
+    --output DP1 --off \
+    --output eDP1 --off \
+    --output VIRTUAL1 --off
 
-  xrandr --output DP2 --mode 1920x1080 --primary \
-    --output eDP1 --mode 1920x1080 --left-of DP2 \
-
-  bspc wm --reorder-monitors eDP1 DP2
-  bspc monitor eDP1 -d 9 10
-  bspc monitor DP2 -d 1 2 3 4 5 6 7 8
+  echo "Xft.dpi: 156" | xrdb -merge
 
 elif [[ -n "$eDP1" ]]; then
-  echo "Only the internal display was found."
+  echo "No external displays found, configuring for eDP1 as primary"
+  xrandr \
+    --dpi 96 \
+    --output eDP1 --primary --auto
 
-  xrandr --output eDP1 --primary --auto
-
-  bspc wm --reorder-monitors eDP1
-  bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10
-
+  echo "Xft.dpi: 96" | xrdb -merge
 
 else
-  echo "No external monitors are plugged in."
-
+  echo "Defaulting to xrandr --auto"
   xrandr --auto
 fi
 
-bspc config window_gap 10
-
-/home/sean/bin/bar.go
-
-~/.fehbg
+$HOME/.config/bspwm/bspwmrc

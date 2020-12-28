@@ -1,4 +1,3 @@
 import:
-  - .cache/wal/colors-alacritty.yml
   - .config/alacritty/config.d/common.yml
   - .config/alacritty/config.d/font-default.yml

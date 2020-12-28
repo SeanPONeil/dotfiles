@@ -3,7 +3,7 @@ symbol = " "
 disabled = true
 
 [battery]
-full_symbol = ""
+full_symbol = ""
 charging_symbol = ""
 discharging_symbol = ""
 
@@ -58,10 +58,10 @@ symbol = " "
 symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
 disabled = true
 
 [package]
@@ -77,13 +77,13 @@ symbol = " "
 symbol = " "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
-symbol = " "
+symbol = " "
 
 [swift]
-symbol = "ﯣ "
+symbol = " "
 
 [env_var]
 variable = "SPRING_PROFILES_ACTIVE"

@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-  kitty --single-instance --directory=$HOME
+  termite --directory=$HOME
 
 # firefox
 super + {shift + Return}

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 if pgrep polybar; then
-  polybar-msg cmd quit
+  polybar-msg cmd quit > /dev/null
 fi
 
 echo "---" | tee -a /tmp/polybar.log > /dev/null
 
-for monitor in $(polybar --list-monitors | cut -d':' -f1); do
+for monitor in $(polybar --list-monitors | cut -d':' -f1 ); do
   MONITOR="${monitor}" polybar standard &> /tmp/polybar.log &
 done
