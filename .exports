@@ -65,8 +65,8 @@ fi
 # export PATH="$(gem env gemdir):$PATH"                             # ruby gems
 
 
-export NEO4J_HOME="/usr/local/opt/neo4j"
-export PATH="/usr/local/opt/neo4j/bin:$PATH"
+# export NEO4J_HOME="/usr/local/opt/neo4j"
+# export PATH="/usr/local/opt/neo4j/bin:$PATH"
 
 # Pure prompt customization
 export PURE_PROMPT_SYMBOL=$i_mdi_chevron_right
