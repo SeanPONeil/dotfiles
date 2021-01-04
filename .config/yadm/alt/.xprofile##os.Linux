@@ -5,9 +5,9 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
 fi
 
 if [[ -z "$SSH_CLIENT" ]]; then
-  xsetroot -cursor_name left_ptr
   /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
   xsettingsd &
+  xsetroot -cursor_name left_ptr
   picom -b
   libinput-gestures-setup start
   unclutter &

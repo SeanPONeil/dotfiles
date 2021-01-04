@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export XDG_CURRENT_DESKTOP=bspwm
+
 # Set wallpaper
 $HOME/.fehbg
 

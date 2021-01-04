@@ -15,6 +15,15 @@ if [[ -n "$DP2" ]]; then
 
   echo "Xft.dpi: 156" | xrdb -merge
 
+  xrandr \
+    --dpi 156 \
+    --output DP2 --mode 3840x2160 --rate 60 --primary \
+    --output DP1 --off \
+    --output eDP1 --off \
+    --output VIRTUAL1 --off
+
+  echo "Xft.dpi: 156" | xrdb -merge
+
 elif [[ -n "$eDP1" ]]; then
   echo "No external displays found, configuring for eDP1 as primary"
   xrandr \
