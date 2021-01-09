@@ -116,3 +116,5 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 alias kittyssh="kitty +kitten ssh "
+
+alias neo4jlog="tail -f /usr/local/opt/neo4j/logs/neo4j.log"

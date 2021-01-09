@@ -1,9 +1,0 @@
-font:
-  normal:
-    family: Tamzen8x16r Nerd Font Complete
-  bold:
-    family: Tamzen8x16b Nerd Font Complete
-  size: 16.0
-  use_thin_strokes: true 
-
-draw_bold_text_with_bright_colors: false

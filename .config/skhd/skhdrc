@@ -1,11 +1,15 @@
 # open terminal
-meh - return : kitty \
-                --single-instance \
-                --directory=$HOME \
-                --config="$HOME/.config/kitty/kitty.conf" \
-                --config="$HOME/.config/kitty/font_macos.conf" \
-                --override font_size=16 \
-                --listen-on=unix:/tmp/kitty
+# meh - return : kitty \
+#                 --single-instance \
+#                 --directory=$HOME \
+#                 --config="$HOME/.config/kitty/kitty.conf" \
+#                 --config="$HOME/.config/kitty/font_macos.conf" \
+#                 --override font_size=16 \
+#                 --listen-on=unix:/tmp/kitty
+
+meh - return : alacritty \
+                --option font.normal.family=Tamzen Nerd Font \
+                --option font.size=16.0
 
 # meh + shift - return : PATH="/usr/local/bin:$PATH" open -a Firefox\ Developer\ Edition
 
