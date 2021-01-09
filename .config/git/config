@@ -8,18 +8,12 @@
   patch = !git --no-pager diff --no-color
 [color]
   ui = true
+[interactive]
+  diffFilter = delta --color-only
 [core]
 	excludesfile = ~/.config/git/gitignore_global
-	pager = less -+$LESS -RS
-[diff]
-  tool = kitty
-  guitool = kitty.gui
-[difftool]
-  prompt = false
-  trustExitCode = true
-[difftool "kitty"]
-  cmd = kitty +kitten diff $LOCAL $REMOTE
-[difftool "kitty.gui"]
-  cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+  pager = delta --diff-so-fancy
+[delta]
+  features = line-numbers decorations
 [init]
 	defaultBranch = main
