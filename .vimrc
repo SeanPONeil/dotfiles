@@ -27,6 +27,8 @@ Plug 'vim-scripts/PreserveNoEOL'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'tfnico/vim-gradle'
 Plug 'udalov/kotlin-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'voldikss/vim-floaterm'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
@@ -74,7 +76,8 @@ let g:coc_global_extensions = [
       \ 'coc-lists',
       \ 'coc-pairs',
       \ 'coc-explorer',
-      \ 'coc-snippets'
+      \ 'coc-snippets',
+      \ 'coc-floaterm',
       \]
 
 " mouse support because I suck
@@ -376,8 +379,6 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 nnoremap <silent><nowait> <space>l :<C-u>CocList<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
@@ -392,3 +393,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Show git lists
 nnoremap <silent><nowait> <space>g  :<C-u>CocList --normal gstatus<CR>
+" Open coc-explorer
+:nmap <space>e :CocCommand explorer<CR>

@@ -41,9 +41,9 @@ export VISUAL=nvim
 export MANPAGER="nvim -c 'set ft=man' -"
 
 # fzf customization
-export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git'
+# export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # setup PATH
 export PATH=$HOME/.local/share/language-servers/kotlin-language-server/server/build/install/server/bin:$PATH
@@ -52,7 +52,8 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$HOME/.config/rofi/bin:$PATH                        # rofi scripts
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # use `gsed` as `sed`
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # `gsed` as `sed`
+export PATH=/usr/local/opt/gnu-getopt/bin:$PATH                 # gnu-getopt over bad getopt
 export PATH=$HOME/.fzf/bin:$PATH                                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                              # rust scripts
 export PATH=$GOBIN:$PATH                                        # go binaries
@@ -86,7 +87,10 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 # export PAGER="less -r"
-export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
-export LESS="-R"
+# export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export PAGER="less -RF"
+export LESS="-RF"
+
+export NEO4J_HOME="/usr/local/opt/neo4j/libexec"
 
 # vim: filetype=bash

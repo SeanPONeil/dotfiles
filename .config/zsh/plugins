@@ -3,13 +3,14 @@ zpm-zsh/clipboard
 
 ohmyzsh/ohmyzsh                   path:plugins/vi-mode
 ohmyzsh/ohmyzsh                   path:plugins/autojump
-ohmyzsh/ohmyzsh                   path:plugins/colored-man-pages
 ohmyzsh/ohmyzsh                   path:plugins/dotenv
 ohmyzsh/ohmyzsh                   path:plugins/pipenv
 ohmyzsh/ohmyzsh                   path:plugins/brew
 ohmyzsh/ohmyzsh                   path:plugins/pip
 ohmyzsh/ohmyzsh                   path:plugins/rvm
 ohmyzsh/ohmyzsh                   path:plugins/archlinux
+ohmyzsh/ohmyzsh                   path:plugins/nmap
+ohmyzsh/ohmyzsh         kind:zsh  path:plugins/aws
 
 Tarrasch/zsh-autoenv
 zdharma/zsh-diff-so-fancy
@@ -17,8 +18,17 @@ pkulev/zsh-rustup-completion
 g-plane/zsh-yarn-autocompletions
 gradle/gradle-completion
 
+chrissicool/zsh-256color
+# chriskempson/base16-shell         kind:zsh
+zuxfoucault/colored-man-pages_mod
+unixorn/docker-helpers.zshplugin
+reegnz/jq-zsh-plugin
+jhwohlgemuth/zsh-handy-helpers
+jhwohlgemuth/zsh-pentest
+
 mafredri/zsh-async
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 chitoku-k/fzf-zsh-completions
 zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search

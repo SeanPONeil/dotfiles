@@ -49,12 +49,16 @@ yabai -m config insert_feedback_color       $foreground
 
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
-yabai -m rule --add app="^Firefox Developer Edition$" opacity=1.0
-yabai -m rule --add app="^Firefox Developer Edition$" border=off
 yabai -m rule --add app="^Chrome$" opacity=1.0
-yabai -m rule --add app="^Chrome$" border=off
-yabai -m rule --add app="^IntelliJ IDEA$" border=off
 yabai -m rule --add app="^Slack$" opacity=1.0
+yabai -m rule --add app="^Pritunl$" manage=off
+
+# jetbrains_apps="^(IntelliJ IDEA|Android Studio)$"
+
+# float all JetBrains apps
+# yabai -m rule --add app="${jetbrains_apps}" manage=off
+
+# yabai -m signal --add event=window_created app="${jetbrains_apps}" action="${XDG_CONFIG_HOME}/yabai/bin/float_window_when_only_window"
 
 
 # automatically focus the window below the cursor after a window/application is closed.
