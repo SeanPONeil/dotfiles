@@ -12,6 +12,9 @@ font:
   normal:
     family: Tamzen Nerd Font
   size: 16.0
+  glyph_offset:
+    x: 0
+    y: 0
 
 window:
   dynamic_padding: true

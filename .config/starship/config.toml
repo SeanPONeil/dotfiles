@@ -23,6 +23,7 @@ symbol = " "
 symbol = " "
 
 [docker_context]
+symbol = " "
 disabled = false
 only_with_files = false
 
