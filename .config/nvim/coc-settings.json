@@ -9,14 +9,22 @@
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "disableWorkspaceFolders": true,
-      "filetypes": ["go"]
+      "rootPatterns": [
+        "go.mod"
+      ],
+      "filetypes": [
+        "go"
+      ],
     },
     "kotlin": {
       "command": "~/.lsp/kotlin/server/bin/kotlin-language-server",
-      "filetypes": ["kotlin"]
+      "filetypes": [
+        "kotlin"
+      ]
     }
   },
-  "git.enableGutters": true
+  "git.enableGutters": true,
+  "go.goplsOptions": {
+    "completeUnimported": true
+  }
 }
