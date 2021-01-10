@@ -7,7 +7,6 @@ cursor:
 
 env:
   TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: '1.0'
 
 font:
   normal:
@@ -27,3 +26,9 @@ window:
 scrolling:
   history: 30000
   multiplier: 5
+
+key_bindings:
+  - { key: Key0,    mods: Control,    action: ResetFontSize }
+  - { key: Equals,  mods: Control,    action: IncreaseFontSize }
+  - { key: Plus,     mods: Control,    action: IncreaseFontSize }
+  - { key: Minus,   mods: Control,    action: DecreaseFontSize }
