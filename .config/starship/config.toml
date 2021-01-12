@@ -20,7 +20,7 @@ symbol = "   "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = "  "
 
 [docker]
 symbol = " "
@@ -31,19 +31,19 @@ disabled = false
 only_with_files = false
 
 [elixir]
-symbol = " "
+symbol = ""
 
 [elm]
-symbol = " "
+symbol = ""
 
 [git_branch]
 symbol = " "
 
 [golang]
-symbol = "  "
+symbol = ""
 
 [haskell]
-symbol = " "
+symbol = "  "
 
 [hg_branch]
 symbol = " "
@@ -56,13 +56,13 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "  "
 
 [nim]
 symbol = " "
 
 [nix_shell]
-symbol = " "
+symbol = "  "
 
 [nodejs]
 symbol = " "
