@@ -3,7 +3,7 @@
 # PyWal
 if [[ -z "$SSH_CLIENT" ]]; then
   source ~/.cache/wal/colors.sh
-  source ~/.cache/wal/colors-tty.sh
+  # source ~/.cache/wal/colors-tty.sh
   (cat ~/.cache/wal/sequences &)
 fi
 
@@ -11,7 +11,7 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 
-setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory
+setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
 
 setopt null_glob
 for file in ~/.{exports,aliases,path,dockerfunc,extra,functions,encrypted}; do
