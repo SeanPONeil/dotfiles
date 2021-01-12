@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-for service in yabai spacebar seanponeil/formulae/skhd; do
+kickstart() {
+  service=$1
   PID=$(launchctl list | grep $(basename $service))
   if [[ -n "${PID}" ]]; then
     # Kickstarting active Homebrew services is faster
@@ -9,4 +10,8 @@ for service in yabai spacebar seanponeil/formulae/skhd; do
   else
     brew services start "${service}"
   fi
-done
+}
+
+kickstart yabai
+kickstart seanponeil/formulae/skhd
+kickstart spacebar
