@@ -1,11 +1,6 @@
 #!/usr/bin/env zsh
 
-# PyWal
-if [[ -z "$SSH_CLIENT" ]]; then
-  source ~/.cache/wal/colors.sh
-  # source ~/.cache/wal/colors-tty.sh
-  (cat ~/.cache/wal/sequences &)
-fi
+source ~/.cache/wal/colors.sh
 
 # GPG pinentry
 GPG_TTY=$(tty)

@@ -122,3 +122,4 @@ alias bluetooth-reset-pairing-all="bluetooth-reset-pairing A8:91:3D:E3:EC:6F 68:
 
 alias yabairc="$XDG_CONFIG_HOME/yabai/yabairc"
 alias spacebarrc="$XDG_CONFIG_HOME/spacebar/spacebarrc"
+alias jqc="jq --color-output"

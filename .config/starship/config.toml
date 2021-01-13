@@ -23,10 +23,10 @@ symbol = " "
 read_only = "  "
 
 [docker]
-symbol = " "
+symbol = "  "
 
 [docker_context]
-symbol = " "
+symbol = "  "
 disabled = false
 only_with_files = false
 
