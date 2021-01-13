@@ -8,30 +8,38 @@ cursor:
 env:
   TERM: alacritty
 
+draw_bold_text_with_bright_colors: true
 font:
   normal:
     family: Tamzen Nerd Font
   size: 16.0
+  offset:
+    x: 0
+    y: 0
   glyph_offset:
     x: 0
     y: 0
 
 window:
+  energy: Performance
   dynamic_padding: true
   decorations: none
-  startup_mode: Windowed
+  startup_mode: Maximized
   dynamic_title: true
-  gtk_theme_variant: dark
+  gtk_theme_variant: None
   padding:
-    x: 5
-    y: 1
+    x: 1
+    y: 0
 
 scrolling:
   history: 30000
   multiplier: 5
+
+working_directory: ~
 
 key_bindings:
   - { key: Key0,    mods: Control,    action: ResetFontSize }
   - { key: Equals,  mods: Control,    action: IncreaseFontSize }
   - { key: Plus,     mods: Control,    action: IncreaseFontSize }
   - { key: Minus,   mods: Control,    action: DecreaseFontSize }
+
