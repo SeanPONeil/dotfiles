@@ -5,20 +5,20 @@
       "subtext" : {
         "size" : 12,
         "colorSelected" : "#839496FF",
-        "font" : "Tamzen",
+        "font" : "Tamzen Nerd Font",
         "color" : "#586E75FF"
       },
       "shortcut" : {
         "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamzen",
+        "font" : "Tamzen Nerd Font",
         "color" : "#B5891BFF"
       },
       "backgroundSelected" : "#063642FF",
       "text" : {
         "size" : 16,
         "colorSelected" : "#B5891BFF",
-        "font" : "Tamzen",
+        "font" : "Tamzen Nerd Font",
         "color" : "#93A1A1FF"
       },
       "iconPaddingHorizontal" : 5,
@@ -33,7 +33,7 @@
       "text" : {
         "size" : 32,
         "colorSelected" : "#032B36FF",
-        "font" : "Tamzen",
+        "font" : "Tamzen Nerd Font",
         "color" : "#B5891BFF"
       },
       "background" : "#063642E5",
@@ -51,7 +51,6 @@
       "paddingVertical" : 10
     },
     "credit" : "Antonio Miranda",
-    "visualEffectMode" : 2,
     "separator" : {
       "color" : "#063642FF",
       "thickness" : 1
