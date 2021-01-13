@@ -28,8 +28,10 @@ meh + shift - j : yabai -m window --swap south
 meh + shift - k : yabai -m window --swap north
 meh + shift - l : yabai -m window --swap east
 
-# close window
+# close window (but only tabs in Firefox?)
 meh - w : skhd --key "cmd - w"
+# super close windows? (Closes Firefox window?)
+meh + shift - w: skhd --key "cmd + shift - w"
 
 # create and destroy desktop
 meh - 0x18: yabai -m space --create && \
@@ -43,8 +45,8 @@ hyper - 0x18: yabai -m space --create && \
                 yabai -m space --focus $last
 
 # fast focus desktop
-meh - 0x21 : yabai -m space --focus prev
-meh - 0x1E : yabai -m space --focus next
+meh - 0x21 : yabai -m space --focus prev || yabai -m space --focus last
+meh - 0x1E : yabai -m space --focus next || yabai -m space --focus first
 meh - 1 : yabai -m space --focus 1
 meh - 2 : yabai -m space --focus 2
 meh - 3 : yabai -m space --focus 3
@@ -88,18 +90,18 @@ shift + ctrl - s : yabai -m window --move 0:20
 shift + ctrl - w : yabai -m window --move 0:-20
 shift + ctrl - d : yabai -m window --move 20:0
 
-# increase window size
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - s : yabai -m window --resize bottom:0:20
-shift + alt - w : yabai -m window --resize top:0:-20
-shift + alt - d : yabai -m window --resize right:20:0
-
-# decrease window size
-shift + cmd - a : yabai -m window --resize left:20:0
-shift + cmd - s : yabai -m window --resize bottom:0:-20
-shift + cmd - w : yabai -m window --resize top:0:20
-shift + cmd - d : yabai -m window --resize right:-20:0
-
+# # increase window size
+# shift + alt - a : yabai -m window --resize left:-20:0
+# shift + alt - s : yabai -m window --resize bottom:0:20
+# shift + alt - w : yabai -m window --resize top:0:-20
+# shift + alt - d : yabai -m window --resize right:20:0
+# 
+# # decrease window size
+# shift + cmd - a : yabai -m window --resize left:20:0
+# shift + cmd - s : yabai -m window --resize bottom:0:-20
+# shift + cmd - w : yabai -m window --resize top:0:20
+# shift + cmd - d : yabai -m window --resize right:-20:0
+# 
 # set insertion point in focused container
 ctrl + alt - h : yabai -m window --insert west
 ctrl + alt - j : yabai -m window --insert south

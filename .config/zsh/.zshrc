@@ -29,6 +29,10 @@ source $HOME/.local/share/fonts/i_all.sh
 # source $ZDOTDIR/completion.zsh
 source $ZDOTDIR/.plugins.sh
 
+# completion related stuff
+CASE_SENSITIVE="false"
+setopt MENU_COMPLETE
+setopt no_list_ambiguous
 autoload -Uz compinit
 # Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
 if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
@@ -38,6 +42,7 @@ if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
 else
   compinit -i -C
 fi
+zstyle ':completion:*' menu yes select
 
 # Completion for kitty
 if [[ $TERM == "xterm-kitty" ]]; then
