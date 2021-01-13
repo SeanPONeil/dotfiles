@@ -29,6 +29,7 @@ Plug 'tfnico/vim-gradle'
 Plug 'udalov/kotlin-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'voldikss/vim-floaterm'
+Plug 'junegunn/vim-cfr'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
