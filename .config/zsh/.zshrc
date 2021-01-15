@@ -23,16 +23,15 @@ unsetopt null_glob
 source $HOME/.local/share/fonts/i_all.sh
 
 # zplug
-if [[ $(uname) == "Darwin" ]]; then
-  export ZPLUG_HOME=/usr/local/opt/zplug
-  source $ZPLUG_HOME/init.zsh
-elif [[ $(uname) == "Linux" ]]; then
-  source /usr/share/zsh/scripts/zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
+if ! zplug check; then
+  zplug install
 fi
+zplug load
 
-. $ZDOTDIR/antibody
+# . $ZDOTDIR/antibody
 # source $ZDOTDIR/completion.zsh
-source $ZDOTDIR/.plugins.sh
+# source $ZDOTDIR/.plugins.sh
 
 # completion related stuff
 CASE_SENSITIVE="false"

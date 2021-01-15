@@ -4,6 +4,12 @@ XDG_CACHE_HOME="$HOME/.cache"
 
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
+ZPLUG_HOME="$XDG_DATA_HOME/zplug"
+if [[ ! -f "$ZPLUG_HOME/init.zsh" ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+fi
+ZPLUG_LOADFILE="$XDG_CONFIG_HOME/zsh/plugins.zsh"
+
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK

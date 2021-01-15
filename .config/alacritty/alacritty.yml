@@ -36,6 +36,8 @@ scrolling:
 
 working_directory: ~
 
+alt_sends_esc: false
+
 key_bindings:
   - { key: Key0,    mods: Control,    action: ResetFontSize }
   - { key: Equals,  mods: Control,    action: IncreaseFontSize }
