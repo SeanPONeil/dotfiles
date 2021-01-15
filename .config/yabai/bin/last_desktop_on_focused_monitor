@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-last=$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')
-echo "$last"
