@@ -1,6 +1,7 @@
 
 import:
   - ~/.cache/wal/colors-alacritty.yml
+  - ~/.config/alacritty/font.yml
 
 cursor:
   style: Block
@@ -8,14 +9,8 @@ cursor:
 env:
   TERM: alacritty
 
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 font:
-  normal:
-    family: Tamzen Nerd Font
-    style:  Medium
-  bold:
-    family: Tamzen Nerd Font
-    style:  Medium
   size: 16.0
   offset:
     x: 0
