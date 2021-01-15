@@ -22,6 +22,14 @@ unsetopt null_glob
 # Nerd Font symbol env vars
 source $HOME/.local/share/fonts/i_all.sh
 
+# zplug
+if [[ $(uname) == "Darwin" ]]; then
+  export ZPLUG_HOME=/usr/local/opt/zplug
+elif [[ $(uname) == "Linux" ]]; then
+  export /usr/share/zsh/scripts/zplug
+fi
+source $ZPLUG_HOME/init.zsh
+
 . $ZDOTDIR/antibody
 # source $ZDOTDIR/completion.zsh
 source $ZDOTDIR/.plugins.sh
