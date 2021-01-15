@@ -25,10 +25,10 @@ source $HOME/.local/share/fonts/i_all.sh
 # zplug
 if [[ $(uname) == "Darwin" ]]; then
   export ZPLUG_HOME=/usr/local/opt/zplug
+  source $ZPLUG_HOME/init.zsh
 elif [[ $(uname) == "Linux" ]]; then
-  export /usr/share/zsh/scripts/zplug
+  source /usr/share/zsh/scripts/zplug/init.zsh
 fi
-source $ZPLUG_HOME/init.zsh
 
 . $ZDOTDIR/antibody
 # source $ZDOTDIR/completion.zsh
