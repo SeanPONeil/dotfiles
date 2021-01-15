@@ -9,7 +9,8 @@ height=${BAR_HEIGHT:-20}
 position=${BAR_POSITION:-"top"}
 
 text_font=${BAR_TEXT_FONT:-"Tamzen Nerd Font:Medium:14.0"}
-icon_font=${BAR_ICON_FONT:-"Symbols Nerd Font:1000-em:16.0"}
+# icon_font=${BAR_ICON_FONT:-"Symbols Nerd Font:1000-em:16.0"}
+icon_font=${BAR_ICON_FONT:-"Tamzen Nerd Font:Medium:16.0"}
 
 icon_style=${BAR_ICON_STYLE:-"fill"}
 
@@ -20,11 +21,11 @@ spacebar -m config spacing_right      20
 spacebar -m config text_font          "${text_font}"
 spacebar -m config icon_font          "${icon_font}"
 spacebar -m config background_color   $background
-spacebar -m config foreground_color   $color3
-spacebar -m config power_icon_color   $color3
-spacebar -m config battery_icon_color $color3
-spacebar -m config space_icon_color   $foreground
-spacebar -m config clock_icon_color   $color3
+spacebar -m config foreground_color   $color6
+spacebar -m config power_icon_color   $color6
+spacebar -m config battery_icon_color $color6
+spacebar -m config space_icon_color   $color3
+spacebar -m config clock_icon_color   $color6
 
 
 if [[ $icon_style == "fill" ]]; then

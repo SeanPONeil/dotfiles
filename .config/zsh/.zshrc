@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
 source ~/.cache/wal/colors.sh
-
+if [[ -z "$SSH_CLIENT" ]]; then
+  (cat ~/.cache/wal/sequences &)
+fi
 # GPG pinentry
 GPG_TTY=$(tty)
 export GPG_TTY

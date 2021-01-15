@@ -30,6 +30,7 @@ Plug 'udalov/kotlin-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
+Plug 'neo4j-contrib/cypher-vim-syntax'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 

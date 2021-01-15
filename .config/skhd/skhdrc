@@ -34,7 +34,8 @@ meh + shift - w: skhd --key "cmd + shift - w"
 # create and destroy desktop
 meh - 0x18: yabai -m space --create && \
             yabai -m space --focus next
-meh - 0x1B: yabai -m space --destroy
+meh - 0x1B: yabai -m space --destroy && \
+            yabai -m space --focus next
 
 # create desktop, send and follow focused window
 hyper - 0x18: yabai -m space --create && \
