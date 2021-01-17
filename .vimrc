@@ -31,6 +31,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
 Plug 'neo4j-contrib/cypher-vim-syntax'
+Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 
