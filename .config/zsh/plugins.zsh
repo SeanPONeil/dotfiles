@@ -27,11 +27,4 @@ zplug "chitoku-k/fzf-zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
 
-zplug "stedolan/jq", \
-    from:gh-r, \
-    as:command, \
-    rename-to:jq
-zplug "b4b4r07/emoji-cli", \
-    on:"stedolan/jq"
-
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
