@@ -48,8 +48,8 @@ monitor = ${env:MONITOR:eDP1}
 dpi-x   = 0
 dpi-y   = 0
 height  = 2%
-font-0  = monospace:size=12;1
-font-1  = Symbols Nerd Font:size=12;1
+font-0  = monospace:size=12;2
+font-1  = Symbols Nerd Font:fontformat=truetype:style=2048-em:size=12;3
 
 [module/pulseaudio-control]
 type = custom/script
@@ -72,10 +72,10 @@ pin-workspaces = true
 format = <label-state> <label-mode>
 fuzzy-match = true
 
-ws-icon-0 = slack;
-ws-icon-1 = firefox;
-ws-icon-2 = music;
-ws-icon-default = 
+ws-icon-0 = slack;聆
+ws-icon-1 = firefox;
+ws-icon-2 = music;阮
+ws-icon-default =  
 
 label-focused = %name%
 ; label-focused-background = ${colors.background-alt}
@@ -123,13 +123,10 @@ format-connected-font = 2
 format-connected = <ramp-signal>
 
 format-disconnected = <label-disconnected>
-label-disconnected = 
+label-disconnected = 睊
 
 ramp-signal-font = 2
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
+ramp-signal-0 = 直
 
 
 [module/battery]
@@ -294,7 +291,7 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-font = 2
 ;label-close = 
 label-close = cancel
