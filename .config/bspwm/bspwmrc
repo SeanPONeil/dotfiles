@@ -36,9 +36,9 @@ bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors false
 
 if pgrep sxhkd; then
-  pkill -USR1 -x sxhkd;
+  pkill -USR1 sxhkd;
 else
-  sxhkd &
+  nohup sxhkd &
 fi
 
 $HOME/.config/polybar/launch

@@ -64,6 +64,7 @@ xset fp rehash
 
 xrandr --auto
 sleep 1
+autorandr --change
 
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . $HOME/.xprofile
