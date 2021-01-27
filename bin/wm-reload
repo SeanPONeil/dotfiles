@@ -13,5 +13,5 @@ kickstart() {
 }
 
 kickstart yabai
-kickstart seanponeil/formulae/skhd
+kickstart skhd
 kickstart spacebar

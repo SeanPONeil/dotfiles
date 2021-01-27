@@ -151,7 +151,7 @@ lcmd + lshift + lalt + lctrl - a : yabai -m space --layout bsp
 lcmd + lshift + lalt + lctrl - d : yabai -m space --layout float
 
 # toggle window between tiling and floating
-lcmd + lshift + lalt + lctrl - t : ~/.config/yabai/scripts/toggle_layout
+# lcmd + lshift + lalt + lctrl - t : ~/.config/yabai/scripts/toggle_layout
 
 # toggle visibility of spacebar
 lcmd + lshift + lalt + lctrl - b : ~/.config/spacebar/scripts/toggle
