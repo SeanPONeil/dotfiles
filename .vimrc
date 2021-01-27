@@ -1,12 +1,11 @@
 call plug#begin("~/.vim/plugged")
-Plug 'tpope/vim-sensible' " sets some normal standards
-Plug 'tpope/vim-eunuch'   " unix commands (especially :SudoWrite)
-Plug 'tpope/vim-vinegar'  " better netrw
-Plug 'tpope/vim-fugitive' " git functions
-Plug 'itchyny/lightline.vim' " status bar
-Plug 'seanponeil/wal.vim'  " pywal colorscheme
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-sensible'     " sets some normal standards
+Plug 'tpope/vim-eunuch'       " unix commands (especially :SudoWrite)
+Plug 'tpope/vim-vinegar'      " better netrw
+Plug 'tpope/vim-fugitive'     " git functions
+Plug 'tpope/vim-commentary'   " add coments with `gcc`
+Plug 'itchyny/lightline.vim'  " status bar
+Plug 'seanponeil/wal.vim'     " pywal colorscheme
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
@@ -32,6 +31,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " Plug 'chrisbra/csv.vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
@@ -49,7 +50,7 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:coc_global_extensions = [ 
+let g:coc_global_extensions = [
       \ 'coc-groovy',
       \ 'coc-marketplace',
       \ 'coc-json',

@@ -4,11 +4,12 @@ zplug "plugins/vi-mode",    from:oh-my-zsh
 zplug "plugins/autojump",   from:oh-my-zsh
 zplug "plugins/dotenv",     from:oh-my-zsh
 zplug "plugins/pipenv",     from:oh-my-zsh
-zplug "plugins/brew",       from:oh-my-zsh
-zplug "plugins/pip",        from:oh-my-zsh
-zplug "plugins/rvm",        from:oh-my-zsh
 zplug "plugins/nmap",       from:oh-my-zsh
 zplug "plugins/aws",        from:oh-my-zsh
+zplug "plugins/adb",        from:oh-my-zsh
+zplug "plugins/colorize",   from:oh-my-zsh
+zplug "plugins/cp",         from:oh-my-zsh
+zplug "plugins/gpg-agent",  from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
