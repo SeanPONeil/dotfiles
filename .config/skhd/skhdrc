@@ -1,5 +1,5 @@
 # open terminal
-# meh - return : kitty \
+# lcmd + lshift + lalt + lctrl - return : kitty \
 #                 --single-instance \
 #                 --directory=$HOME \
 #                 --config="$HOME/.config/kitty/kitty.conf" \
@@ -7,79 +7,82 @@
 #                 --override font_size=16 \
 #                 --listen-on=unix:/tmp/kitty
 
-meh - return : alacritty
+lcmd + lshift + lalt + lctrl - return  : alacritty
 
-# meh + shift - return : PATH="/usr/local/bin:$PATH" open -a Firefox\ Developer\ Edition
+# launch alfred
+lcmd + lshift + lalt + lctrl - space   : skhd --key "cmd - space"
+
+# lcmd + lshift + lalt + lctrl + rshift - return : PATH="/usr/local/bin:$PATH" open -a Firefox\ Developer\ Edition
 
 # reload skhd config
-meh - escape : $HOME/bin/wm-reload
+lcmd + lshift + lalt + lctrl - escape : $HOME/bin/wm-reload
 
 # focus window
-meh - h : yabai -m window --focus west
-meh - j : yabai -m window --focus south
-meh - k : yabai -m window --focus north
-meh - l : yabai -m window --focus east
+lcmd + lshift + lalt + lctrl - h : yabai -m window --focus west
+lcmd + lshift + lalt + lctrl - j : yabai -m window --focus south
+lcmd + lshift + lalt + lctrl - k : yabai -m window --focus north
+lcmd + lshift + lalt + lctrl - l : yabai -m window --focus east
 
 # move window
-meh + shift - h : yabai -m window --swap west
-meh + shift - j : yabai -m window --swap south
-meh + shift - k : yabai -m window --swap north
-meh + shift - l : yabai -m window --swap east
+lcmd + lshift + lalt + lctrl + rshift - h : yabai -m window --swap west
+lcmd + lshift + lalt + lctrl + rshift - j : yabai -m window --swap south
+lcmd + lshift + lalt + lctrl + rshift - k : yabai -m window --swap north
+lcmd + lshift + lalt + lctrl + rshift - l : yabai -m window --swap east
 
 # close window (but only tabs in Firefox?)
-meh - w : skhd --key "cmd - w"
+lcmd + lshift + lalt + lctrl - w : skhd --key "cmd - w"
 # super close windows? (Closes Firefox window?)
-meh + shift - w: skhd --key "cmd + shift - w"
+lcmd + lshift + lalt + lctrl + shift - w: skhd --key "cmd + shift - w"
 
 # create and destroy desktop
-meh - 0x18: yabai -m space --create
-meh - 0x1B: yabai -m space --destroy
+lcmd + lshift + lalt + lctrl - 0x18: yabai -m space --create
+lcmd + lshift + lalt + lctrl - 0x1B: yabai -m space --destroy
 
 # create desktop, send and follow focused window
-hyper - 0x18: yabai -m space --create && \
+lcmd + lshift + lalt + lctrl + rshift - 0x18: yabai -m space --create && \
                 last=$($HOME/.config/yabai/bin/last_desktop_on_focused_monitor) && \
                 yabai -m window --space $last && \
                 yabai -m space --focus $last
 
 # fast focus desktop
-meh - 0x21 : yabai -m space --focus prev || yabai -m space --focus last
-meh - 0x1E : yabai -m space --focus next || yabai -m space --focus first
-meh - 1 : yabai -m space --focus 1
-meh - 2 : yabai -m space --focus 2
-meh - 3 : yabai -m space --focus 3
-meh - 4 : yabai -m space --focus 4
-meh - 5 : yabai -m space --focus 5
-meh - 6 : yabai -m space --focus 6
-meh - 7 : yabai -m space --focus 7
-meh - 8 : yabai -m space --focus 8
-meh - 9 : yabai -m space --focus 9
-meh - 0 : yabai -m space --focus 10
+lcmd + lshift + lalt + lctrl - 0x21 : yabai -m space --focus prev || yabai -m space --focus last
+lcmd + lshift + lalt + lctrl - 0x1E : yabai -m space --focus next || yabai -m space --focus first
+lcmd + lshift + lalt + lctrl - 1 : yabai -m space --focus 1
+lcmd + lshift + lalt + lctrl - 2 : yabai -m space --focus 2
+lcmd + lshift + lalt + lctrl - 3 : yabai -m space --focus 3
+lcmd + lshift + lalt + lctrl - 4 : yabai -m space --focus 4
+lcmd + lshift + lalt + lctrl - 5 : yabai -m space --focus 5
+lcmd + lshift + lalt + lctrl - 6 : yabai -m space --focus 6
+lcmd + lshift + lalt + lctrl - 7 : yabai -m space --focus 7
+lcmd + lshift + lalt + lctrl - 8 : yabai -m space --focus 8
+lcmd + lshift + lalt + lctrl - 9 : yabai -m space --focus 9
+lcmd + lshift + lalt + lctrl - 0 : yabai -m space --focus 10
 
 # fast focus monitor
-meh - 0x2A : index="$($HOME/.config/yabai/bin/focused_monitor)" && \
+lcmd + lshift + lalt + lctrl - 0x2A : index="$($HOME/.config/yabai/bin/focused_monitor)" && \
                     other="$((index % 2 + 1))" && \
                     yabai -m display --focus $other
 
 # send window to desktop and follow focus
-#  
-# meh + shift - 1 : yabai -m window --space  1; yabai -m space --focus 1
-hyper - 0x21 : yabai -m window --space prev && \
+#
+# lcmd + lshift + lalt + lctrl + rshift - 1 : yabai -m window --space  1; yabai -m space --focus 1
+lcmd + lshift + lalt + lctrl + rshift - 0x21 : yabai -m window --space prev && \
                       yabai -m space --focus prev
-hyper - 0x1E : yabai -m window --space next && \
+lcmd + lshift + lalt + lctrl + rshift - 0x1E : yabai -m window --space next && \
                       yabai -m space --focus next
-meh + shift - 1 : yabai -m window --space  1;
-meh + shift - 2 : yabai -m window --space  2;
-meh + shift - 3 : yabai -m window --space  3;
-meh + shift - 4 : yabai -m window --space  4;
-meh + shift - 5 : yabai -m window --space  5;
-meh + shift - 6 : yabai -m window --space  6;
-meh + shift - 7 : yabai -m window --space  7;
-meh + shift - 8 : yabai -m window --space  8;
-meh + shift - 9 : yabai -m window --space  9;
-meh + shift - 0 : yabai -m window --space 10;
+lcmd + lshift + lalt + lctrl + rshift - 1 : yabai -m window --space  1;
+lcmd + lshift + lalt + lctrl + rshift - 2 : yabai -m window --space  2;
+lcmd + lshift + lalt + lctrl + rshift - 3 : yabai -m window --space  3;
+lcmd + lshift + lalt + lctrl + rshift - 4 : yabai -m window --space  4;
+lcmd + lshift + lalt + lctrl + rshift - 5 : yabai -m window --space  5;
+lcmd + lshift + lalt + lctrl + rshift - 6 : yabai -m window --space  6;
+lcmd + lshift + lalt + lctrl + rshift - 7 : yabai -m window --space  7;
+lcmd + lshift + lalt + lctrl + rshift - 8 : yabai -m window --space  8;
+lcmd + lshift + lalt + lctrl + rshift - 9 : yabai -m window --space  9;
+lcmd + lshift + lalt + lctrl + rshift - 0 : yabai -m window --space 10;
 
 # send desktop to monitor and follow focus
-meh + shift - 0x2A : $HOME/.config/yabai/bin/move_space_to_other_desktop
+lcmd + lshift + lalt + lctrl + rshift - 0x2A : $HOME/.config/yabai/bin/move_space_to_other_desktop
 
 # move window
 shift + ctrl - a : yabai -m window --move -20:0
@@ -92,13 +95,13 @@ shift + ctrl - d : yabai -m window --move 20:0
 # shift + alt - s : yabai -m window --resize bottom:0:20
 # shift + alt - w : yabai -m window --resize top:0:-20
 # shift + alt - d : yabai -m window --resize right:20:0
-# 
+#
 # # decrease window size
 # shift + cmd - a : yabai -m window --resize left:20:0
 # shift + cmd - s : yabai -m window --resize bottom:0:-20
 # shift + cmd - w : yabai -m window --resize top:0:20
 # shift + cmd - d : yabai -m window --resize right:-20:0
-# 
+#
 # set insertion point in focused container
 ctrl + alt - h : yabai -m window --insert west
 ctrl + alt - j : yabai -m window --insert south
@@ -106,7 +109,7 @@ ctrl + alt - k : yabai -m window --insert north
 ctrl + alt - l : yabai -m window --insert east
 
 # rotate tree
-meh - r : yabai -m space --rotate 90
+lcmd + lshift + lalt + lctrl - r : yabai -m space --rotate 90
 
 # mirror tree y-axis
 alt - y : yabai -m space --mirror y-axis
@@ -121,7 +124,7 @@ alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - f : yabai -m window --toggle float
 
 # toggle window fullscreen
-meh - f : yabai -m window --toggle zoom-fullscreen
+lcmd + lshift + lalt + lctrl - f : yabai -m window --toggle zoom-fullscreen
 
 # toggle window native fullscreen
 # shift + alt - f : yabai -m window --toggle native-fullscreen
@@ -144,14 +147,14 @@ alt - p : yabai -m window --toggle sticky;\
           yabai -m window --grid 10:10:8:0:1:1
 
 # change layout of desktop
-ctrl + alt - a : yabai -m space --layout bsp
-ctrl + alt - d : yabai -m space --layout float
+lcmd + lshift + lalt + lctrl - a : yabai -m space --layout bsp
+lcmd + lshift + lalt + lctrl - d : yabai -m space --layout float
 
 # toggle window between tiling and floating
-meh - t : ~/.config/yabai/scripts/toggle_layout
+lcmd + lshift + lalt + lctrl - t : ~/.config/yabai/scripts/toggle_layout
 
 # toggle visibility of spacebar
-meh - b : ~/.config/spacebar/scripts/toggle
+lcmd + lshift + lalt + lctrl - b : ~/.config/spacebar/scripts/toggle
 
 # toggle gaps and padding
-meh - g : ~/.config/yabai/bin/toggle_gaps
+lcmd + lshift + lalt + lctrl - g : ~/.config/yabai/bin/toggle_gaps
