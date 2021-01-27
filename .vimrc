@@ -12,7 +12,7 @@ Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
-" Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
+Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
 Plug 'vim-test/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -20,7 +20,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
 " Plug 'beeender/Comrade'           " intellij neovim link
-Plug 'godlygeek/tabular'
+" Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
@@ -32,6 +32,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
+" Plug 'chrisbra/csv.vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
 

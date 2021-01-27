@@ -88,8 +88,10 @@ export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 
 # export PAGER="less -r"
 # export LESSOPEN="|/usr/local/bin/lesspipe.sh %s" LESS_ADVANCED_PREPROCESSOR=1
+export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+export LESS_ADVANCED_PREPROCESSOR=1
 export PAGER="less -RF"
-export LESS="-RF"
+export LESS="-rf"
 
 export NEO4J_HOME="/usr/local/opt/neo4j/libexec"
 
