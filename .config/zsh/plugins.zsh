@@ -3,9 +3,7 @@ zplug "lukechilds/zsh-nvm"
 zplug "plugins/vi-mode",    from:oh-my-zsh
 zplug "plugins/autojump",   from:oh-my-zsh
 zplug "plugins/dotenv",     from:oh-my-zsh
-zplug "plugins/pipenv",     from:oh-my-zsh
 zplug "plugins/nmap",       from:oh-my-zsh
-zplug "plugins/aws",        from:oh-my-zsh
 zplug "plugins/adb",        from:oh-my-zsh
 zplug "plugins/colorize",   from:oh-my-zsh
 zplug "plugins/cp",         from:oh-my-zsh
@@ -18,7 +16,6 @@ zplug "zdharma/zsh-diff-so-fancy"
 zplug "gradle/gradle-completion"
 
 zplug "chrissicool/zsh-256color"
-zplug "zuxfoucault/colored-man-pages_mod"
 zplug "reegnz/jq-zsh-plugin"
 
 zplug "mafredri/zsh-async"
