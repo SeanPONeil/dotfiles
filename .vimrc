@@ -33,6 +33,7 @@ Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'mg979/vim-visual-multi'
 " Plug 'chrisbra/csv.vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
