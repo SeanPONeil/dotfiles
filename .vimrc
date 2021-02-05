@@ -203,9 +203,7 @@ set redrawtime=10000
 
 " map smashing jk to escape
 inoremap jk <esc>
-vnoremap jk <esc>
 inoremap kj <esc>
-vnoremap kj <esc>
 
 set ttimeout
 set ttimeoutlen=100
