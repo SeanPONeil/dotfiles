@@ -1,17 +1,5 @@
 #!/usr/bin/env bash
 
-kickstart() {
-  service=$1
-  PID=$(launchctl list | grep $(basename $service))
-  if [[ -n "${PID}" ]]; then
-    # Kickstarting active Homebrew services is faster
-    # than a full restart
-    launchctl kickstart -k "gui/501/homebrew.mxcl.$(basename $service)"
-  else
-    brew services start "${service}"
-  fi
-}
-
-kickstart yabai
-kickstart skhd
-kickstart spacebar
+brew services restart yabai
+brew services restart skhd
+brew services restart spacebar
