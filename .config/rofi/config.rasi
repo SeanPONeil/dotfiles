@@ -1,6 +1,7 @@
-/** Basic config file **/
-
 configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
+  theme: "~/.cache/wal/colors-rofi-dark.rasi";
+  font: "Tamzen 12";
 }
+
+
+/* vim:ft=css
