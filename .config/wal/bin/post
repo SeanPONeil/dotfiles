@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
-kitty @ set-colors --all --configured ~/.config/kitty/kitty.conf
-~/github/intellijPywal/intellijPywalGen.sh
-pywalfox update
+~/src/intellijPywal/intellijPywalGen.sh
 
 if [[ $(uname) == "Darwin" ]]; then
-  cp $HOME/.cache/wal/colors-simplebar.js $HOME/Library/Application\ Support/Übersicht/widgets/simple-bar/lib/styles/Pywal.js
-  launchctl kickstart -k "gui/501/homebrew.mxcl.yabai"
-  launchctl kickstart -k "gui/501/homebrew.mxcl.spacebar"
-  launchctl kickstart -k "gui/501/homebrew.mxcl.skhd"
+  for s in yabai sxhkd spacebar; do
+    brew services restart $s
+    sleep 1
+  done
 fi
