@@ -17,3 +17,7 @@
   features = line-numbers decorations
 [init]
 	defaultBranch = main
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+[url "ssh://git@logicgate.gitlab.com/"]
+  insteadOf = https://logicgate.gitlab.com/

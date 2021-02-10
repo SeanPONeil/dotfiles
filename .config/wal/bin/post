@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-~/src/intellijPywal/intellijPywalGen.sh
+# ~/src/intellijPywal/intellijPywalGen.sh
 
 if [[ $(uname) == "Darwin" ]]; then
   for s in yabai sxhkd spacebar; do

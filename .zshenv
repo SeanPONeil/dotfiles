@@ -15,6 +15,10 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
+eval $(ssh-agent)
+
+
+
 # workaround for `nice(5) failed: operation not permitted`
 #
 # https://github.com/microsoft/WSL/issues/1887
