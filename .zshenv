@@ -15,7 +15,7 @@ if [ -n "$DESKTOP_SESSION" ];then
     export SSH_AUTH_SOCK
 fi
 
-eval $(ssh-agent)
+eval "$(ssh-agent >/dev/null 2>&1)"
 
 
 
