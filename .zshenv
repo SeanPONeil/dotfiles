@@ -11,11 +11,10 @@ fi
 ZPLUG_LOADFILE="$XDG_CONFIG_HOME/zsh/plugins.zsh"
 
 if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
+    # eval $(gnome-keyring-daemon --start)
+    # export SSH_AUTH_SOCK
 fi
 
-eval "$(ssh-agent >/dev/null 2>&1)"
 
 
 

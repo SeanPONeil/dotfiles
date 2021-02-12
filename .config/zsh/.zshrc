@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+zmodload zsh/zprof
 
 source ~/.cache/wal/colors.sh
 if [[ -z "$SSH_CLIENT" ]]; then
@@ -24,9 +25,6 @@ source $HOME/.local/share/fonts/i_all.sh
 
 # zplug
 source $ZPLUG_HOME/init.zsh
-if ! zplug check; then
-  zplug install
-fi
 zplug load
 
 # . $ZDOTDIR/antibody
@@ -54,11 +52,6 @@ if [[ $TERM == "xterm-kitty" ]]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export JDK_HOME="${JAVA_HOME}"
-
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"

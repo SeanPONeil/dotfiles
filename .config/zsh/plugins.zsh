@@ -7,7 +7,9 @@ zplug "plugins/nmap",       from:oh-my-zsh
 zplug "plugins/adb",        from:oh-my-zsh
 zplug "plugins/colorize",   from:oh-my-zsh
 zplug "plugins/cp",         from:oh-my-zsh
-zplug "plugins/gpg-agent",  from:oh-my-zsh
+zplug "plugins/ssh-agent",  from:oh-my-zsh
+# zplug "plugins/gpg-agent",  from:oh-my-zsh
+zplug "plugins/asdf",       from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
@@ -15,12 +17,10 @@ zplug "Tarrasch/zsh-autoenv"
 zplug "zdharma/zsh-diff-so-fancy"
 zplug "gradle/gradle-completion"
 
-zplug "chrissicool/zsh-256color"
 zplug "reegnz/jq-zsh-plugin"
 
 zplug "mafredri/zsh-async"
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
 zplug "chitoku-k/fzf-zsh-completions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
