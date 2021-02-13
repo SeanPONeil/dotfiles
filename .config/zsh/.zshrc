@@ -5,9 +5,10 @@ source ~/.cache/wal/colors.sh
 if [[ -z "$SSH_CLIENT" ]]; then
   (cat ~/.cache/wal/sequences &)
 fi
+
 # GPG pinentry
-GPG_TTY=$(tty)
-export GPG_TTY
+# GPG_TTY=$(tty)
+# export GPG_TTY
 
 setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
 
