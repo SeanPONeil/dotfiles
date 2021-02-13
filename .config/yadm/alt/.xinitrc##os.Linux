@@ -69,10 +69,11 @@ autorandr --change
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . $HOME/.xprofile
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
-export SSH_AUTH_SOCK
+# eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
+# export SSH_AUTH_SOCK
 
-export SUDO_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
+export SUDO_ASKPASS=$HOME/bin/rofi-askpass
+export SSH_ASKPASS=$HOME/bin/rofi-askpass
 
 # run local xhost
 xhost local:root
