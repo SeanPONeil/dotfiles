@@ -10,7 +10,7 @@ dbash(){
 }
 
 dsh(){
-  docker exec -it $1 bash -c "stty cols $COLUMNS rows $LINES && bash";
+  docker exec -it $1 sh -c "stty cols $COLUMNS rows $LINES && sh";
 }
 dcleanup() {
   for container in $(docker ps -aq 2>/dev/null); do
@@ -103,7 +103,7 @@ docker exec $run_options \
 dbreset() {
   local-cypher-shell -d system "drop database \`logicgate-localhost\`;"
   local-cypher-shell -d system "create database \`logicgate-localhost\`;"
-  
+
   local-cypher-shell -d system "drop database \`lgtest\`;"
   local-cypher-shell -d system "create database \`lgtest\`;"
 }
