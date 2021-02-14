@@ -1,20 +1,22 @@
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:keychain agents gpg,ssh
+zstyle :omz:plugins:keychain agents gpg,ssh,secrets,pkcs11
 zstyle :omz:plugins:keychain identities id_ed25519
-zstyle :omz:plugins:keychain options --quiet --quick --systemd --ignore-missing
+zstyle :omz:plugins:keychain options --quiet --quick --systemd --ignore-missing --inherit any
 zplug "plugins/keychain",   from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
 zplug "plugins/gpg-agent",  from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
 
 zplug "lukechilds/zsh-nvm"
 
-zplug "plugins/vi-mode",    from:oh-my-zsh
-zplug "plugins/autojump",   from:oh-my-zsh
-zplug "plugins/dotenv",     from:oh-my-zsh
-zplug "plugins/nmap",       from:oh-my-zsh
-zplug "plugins/adb",        from:oh-my-zsh
-zplug "plugins/colorize",   from:oh-my-zsh
-zplug "plugins/cp",         from:oh-my-zsh
-zplug "plugins/asdf",       from:oh-my-zsh
+zplug "plugins/vi-mode",        from:oh-my-zsh
+zplug "plugins/autojump",       from:oh-my-zsh
+zplug "plugins/dotenv",         from:oh-my-zsh
+zplug "plugins/nmap",           from:oh-my-zsh
+zplug "plugins/adb",            from:oh-my-zsh
+zplug "plugins/colorize",       from:oh-my-zsh
+zplug "plugins/cp",             from:oh-my-zsh
+zplug "plugins/docker",         from:oh-my-zsh
+zplug "plugins/docker-compose", from:oh-my-zsh
+zplug "plugins/asdf",           from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
