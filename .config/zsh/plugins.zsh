@@ -1,5 +1,5 @@
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:keychain agents gpg,ssh,secrets,pkcs11
+zstyle :omz:plugins:keychain agents gpg,ssh
 zstyle :omz:plugins:keychain identities id_ed25519
 zstyle :omz:plugins:keychain options --quiet --quick --systemd --ignore-missing --inherit any
 zplug "plugins/keychain",   from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
