@@ -54,6 +54,8 @@ yabai -m rule --add app="^Slack$" opacity=1.0
 yabai -m rule --add app="^Zoom$" opacity=1.0
 yabai -m rule --add app="^Pritunl$" manage=off
 
+yabai -m rule --add title="^Preferences$" manage=off
+
 # jetbrains_apps="^(IntelliJ IDEA|Android Studio)$"
 
 # float all JetBrains apps
