@@ -1,9 +1,9 @@
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:keychain agents gpg,ssh
+zstyle :omz:plugins:keychain agents ssh
 zstyle :omz:plugins:keychain identities id_ed25519
-zstyle :omz:plugins:keychain options --confirm --noask --quiet --quick --systemd --ignore-missing --inherit any-once
+zstyle :omz:plugins:keychain options --quiet --quick --systemd --ignore-missing --inherit any-once
 zplug "plugins/keychain",   from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
-zplug "plugins/gpg-agent",  from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
+# zplug "plugins/gpg-agent",  from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
 
 zplug "lukechilds/zsh-nvm"
 
@@ -18,6 +18,7 @@ zplug "plugins/docker",         from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/asdf",           from:oh-my-zsh
 zplug "plugins/wakeonlan",      from:oh-my-zsh
+zplug "plugins/jenv",           from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
