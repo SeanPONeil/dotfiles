@@ -10,23 +10,16 @@ zplug "lukechilds/zsh-nvm"
 zplug "plugins/vi-mode",        from:oh-my-zsh
 zplug "plugins/autojump",       from:oh-my-zsh
 zplug "plugins/dotenv",         from:oh-my-zsh
-zplug "plugins/nmap",           from:oh-my-zsh
-zplug "plugins/adb",            from:oh-my-zsh
 zplug "plugins/colorize",       from:oh-my-zsh
 zplug "plugins/cp",             from:oh-my-zsh
 zplug "plugins/docker",         from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
-zplug "plugins/asdf",           from:oh-my-zsh
 zplug "plugins/wakeonlan",      from:oh-my-zsh
-zplug "plugins/jenv",           from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
 zplug "Tarrasch/zsh-autoenv"
 zplug "zdharma/zsh-diff-so-fancy"
-zplug "gradle/gradle-completion"
-
-zplug "reegnz/jq-zsh-plugin"
 
 zplug "mafredri/zsh-async"
 zplug "zsh-users/zsh-completions"

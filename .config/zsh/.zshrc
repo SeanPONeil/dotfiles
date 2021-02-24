@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
 zmodload zsh/zprof
 
-source ~/.cache/wal/colors.sh
-if [[ -z "$SSH_CLIENT" ]]; then
+if [[ ! $SSH_CLIENT ]]; then
   (cat ~/.cache/wal/sequences &)
 fi
 
@@ -20,9 +19,6 @@ for file in ~/.{exports,aliases,path,dockerfunc,extra,functions,encrypted}; do
 done
 unset file
 unsetopt null_glob
-
-# Nerd Font symbol env vars
-source $HOME/.local/share/fonts/i_all.sh
 
 # zplug
 source $ZPLUG_HOME/init.zsh
