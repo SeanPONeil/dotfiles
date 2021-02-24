@@ -1,10 +1,3 @@
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:keychain agents ssh
-zstyle :omz:plugins:keychain identities id_ed25519
-zstyle :omz:plugins:keychain options --quiet --quick --systemd --ignore-missing --inherit any-once
-zplug "plugins/keychain",   from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
-# zplug "plugins/gpg-agent",  from:oh-my-zsh, ignore:"*oh-my-zsh.zsh"
-
 zplug "lukechilds/zsh-nvm"
 
 zplug "plugins/vi-mode",        from:oh-my-zsh
