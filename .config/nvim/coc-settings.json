@@ -2,9 +2,6 @@
   "tsserver.trace.server": "verbose",
   "coc.preferences.formatOnType": true,
   "coc.preferences.extensionUpdateCheck": "daily",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G",
-  "java.trace.server": "verbose",
-  "java.import.gradle.enabled": true,
   "python.pythonPath": "python3",
   "languageserver": {
     "golang": {
@@ -14,7 +11,7 @@
       ],
       "filetypes": [
         "go"
-      ],
+      ]
     },
     "kotlin": {
       "command": "~/.lsp/kotlin/server/bin/kotlin-language-server",
