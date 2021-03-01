@@ -1,7 +1,6 @@
 export DOTFILES="$HOME/dotfiles"
 export LG="$HOME/lg"
 
-export BROWSER="firefox-developer-edition"
 # starship prompt config location
 export STARSHIP_CONFIG=~/.config/starship/config.toml
 

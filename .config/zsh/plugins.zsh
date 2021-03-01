@@ -1,5 +1,6 @@
 zplug "lukechilds/zsh-nvm"
 
+zplug "plugins/git",            from:oh-my-zsh
 zplug "plugins/vi-mode",        from:oh-my-zsh
 zplug "plugins/autojump",       from:oh-my-zsh
 zplug "plugins/dotenv",         from:oh-my-zsh
