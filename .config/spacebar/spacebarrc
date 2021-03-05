@@ -1,9 +1,6 @@
-#!/usr/bin/env bash
-set -x
-
-source $HOME/.cache/wal/colors-yabai.sh
-source $HOME/.cache/wal/colors-yabai-argb.sh
-source $HOME/.local/share/fonts/i_all.sh
+source /Users/seanoneil/.cache/wal/colors-yabai.sh
+source /Users/seanoneil/.cache/wal/colors-yabai-argb.sh
+source /Users/seanoneil/.local/share/fonts/i_all.sh
 
 height=${BAR_HEIGHT:-20}
 position=${BAR_POSITION:-"top"}
@@ -28,47 +25,28 @@ spacebar -m config space_icon_color   $color3
 spacebar -m config clock_icon_color   $color6
 
 
-if [[ $icon_style == "fill" ]]; then
-  spacebar -m config space_icon_strip \
-    $i_mdi_numeric_1_box \
-    $i_mdi_numeric_2_box \
-    $i_mdi_numeric_3_box \
-    $i_mdi_numeric_4_box \
-    $i_mdi_numeric_5_box \
-    $i_mdi_numeric_6_box \
-    $i_mdi_numeric_7_box \
-    $i_mdi_numeric_8_box \
-    $i_mdi_numeric_9_box
+spacebar -m config space_icon_strip \
+  "${i_mdi_numeric_1_box}" \
+  "${i_mdi_numeric_2_box}" \
+  "${i_mdi_numeric_3_box}" \
+  "${i_mdi_numeric_4_box}" \
+  "${i_mdi_numeric_5_box}" \
+  "${i_mdi_numeric_6_box}" \
+  "${i_mdi_numeric_7_box}" \
+  "${i_mdi_numeric_8_box}" \
+  "${i_mdi_numeric_9_box}"
 
-  spacebar -m config space_icon $i_mdi_numeric_9_plus_box
-  spacebar -m config clock_icon $i_mdi_clock
-  spacebar -m config power_icon_strip $i_mdi_battery $i_mdi_battery_charging
-else
-  spacebar -m config space_icon_strip \
-    $i_mdi_numeric_1_box_outline \
-    $i_mdi_numeric_2_box_outline \
-    $i_mdi_numeric_3_box_outline \
-    $i_mdi_numeric_4_box_outline \
-    $i_mdi_numeric_5_box_outline \
-    $i_mdi_numeric_6_box_outline \
-    $i_mdi_numeric_7_box_outline \
-    $i_mdi_numeric_8_box_outline \
-    $i_mdi_numeric_9_box_outline
+spacebar -m config space_icon "${i_mdi_numeric_9_plus_box}"
+spacebar -m config clock_icon "${i_mdi_clock}"
+spacebar -m config power_icon_strip "${i_mdi_battery}" "${i_mdi_battery_charging}"
 
-  spacebar -m config space_icon $i_mdi_numeric_9_plus_box_outline
-  spacebar -m config clock_icon $i_mdi_clock
-  spacebar -m config power_icon_strip $i_mdi_battery_outline $i_mdi_battery_charging
-fi
 
 
 spacebar -m config clock_format      "%a %d %b %R"
 
+yabai -m config external_bar all:$height:0
+
 echo "spacebar configuration loaded.."
 
-if [[ "$position" == "bottom" ]]; then
-  echo "yabai config for bottom"
-  yabai -m config external_bar all:0:$height
-else
-  echo "yabai config for top"
-  yabai -m config external_bar all:$height:0
-fi
+
+# vim: set ft=bash :

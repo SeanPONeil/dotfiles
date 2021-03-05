@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 zmodload zsh/zprof
+zmodload zsh/zpty
 
 if [[ ! $SSH_CLIENT ]]; then
   (cat ~/.cache/wal/sequences &)
@@ -42,6 +43,7 @@ else
   compinit -i -C
 fi
 zstyle ':completion:*' menu yes select
+zstyle ':completion:*' use-cache on
 
 # Completion for kitty
 if [[ $TERM == "xterm-kitty" ]]; then

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # the scripting addition must be loaded manually if
 # yabai is running on Big Sur
 sudo yabai --load-sa
@@ -9,7 +7,7 @@ yabai -m signal \
 
 # get color values from pywal
 # source $HOME/.cache/wal/colors-yabai-argb.sh
-source $HOME/.cache/wal/colors-yabai.sh
+source /Users/seanoneil/.cache/wal/colors-yabai.sh
 transparent=0xFF
 
 # global settings
@@ -79,3 +77,6 @@ yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yab
 
 # focus window after active display changes
 yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+
+
+# vim: set ft=bash :
