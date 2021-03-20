@@ -94,4 +94,7 @@ export LESS="-rf"
 
 export NEO4J_HOME="/usr/local/opt/neo4j/libexec"
 
+export GNUPGHOME="$HOME/gnupg-workspace"
+
 # vim: filetype=bash
+
