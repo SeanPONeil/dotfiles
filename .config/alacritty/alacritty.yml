@@ -21,12 +21,11 @@ font:
 
 window:
   energy: Performance
-  dynamic_padding: true
   decorations: none
   dynamic_title: true
   gtk_theme_variant: None
   padding:
-    x: 1
+    x: 3
     y: 0
 
 scrolling:
