@@ -110,7 +110,7 @@ alias pip2="python2 -m pip"
 if [[ $(uname) == "Linux" ]]; then
   alias pbcopy="xclip -selection clipboard"
   alias pbpaste="xclip -selection clipboard -o"
-  
+
   alias polybar-launch="$HOME/.config/polybar/launch"
 fi
 

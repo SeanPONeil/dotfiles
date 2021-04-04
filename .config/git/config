@@ -12,7 +12,7 @@
   diffFilter = delta --color-only
 [core]
 	excludesfile = ~/.config/git/gitignore_global
-  pager = delta --diff-so-fancy
+  pager = delta --side-by-side -w ${FZF_PREVIEW_COLMNS:-$COLUMNS}
 [delta]
   features = line-numbers decorations
 [init]

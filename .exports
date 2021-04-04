@@ -41,8 +41,15 @@ export MANPAGER="nvim -c 'set ft=man' -"
 
 # fzf customization
 # export FZF_DEFAULT_COMMAND='fd --type f --follow --exclude .git'
-export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
+# export FZF_DEFAULT_OPTS="--height 40% --border --layout=reverse --inline-info --preview='head -$LINES {}'"
 # export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_DEFAULT_OPTS="
+# --exact
+# --border
+# --cycle
+# --reverse
+# --height '80%'
+# "
 
 # setup PATH
 export PATH=$HOME/.local/share/language-servers/kotlin-language-server/server/build/install/server/bin:$PATH
@@ -95,6 +102,8 @@ export LESS="-rf"
 export NEO4J_HOME="/usr/local/opt/neo4j/libexec"
 
 export GNUPGHOME="$HOME/gnupg-workspace"
+
+export JAVA_HOME="$(jenv javahome)"
 
 # vim: filetype=bash
 

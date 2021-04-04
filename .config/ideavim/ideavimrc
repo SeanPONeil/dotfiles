@@ -1,2 +1,16 @@
-source ~/.vimrc
+set NERDTree
+set surround
+set highlightedyank
+set argtextobj
+
 set clipboard+=ideaput
+set smartcase " automatic case sensitive search
+set splitbelow
+set splitright
+set scrolloff=40
+set ideajoin=true
+set showmode
+set incsearch
+
+inoremap jk <esc>
+inoremap kj <esc>

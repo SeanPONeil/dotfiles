@@ -6,6 +6,7 @@ disabled = true
 full_symbol = ""
 charging_symbol = ""
 discharging_symbol = ""
+disabled = true
 
 [character]
 success_symbol  = "[](bold green)"
@@ -38,6 +39,9 @@ symbol = ""
 
 [git_branch]
 symbol = " "
+
+[gcloud]
+disabled = true
 
 [golang]
 symbol = ""

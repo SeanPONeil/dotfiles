@@ -26,7 +26,6 @@ Plug 'vim-scripts/PreserveNoEOL'
 Plug 'glench/vim-jinja2-syntax'
 Plug 'tfnico/vim-gradle'
 Plug 'udalov/kotlin-vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
 Plug 'neo4j-contrib/cypher-vim-syntax'
@@ -34,6 +33,8 @@ Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi'
+Plug 'ryanoasis/vim-devicons' " always last
+Plug 'preservim/nerdtree'
 " Plug 'chrisbra/csv.vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
@@ -179,7 +180,7 @@ nnoremap <c-ENTER> :vsplit<CR>
 set list          " Display whitespace characters
 set splitbelow    " `:split`'s appear below
 set splitright    " `:vsplit`'s appear right
-set scrolloff=20  " always show 20 lines below my cursor
+set scrolloff=40  " always show 20 lines below my cursor
 
 set nofoldenable " Don't automatically fold everything when opening a file
 

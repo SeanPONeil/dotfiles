@@ -10,6 +10,10 @@ fi
 # GPG_TTY=$(tty)
 # export GPG_TTY
 
+# zplug
+source $ZPLUG_HOME/init.zsh
+zplug load
+
 setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
 
 setopt null_glob
@@ -21,9 +25,6 @@ done
 unset file
 unsetopt null_glob
 
-# zplug
-source $ZPLUG_HOME/init.zsh
-zplug load
 
 # . $ZDOTDIR/antibody
 # source $ZDOTDIR/completion.zsh
@@ -42,8 +43,8 @@ if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
 else
   compinit -i -C
 fi
-zstyle ':completion:*' menu yes select
-zstyle ':completion:*' use-cache on
+# zstyle ':completion:*' menu yes select
+# zstyle ':completion:*' use-cache on
 
 # Completion for kitty
 if [[ $TERM == "xterm-kitty" ]]; then
