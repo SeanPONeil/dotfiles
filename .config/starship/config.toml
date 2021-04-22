@@ -3,9 +3,6 @@ symbol = " "
 disabled = true
 
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
 disabled = true
 
 [character]
@@ -13,29 +10,16 @@ success_symbol  = "[](bold green)"
 error_symbol    = "[](bold red)"
 vicmd_symbol    = "[](bold green)"
 
-
-[conda]
-symbol = "   "
-
 [dart]
 symbol = " "
 
 [directory]
 read_only = "  "
 
-[docker]
-symbol = "  "
-
 [docker_context]
 symbol = "  "
 disabled = false
 only_with_files = false
-
-[elixir]
-symbol = ""
-
-[elm]
-symbol = ""
 
 [git_branch]
 symbol = " "
@@ -46,27 +30,12 @@ disabled = true
 [golang]
 symbol = ""
 
-[haskell]
-symbol = "  "
-
-[hg_branch]
-symbol = " "
-
 [java]
 disabled = true
 symbol = " "
 
-[julia]
-symbol = " "
-
 [memory_usage]
 symbol = "  "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = "  "
 
 [nodejs]
 symbol = " "
@@ -74,12 +43,6 @@ disabled = true
 
 [package]
 symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
 
 [python]
 symbol = " "
