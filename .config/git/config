@@ -10,9 +10,13 @@
   ui = true
 [interactive]
   diffFilter = delta --color-only
+[commit]
+	gpgsign = true
+  trustExitCode = true
 [core]
 	excludesfile = ~/.config/git/gitignore_global
-  pager = delta --side-by-side -w ${FZF_PREVIEW_COLMNS:-$COLUMNS}
+  pager = delta
+  trustctime = false
 [delta]
   features = line-numbers decorations
 [init]
