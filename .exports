@@ -35,8 +35,8 @@ export KITTY_REMOTE=/tmp/kitty_remote
 
 if [[ "$(command -v nvim)" ]]; then
   export EDITOR='nvim'
-  export SYSTEMD_EDITOR=nvim
-  export VISUAL=nvim
+  export SYSTEMD_EDITOR='nvim'
+  export VISUAL='nvim'
   export MANPAGER='nvim +Man!'
   export MANWIDTH=999
 fi
