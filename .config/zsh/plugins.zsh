@@ -35,6 +35,5 @@ zplug "zdharma/fast-syntax-highlighting"
 # zplug "zsh-users/zsh-autosuggestions"
 
 zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
-zplug "wfxr/forgit"
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
