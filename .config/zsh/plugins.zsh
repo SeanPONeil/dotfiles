@@ -30,9 +30,9 @@ zplug "Tarrasch/zsh-autoenv"
 zplug "zdharma/zsh-diff-so-fancy"
 
 zplug "zsh-users/zsh-completions"
-zplug "chitoku-k/fzf-zsh-completions"
 zplug "zdharma/fast-syntax-highlighting"
 # zplug "zsh-users/zsh-autosuggestions"
+zplug "Aloxaf/fzf-tab"
 
 zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
 

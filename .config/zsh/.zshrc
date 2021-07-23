@@ -6,36 +6,26 @@ if [[ ! $SSH_CLIENT ]]; then
   (cat ~/.cache/wal/sequences &)
 fi
 
-zstyle ':completion:*' menu yes select
-zstyle ':completion:*' use-cache on
+setopt extendedglob alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
 
-# GPG pinentry
-# GPG_TTY=$(tty)
-# export GPG_TTY
-
-setopt extendedglob auto_menu alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
-
+dotfiles=(
+  "$HOME/.exports"
+  "$HOME/.aliases"
+  "$HOME/.path"
+  "$HOME/.dockerfunc"
+  "$HOME/.extra"
+  "$HOME/.functions"
+  "$HOME/.encrypted"
+  "$ZDOTDIR/completion.zsh"
+)
 setopt null_glob
-for file in ~/.{exports,aliases,path,dockerfunc,extra,functions,encrypted}; do
-  if [[ -f "$file" ]] && [[ -f "$file" ]]; then
-    source "$file"
+for f in $dotfiles; do
+  if [[ -f "$f" ]]; then
+    . "$f"
   fi
 done
-unset file
+unset f
 unsetopt null_glob
-
-
-# completion related stuff
-CASE_SENSITIVE="false"
-setopt MENU_COMPLETE
-setopt no_list_ambiguous
-autoload -Uz compinit
-# Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
-if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
-  echo "Recompiling zcompdump"
-  compinit
-fi
-compinit -C
 
 source $ZPLUG_HOME/init.zsh
 if ! zplug check; then
