@@ -16,11 +16,11 @@ fs(){
 }
 
 wal() {
-#  if [[ $(uname) == "Darwin" ]]; then
-#   command wal -e -s -t -o ~/bin/wal-set $@
-#  else
-#    command wal -o wal-set $@
-#  fi
+  #  if [[ $(uname) == "Darwin" ]]; then
+  #   command wal -e -s -t -o ~/bin/wal-set $@
+  #  else
+  #    command wal -o wal-set $@
+  #  fi
   command wal -o $HOME/.config/wal/bin/post $@
 }
 
@@ -52,3 +52,4 @@ hextorgb() {
   hex=${hex#"#"}
   printf "%d %d %d\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2}
 }
+

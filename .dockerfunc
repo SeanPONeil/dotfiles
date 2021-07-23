@@ -100,14 +100,6 @@ docker exec $run_options \
   cypher-shell -u neo4j -p $NEO4J_PASSWORD -d logicgate-localhost  "$@"
 }
 
-dbreset() {
-  local-cypher-shell -d system "drop database \`logicgate-localhost\`;"
-  local-cypher-shell -d system "create database \`logicgate-localhost\`;"
-
-  local-cypher-shell -d system "drop database \`lgtest\`;"
-  local-cypher-shell -d system "create database \`lgtest\`;"
-}
-
 function macos-x11() {
   ip=$(ifconfig | grep -E 'inet.*broad' | awk  '{ print $2; }')
   open -a XQuartz &
