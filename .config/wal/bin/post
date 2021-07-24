@@ -3,7 +3,7 @@
 # ~/src/intellijPywal/intellijPywalGen.sh
 
 if [[ $(uname) == "Darwin" ]]; then
-  for s in yabai skhd spacebar; do
+  for s in yabai skhd; do
     brew services restart $s
     sleep 1
   done

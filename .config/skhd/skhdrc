@@ -82,7 +82,7 @@ lcmd + lshift + lalt + lctrl + rshift - 9 : yabai -m window --space  9;
 lcmd + lshift + lalt + lctrl + rshift - 0 : yabai -m window --space 10;
 
 # send desktop to monitor and follow focus
-lcmd + lshift + lalt + lctrl + rshift - 0x2A : $HOME/.config/yabai/bin/move_space_to_other_desktop
+lcmd + lshift + lalt + lctrl + rshift - 0x2A : $HOME/.config/yabai/bin/move_window_to_other_desktop
 
 # move window
 shift + ctrl - a : yabai -m window --move -20:0
