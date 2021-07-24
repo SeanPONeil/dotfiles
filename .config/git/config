@@ -11,7 +11,7 @@
 [interactive]
   diffFilter = delta --color-only
 [commit]
-	gpgsign = true
+	gpgsign = false
   trustExitCode = true
 [core]
 	excludesfile = ~/.config/git/gitignore_global
