@@ -1,0 +1,4 @@
+#!/bin/sh
+# Paste text (files) from stdin to http://ix.io
+
+curl -sS -F 'f:1=<-' http://ix.io

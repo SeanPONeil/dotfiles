@@ -1,0 +1,91 @@
+#!/bin/sh
+# Wrapper to connect to remote hosts defined in ssh_config(5)
+# transparently through ssh(1) or mosh(1) depending on network
+# connectivity. IPv6 is always preferred over IPv4, Tor hidden services
+# can be used as last resort. The same hidden service is currently used
+# to obtain the remote host's public IPv4/6 addresses in an address
+# family agnostic way.
+#
+# Example ssh_config(5) for host foo over Tor:
+#
+#	Host foo-tor
+#		Hostname	0xdeadbeef123456.onion
+#		ProxyCommand	nc -6nX5 -x[::1]:9050 %h %p
+
+set -eu
+PS4='    '
+
+err() {
+	cat <<- EOF 1>&2
+		${1:-}
+		usage: ${0##*/} <host> [-p <mosh_port>[:<mosh_port2>]]
+		       [cmd [args...]]
+		EOF
+	exit 1
+}
+
+[ -n "${host:=${1}}" ] ||
+	err 'hostname missing'
+shift 1
+case "${1}" in
+-p)
+	case "${2}" in
+	[0-9]*|[0-9]*:[0-9]*)
+		mosh_ports="-p ${2}"
+		;;
+	*)
+		err 'invalid mosh port'
+	esac
+	shift 2
+	;;
+esac
+remote_cmd="${@:-}"
+def_opts='-q -oConnectTimeout=10'
+ck_opts='-oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null'
+
+ip() {
+	printf 'GET /ip HTTP/1.0\r\n\r\n' |
+		command ssh -T ${def_opts} \
+		    -- "${host}"-tor nc ${1} -cw5 ifcfg.me 443 |
+		tail -n1
+}
+
+mosh() {
+	set -x
+	command mosh --family=prefer-inet6 ${mosh_ports:-} \
+		--ssh="ssh -T ${def_opts} ${NO_CHECK:+${ck_opts}}" \
+		-- "${1:-${host}}" ${remote_cmd:-} 2>/dev/null
+}
+
+ssh() {
+	set -x
+	command ssh -t ${def_opts} ${NO_CHECK:+${ck_opts}} \
+		-- "${1:-${host}}" ${remote_cmd:-}
+}
+
+printf 'LAN...\n'
+
+mosh ||
+ssh  ||
+	printf 'LAN failed\n'
+
+printf 'WAN...\n'
+NO_CHECK=1
+
+for f in 6 4; do
+	printf '  IPv%d: ...' ${f}
+	ip="$(ip -${f})"
+	if [ -z "${ip}" ]; then
+		printf '\b\b\bnot found\n'
+		continue
+	fi
+	printf '\b\b\b%s\n' "${ip}"
+	mosh "${ip}" ||
+	ssh  "${ip}" ||
+		printf 'IPv%d failed\n' ${f}
+done
+
+printf 'Tor...\n'
+
+ssh "${host}"-tor ||
+	printf '\b\b\b failed\n'

@@ -1,0 +1,8 @@
+#!/bin/sh
+# type(1) for git(1) aliases
+
+alias=$(sed -ne "/^\[alias\]\$/,\$ {
+			s/^[[:space:]]*${1}[[:space:]]*=[[:space:]]*//p
+		}" "${HOME}"/.gitconfig)
+
+printf "%s is aliased to '%s'\n" "${1:?alias  missing}" "${alias:?${1} not found}"

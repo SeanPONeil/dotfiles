@@ -1,0 +1,7 @@
+#!/bin/sh
+# get currently set wifi SSID
+
+ifconfig wlan |
+	grep -FA1 'status: active' |
+	tail -n1 |
+	cut -d' ' -f3

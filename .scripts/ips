@@ -1,0 +1,6 @@
+#!/bin/sh
+# get IP addresses (of given interface only)
+
+ifconfig ${@:-egress} |
+	grep -F inet |
+	cut -d' ' -f2

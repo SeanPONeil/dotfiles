@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mixerctl -n outputs.master | {
+	IFS=, read left right
+	mixerctl outputs.master=$((left $1)),$((right ${2:-$1}))
+}

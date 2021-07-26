@@ -1,0 +1,41 @@
+#!/bin/sh
+# Load IPv4 and IPv6 networks (one per line) into memory in order to
+# block to and/or from them
+#	## Example pf.conf(5)
+#	table <netblock> persist
+#	block return out quick to   <netblock>
+#	block drop   in  quick from <netblock>
+#
+#	## Example doas.conf(5) entry
+#	permit	nopass	kle \
+#		cmd /sbin/pfctl	args -Treplace -tnetblock -f-
+#
+#	## Example crontab(5)
+#	# Fill table every thursday at 8pm
+#	0 20 * * * netblock
+
+# Services to block
+as='714    Apple
+    2906   Netflix
+    8075   Microsoft
+    8302   Zattoo
+    8403   Spotify
+    15169  Google
+    19679  Dropbox
+    20940  Akamai
+    32590  Valve
+    32787  Akamai (other)
+    32934  Facebook
+    54113  Disqus'
+
+api_url='https://stat.ripe.net/data/announced-prefixes/data.json?min_peers_seeing=0&resource='
+
+# TODO: Check network connectivity to ensure table won't be emptied
+
+# Brace expansion done by curl(1) not sh(1)
+curl -sS --compressed "${api_url}{$(printf %s "${as}" |
+					tr -dc '[:digit:]\n' |
+					paste -sd, -)}" |
+	grep -Fw prefix |
+	cut -d\" -f4 |
+	doas /sbin/pfctl -Treplace -tnetblock -f-

@@ -1,0 +1,4 @@
+#!/bin/sh
+# get title and artist from cmus(1)
+
+cmus-remote -C 'format_print "%t - %a"'

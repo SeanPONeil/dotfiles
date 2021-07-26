@@ -1,0 +1,33 @@
+#!/bin/sh
+# Ensure that the program being symlinked from is always run
+# inside a tmux(1) session. If already running, simply attach.
+# Command line arguments are passed unmodified to the program upon
+# spawning a new session.
+#
+# USAGE:
+#	$ ln -s $(which tmuxify) mutt
+#	$ ./mutt -R	# run 'mutt -R' or attach to "mutt"
+
+set -eu
+
+# name of the program/symlink
+name="${0##*/}"
+# absoloute path to this script
+self="$(readlink -fn "${0}")"
+# first program in $PATH called $name
+bin=
+
+for p in $(which -a "${name}"); do
+	# prevent recursion
+	if [ "$(readlink -fn "${p}")" != "${self}" ]; then
+		bin="${p}"
+		break
+	fi
+done
+
+# Run new instance if in tmux
+[ -n "${TMUX:-}" ] &&
+	exec "${bin}" "${@}"
+
+exec tmux new-session -A -n "${name}" -s "${name}" \
+	"${bin}" "${@}"

@@ -1,0 +1,62 @@
+#!/usr/bin/awk -f
+# This script is used on https://notabug.org/kl3/barricade to generate
+# traffic statistics
+
+BEGIN {
+"date +%s" | getline epoch
+"sysctl -n kern.boottime" | getline boot
+# Uptime in days
+uptime_d = (epoch - boot) / 60 / 60 / 24
+
+"netstat -b -I em0 | sed '2q;d'" | getline
+# Total in- and outbound traffic on WAN interfaces in bytes
+ibytes = $(NF - 1)
+obytes = $NF
+
+printf "In  [B]:\t%d\nOut [B]:\t%d\n",
+       ibytes,
+       obytes
+
+
+if (uptime_d < 1)
+	exit(0)
+
+printf "Uptime [d]:\t%d\n",
+        uptime_d
+
+# Traffic in mebibytes
+ibytes_m = ibytes / 1024 / 1024
+obytes_m = obytes / 1024 / 1024
+
+printf "In  [MiB/d]:\t%d\nOut [MiB/d]:\t%d\n",
+       ibytes_m / uptime_d,
+       obytes_m / uptime_d
+
+
+if (uptime_d < 7)
+	exit(0)
+
+# Traffic in gibibytes
+ibytes_g = ibytes_m / 1024
+obytes_g = obytes_m / 1024
+
+printf "In  [GiB/w]:\t%.1f\nOut [GiB/w]:\t%.1f\n",
+       ibytes_g * 7 / uptime_d,
+       obytes_g * 7 / uptime_d
+
+
+if (uptime_d < 30)
+	exit(0)
+
+printf "In  [GiB/m]:\t%.2f\nOut [GiB/m]:\t%.2f\n",
+       ibytes_g * 30 / uptime_d,
+       obytes_g * 30 / uptime_d
+
+
+if (uptime_d < 365)
+	exit(0)
+
+printf "In  [TiB/y]:\t%.3f\nOut [TiB/y]:\t%.3f\n",
+       ibytes_g / 1024 * 365 / uptime_d,
+       obytes_g / 1024 * 365 / uptime_d
+}

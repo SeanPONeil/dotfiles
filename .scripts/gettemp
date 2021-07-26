@@ -1,0 +1,5 @@
+#!/bin/sh
+# get CPU temperature in celsius
+
+sysctl -n hw.sensors.cpu0.temp0 |
+	cut -d. -f1

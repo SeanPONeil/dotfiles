@@ -1,0 +1,9 @@
+#/bin/sh
+# list IP addresses (for given interface)
+
+self=${0##*/}
+family=inet${self#ip}
+
+ifconfig ${1:-egress} "$family" | while read -r _family _ip __ ; do
+	[ $_family = "$family" ] && echo $_ip
+done

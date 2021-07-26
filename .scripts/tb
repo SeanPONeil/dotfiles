@@ -1,0 +1,4 @@
+#!/bin/sh
+# Free Fiche based CLI pastebin service, pastes last one month.
+
+exec nc ${@} termbin.com 9999

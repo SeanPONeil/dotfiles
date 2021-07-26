@@ -1,0 +1,7 @@
+#!/bin/sh
+# get master volume in percentage
+
+bc -e "scale = 2
+       $(mixerctl -n outputs.master | cut -d, -f1) / 255 * 100" \
+   -e quit |
+	cut -d. -f1

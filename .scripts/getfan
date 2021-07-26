@@ -1,0 +1,5 @@
+#!/bin/sh
+# get CPU fan speed in RPM
+
+sysctl -n hw.sensors.acpithinkpad0.fan0 |
+	cut -d' ' -f1

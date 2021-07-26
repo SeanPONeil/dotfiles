@@ -1,0 +1,7 @@
+#!/bin/sh
+# Get RGB value of the pixel under the mouse
+
+eval $(xdotool getmouselocation --shell)
+
+import -window "${WINDOW}" png:- |
+	convert png:- -format "%[pixel:p{${X},${Y}}]\n" info:-

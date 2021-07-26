@@ -1,0 +1,9 @@
+#!/bin/sh
+# filter basic URLs, show them in dmenu and copy selection to clipboard
+
+tr -s ' ,;<>\\()"│' '\n' |
+	grep -iE '(git|https?|s?ftp|rsync|rtmps?|ssh)://' |
+	sort -fu |
+	dmenu -f -i -l 20 |
+	tr -d '\n' |
+	xclip -i

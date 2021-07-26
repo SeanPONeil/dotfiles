@@ -1,0 +1,26 @@
+#!/usr/bin/awk -f
+# show overall addition/removal statistics for unified diffs
+
+/^(---|\+\+\+)/ {
+	next
+}
+
+/^-/ {
+	R++
+	r += length()
+}
+/^\+/ {
+	A++
+	a += length()
+}
+
+END {
+	while (i++ < 67)
+		l = l "="
+	printf "%s\n" \
+	    "Stats: --- %d lines %d chars\n" \
+	    "Stats: +++ %d lines %d chars\n" \
+	    "Stats: %d lines\n" \
+	    "Stats: %d chars\n", \
+	    l, R, r, A, a, A - R, a - r
+}
