@@ -129,3 +129,11 @@ volume(){
     --mount source=$1,destination=/data \
     ubuntu
   }
+
+idea-server() {
+  docker run -d \
+    -p 8887:8887 \
+    -v projector:/mnt \
+    --name idea-projector \
+    registry.jetbrains.team/p/prj/containers/projector-idea-u
+}
