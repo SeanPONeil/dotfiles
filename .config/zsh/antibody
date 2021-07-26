@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
 antibody_compile() {
   echo "Removing zcompdump..."

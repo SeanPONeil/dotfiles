@@ -1,3 +1,5 @@
+#!/bin/sh
+
 export DOTFILES="$HOME/dotfiles"
 export LG="$HOME/lg"
 
@@ -60,8 +62,6 @@ export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$HOME/.config/rofi/bin:$PATH                        # rofi scripts
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH         # `gsed` as `sed`
-export PATH=/usr/local/opt/gnu-getopt/bin:$PATH                 # gnu-getopt over bad getopt
 export PATH=$HOME/.fzf/bin:$PATH                                # fzf fuzzy finder
 export PATH=$HOME/.cargo/bin:$PATH                              # rust scripts
 export PATH=$GOBIN:$PATH                                        # go binaries
@@ -86,5 +86,3 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
-
-# vim: filetype=bash
