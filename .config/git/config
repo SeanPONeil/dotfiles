@@ -25,3 +25,5 @@
   insteadOf = https://github.com/
 [url "ssh://git@logicgate.gitlab.com/"]
   insteadOf = https://logicgate.gitlab.com/
+[diff]
+	colorMoved = zebra
