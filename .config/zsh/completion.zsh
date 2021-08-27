@@ -18,16 +18,13 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
+zstyle ':completion:*:*:docker:*'   option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+
 
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 # setopt no_list_ambiguous
 
+fpath=($ZDOTDIR/completions /usr/local/share/zsh-completions $fpath)
 
-autoload -Uz compinit
-# Speed up zsh https://carlosbecker.com/posts/speeding-up-zsh/
-if [[ -n $ZDOTDIR/.zcompdump(#qN.mh+24) ]]; then
-  echo "Recompiling zcompdump"
-  compinit
-fi
-compinit -C
