@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Determine size of a file or total size of a directory
 fs(){
@@ -53,3 +53,8 @@ hextorgb() {
   printf "%d %d %d\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2}
 }
 
+splitpath(){
+  kscript -t 'lines.split(":").print(System.getProperty("line.separator"))'
+}
+
+# vim: set filetype=zsh :

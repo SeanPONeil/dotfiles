@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 export DOTFILES="$HOME/dotfiles"
 export LG="$HOME/lg"

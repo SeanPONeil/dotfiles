@@ -1,12 +1,13 @@
 #!/usr/bin/env zsh
 # zmodload zsh/zprof
 # zmodload zsh/zpty
+zmodload zsh/parameter
 
 if [[ ! $SSH_CLIENT ]]; then
   (cat ~/.cache/wal/sequences &)
 fi
 
-setopt extendedglob alwaystoend no_nomatch histignorealldups sharehistory prompt_subst
+setopt extendedglob alwaystoend no_nomatch histignorealldups sharehistory
 
 dotfiles=(
   "$HOME/.exports"
