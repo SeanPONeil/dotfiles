@@ -7,7 +7,7 @@ if [[ ! $SSH_CLIENT ]]; then
   (cat ~/.cache/wal/sequences &)
 fi
 
-setopt extendedglob alwaystoend no_nomatch histignorealldups sharehistory
+setopt extendedglob globdots alwaystoend no_nomatch histignorealldups sharehistory
 
 dotfiles=(
   "$HOME/.exports"
@@ -27,6 +27,10 @@ for f in $dotfiles; do
 done
 unset f
 unsetopt null_glob
+
+if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+  return
+fi
 
 source $ZPLUG_HOME/init.zsh
 if ! zplug check; then

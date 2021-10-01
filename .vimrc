@@ -62,7 +62,6 @@ let g:coc_global_extensions = [
       \ 'coc-angular',
       \ 'coc-tsserver',
       \ 'coc-tslint',
-      \ 'coc-yaml',
       \ 'coc-fzf-preview',
       \ 'coc-sh',
       \ 'coc-toml',
@@ -72,7 +71,6 @@ let g:coc_global_extensions = [
       \ 'coc-snippets',
       \ 'coc-highlight',
       \ 'coc-pyright',
-      \ 'coc-markdownlint',
       \ 'coc-vimlsp',
       \ 'coc-sql',
       \ 'coc-yank',
@@ -82,7 +80,6 @@ let g:coc_global_extensions = [
       \ 'coc-pairs',
       \ 'coc-explorer',
       \ 'coc-snippets',
-      \ 'coc-floaterm',
       \]
 
 " mouse support because I suck
