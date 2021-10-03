@@ -37,7 +37,7 @@ zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
 zplug "docker/cli", use:"contrib/completion/zsh/_docker"
 
 zplug "$ZDOTDIR/completions",             from:local
-zplug "/usr/local/share/zsh-completions", from:local
+zplug "/usr/local/share/zsh-completions", from:local, if:"[[ $OSTYPE == *darwin* ]]"
 
 zplug "Aloxaf/fzf-tab"
 
