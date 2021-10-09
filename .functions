@@ -57,4 +57,9 @@ splitpath(){
   kscript -t 'lines.split(":").print(System.getProperty("line.separator"))'
 }
 
+docker-sock-ssh-mount() {
+  rm /tmp/docker-ssh.sock
+  ssh -fnNT -L /tmp/docker-ssh.sock:/var/run/docker.sock $1
+}
+
 # vim: set filetype=zsh :
