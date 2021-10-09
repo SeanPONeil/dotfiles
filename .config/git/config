@@ -27,3 +27,5 @@
   insteadOf = https://logicgate.gitlab.com/
 [diff]
 	colorMoved = zebra
+[checkout]
+	defaultRemote = origin

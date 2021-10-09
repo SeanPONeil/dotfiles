@@ -28,6 +28,8 @@ done
 unset f
 unsetopt null_glob
 
+[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
+
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
 fi
@@ -42,7 +44,6 @@ fi
 zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"

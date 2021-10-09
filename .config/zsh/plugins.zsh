@@ -1,15 +1,16 @@
-# if [[ -n "$SSH_CLIENT" ]]; then
-#   zstyle :omz:plugins:ssh-agent agent-forwarding on
-# fi
-# if [[ $(uname) == "Darwin" ]]; then
-#   zstyle :omz:plugins:ssh-agent ssh-add-args -K
-# fi
-# zstyle :omz:plugins:ssh-agent identities id_ed25519
+if [[ -n "$SSH_CLIENT" ]]; then
+  zstyle :omz:plugins:ssh-agent agent-forwarding on
+fi
+if [[ $OSTYPE == *darwin* ]]; then
+  zstyle :omz:plugins:ssh-agent ssh-add-args -K
+fi
+zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 
 zplug "plugins/git",            from:oh-my-zsh
-# zplug "plugins/ssh-agent",      from:oh-my-zsh
+zplug "plugins/gpg-agent",      from:oh-my-zsh
+zplug "plugins/ssh-agent",      from:oh-my-zsh
 
 zplug "lukechilds/zsh-nvm"
 
@@ -18,7 +19,6 @@ zplug "plugins/autojump",       from:oh-my-zsh
 zplug "plugins/dotenv",         from:oh-my-zsh
 zplug "plugins/colorize",       from:oh-my-zsh
 zplug "plugins/cp",             from:oh-my-zsh
-zplug "plugins/gpg-agent",      from:oh-my-zsh
 zplug "plugins/gnu-utils",      from:oh-my-zsh
 
 zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
