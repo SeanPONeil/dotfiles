@@ -9,7 +9,6 @@ Plug 'seanponeil/wal.vim'     " pywal colorscheme
 Plug 'chrisbra/unicode.vim'
 Plug 'fatih/vim-go'
 Plug 'udalov/kotlin-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
