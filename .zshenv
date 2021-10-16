@@ -15,7 +15,7 @@ SAVEHIST=4000
 HISTFILE=~/.history
 
 # pywal colors for window manager related services
-. ~/.cache/wal/colors.sh
+# . ~/.cache/wal/colors.sh
 
 # Nerd Font symbol env vars
 . $HOME/.local/share/fonts/i_all.sh
