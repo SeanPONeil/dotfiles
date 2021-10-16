@@ -60,6 +60,7 @@ splitpath(){
 docker-sock-ssh-mount() {
   rm /tmp/docker-ssh.sock
   ssh -fnNT -L /tmp/docker-ssh.sock:/var/run/docker.sock $1
+  docker context use ssh-forwarding
 }
 
 # vim: set filetype=zsh :
