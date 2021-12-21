@@ -29,3 +29,7 @@
 	colorMoved = zebra
 [checkout]
 	defaultRemote = origin
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	defaultKeyCommand = ssh-add -L
