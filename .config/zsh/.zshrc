@@ -3,10 +3,6 @@
 # zmodload zsh/zpty
 zmodload zsh/parameter
 
-if [[ ! $SSH_CLIENT ]]; then
-  (cat ~/.cache/wal/sequences &)
-fi
-
 setopt extendedglob globdots alwaystoend no_nomatch histignorealldups sharehistory
 
 dotfiles=(
