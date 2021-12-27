@@ -11,25 +11,25 @@
 [interactive]
   diffFilter = delta --color-only
 [commit]
-	gpgsign = false
+  gpgsign = true
   trustExitCode = true
 [core]
-	excludesfile = ~/.config/git/gitignore_global
+  excludesfile = ~/.config/git/gitignore_global
   pager = delta
   trustctime = false
 [delta]
   features = line-numbers decorations
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
 [url "ssh://git@logicgate.gitlab.com/"]
   insteadOf = https://logicgate.gitlab.com/
 [diff]
-	colorMoved = zebra
+  colorMoved = zebra
 [checkout]
-	defaultRemote = origin
+  defaultRemote = origin
 [gpg]
-	format = ssh
+  format = ssh
 [gpg "ssh"]
-	defaultKeyCommand = ssh-add -L
+  defaultKeyCommand = ssh-add -L
