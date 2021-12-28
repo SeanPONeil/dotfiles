@@ -1,6 +1,5 @@
-
 import:
-  - ~/.config/alacritty/color_schemes.yaml
+  - ~/.config/alacritty/current_theme.yml
   - ~/.config/alacritty/font.yml
   - ~/.config/alacritty/decorations.yml
 
