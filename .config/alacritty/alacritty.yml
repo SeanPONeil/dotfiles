@@ -1,17 +1,15 @@
 
 import:
-  - ~/.cache/wal/colors-alacritty.yml
+  - ~/.config/alacritty/color_schemes.yaml
   - ~/.config/alacritty/font.yml
 
 cursor:
   style: Block
 
 draw_bold_text_with_bright_colors: false
-font:
-  size: 16
 
 window:
-  decorations: buttonless
+  decorations: full
   dynamic_padding:  true
   # padding:
     # x: 3
