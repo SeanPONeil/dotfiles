@@ -2,6 +2,7 @@
 import:
   - ~/.config/alacritty/color_schemes.yaml
   - ~/.config/alacritty/font.yml
+  - ~/.config/alacritty/decorations.yml
 
 cursor:
   style: Block
@@ -9,7 +10,6 @@ cursor:
 draw_bold_text_with_bright_colors: false
 
 window:
-  decorations: full
   dynamic_padding:  true
   # padding:
     # x: 3
