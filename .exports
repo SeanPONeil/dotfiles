@@ -30,6 +30,8 @@ if [[ -e "${HOME}/Android/Sdk" ]]; then
   export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
 fi
 
+export LESSOPEN="|$(which lesspipe.sh) %s"
+
 export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 
