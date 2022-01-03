@@ -34,4 +34,4 @@
 [gpg "ssh"]
   defaultKeyCommand = ssh-add -L
 [fetch]
-	prune = true
+	prune = false
