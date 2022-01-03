@@ -3,7 +3,7 @@
   name = Sean O'Neil
   email = oneilse14@gmail.com
 [pull]
-  rebase = true
+	rebase = true
 [alias]
   patch = !git --no-pager diff --no-color
 [color]
@@ -26,10 +26,12 @@
 [url "ssh://git@logicgate.gitlab.com/"]
   insteadOf = https://logicgate.gitlab.com/
 [diff]
-  colorMoved = zebra
+	colorMoved = zebra
 [checkout]
   defaultRemote = origin
 [gpg]
   format = ssh
 [gpg "ssh"]
   defaultKeyCommand = ssh-add -L
+[fetch]
+	prune = true
