@@ -25,7 +25,7 @@ zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "gradle/gradle-completion"
 
 zplug "Tarrasch/zsh-autoenv"
-zplug "zdharma-continuum/zsh-diff-so-fancy"
+zplug "zdharma-continuum/zsh-diff-so-fancy", as:command, use:"bin/"
 
 zplug "zsh-users/zsh-completions"
 zplug "zdharma-continuum/fast-syntax-highlighting"

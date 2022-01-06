@@ -1,5 +1,5 @@
 export PLATFORM=$(uname)
-export TZ='America/Los_Angeles'
+export TZ='America/Detroit'
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
