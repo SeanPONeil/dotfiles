@@ -26,10 +26,10 @@ zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "gradle/gradle-completion"
 
 zplug "Tarrasch/zsh-autoenv"
-zplug "zdharma/zsh-diff-so-fancy"
+zplug "zdharma-continuum/zsh-diff-so-fancy"
 
 zplug "zsh-users/zsh-completions"
-zplug "zdharma/fast-syntax-highlighting"
+zplug "zdharma-continuum/fast-syntax-highlighting"
 # zplug "zsh-users/zsh-autosuggestions"
 
 zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
