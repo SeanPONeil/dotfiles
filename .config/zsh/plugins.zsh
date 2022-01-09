@@ -2,7 +2,7 @@ if [[ -n "$SSH_CLIENT" ]]; then
   zstyle :omz:plugins:ssh-agent agent-forwarding on
 fi
 if [[ $OSTYPE == *darwin* ]]; then
-  zstyle :omz:plugins:ssh-agent ssh-add-args -K
+  zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
 fi
 zstyle :omz:plugins:ssh-agent identities id_ed25519
 
