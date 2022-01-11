@@ -8,7 +8,6 @@ zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 
-zplug "plugins/git",            from:oh-my-zsh
 zplug "plugins/gpg-agent",      from:oh-my-zsh
 zplug "plugins/ssh-agent",      from:oh-my-zsh
 
