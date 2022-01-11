@@ -70,3 +70,5 @@ alias jqc="jq --color-output"
 alias ag="rg"
 
 alias rsync="rsync -ah"
+
+alias gcl="gitlab-ci-local"
