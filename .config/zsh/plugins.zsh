@@ -25,6 +25,7 @@ zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "gradle/gradle-completion"
 
 zplug "Tarrasch/zsh-autoenv"
+zplug "reegnz/jq-zsh-plugin"
 zplug "zdharma-continuum/zsh-diff-so-fancy", as:command, use:"bin/"
 
 zplug "zsh-users/zsh-completions"
@@ -36,7 +37,12 @@ zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
 zplug "docker/cli", use:"contrib/completion/zsh/_docker"
 
 zplug "$ZDOTDIR/completions",             from:local
-zplug "/usr/local/share/zsh-completions", from:local, if:"[[ $OSTYPE == *darwin* ]]"
+if [[ $OSTYPE == *darwin* ]]; then
+  zplug "/usr/local/share/zsh-completions", from:local, if:"[[ $OSTYPE == *darwin* ]]"
+elif [[ $OSTYPE == *linux* ]]; then
+  zplug "/usr/share/zsh/vendor-completions", from:local, if:"[[ $OSTYPE == *linux* ]]"
+fi
+
 
 zplug "Aloxaf/fzf-tab"
 
