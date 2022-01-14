@@ -1,2 +1,3 @@
 window:
-  decorations:  full
+  decorations:  none
+  startup_mode: maximized
