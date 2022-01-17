@@ -6,34 +6,29 @@ Plug 'tpope/vim-fugitive'     " git functions
 Plug 'tpope/vim-commentary'   " add coments with `gcc`
 Plug 'itchyny/lightline.vim'  " status bar
 Plug 'seanponeil/wal.vim'     " pywal colorscheme
-Plug 'chrisbra/unicode.vim'
-Plug 'fatih/vim-go'
-Plug 'udalov/kotlin-vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'editorconfig/editorconfig-vim' " .editorconfig linter
 Plug 'preservim/nerdcommenter'
-Plug 'vim-test/vim-test'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'rbgrouleff/bclose.vim'
-Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'chrisbra/Colorizer'
-" Plug 'beeender/Comrade'           " intellij neovim link
-" Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'hunner/vim-plist'
 Plug 'vim-scripts/PreserveNoEOL'
-Plug 'glench/vim-jinja2-syntax'
-Plug 'tfnico/vim-gradle'
-Plug 'udalov/kotlin-vim'
-Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-cfr'
 Plug 'neo4j-contrib/cypher-vim-syntax'
 Plug 'vim-scripts/nc.vim--Eno'      " gcode syntax highlighter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi'
+Plug 'udalov/kotlin-vim'
 Plug 'ryanoasis/vim-devicons' " always last
 Plug 'preservim/nerdtree'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 " Plug 'chrisbra/csv.vim'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
@@ -48,6 +43,68 @@ endif
 if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+set completeopt=menu,menuone,noselect
+
+lua <<EOF
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+      end,
+    },
+    mapping = {
+      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
+
+  -- Setup lspconfig.
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+  require('lspconfig')['kotlin_language_server'].setup {}
+  require('lspconfig')['bashls'].setup {}
+EOF
+
 
 " mouse support because I suck
 set mouse=a

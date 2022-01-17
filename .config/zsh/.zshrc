@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 # zmodload zsh/zprof
 # zmodload zsh/zpty
-zmodload zsh/parameter
+# zmodload zsh/parameter
 
-setopt extendedglob globdots alwaystoend no_nomatch histignorealldups sharehistory
+setopt histignorealldups sharehistory
 
 dotfiles=(
   "$HOME/.exports"
@@ -15,14 +15,14 @@ dotfiles=(
   "$HOME/.encrypted"
   "$ZDOTDIR/completion.zsh"
 )
-setopt null_glob
+# setopt null_glob
 for f in $dotfiles; do
   if [[ -f "$f" ]]; then
     . "$f"
   fi
 done
 unset f
-unsetopt null_glob
+# unsetopt null_glob
 
 [ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
 

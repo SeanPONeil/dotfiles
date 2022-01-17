@@ -46,4 +46,7 @@ fi
 
 zplug "Aloxaf/fzf-tab"
 
+zplug "alacritty/alacritty", \
+  use:"extra/completions/_alacritty"
+
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
