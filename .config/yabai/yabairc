@@ -1,14 +1,14 @@
 # the scripting addition must be loaded manually if
 # yabai is running on Big Sur
-sudo yabai --load-sa
-yabai -m signal \
-  --add event=dock_did_restart \
-  action="sudo yabai --load-sa"
+# sudo yabai --load-sa
+# yabai -m signal \
+#   --add event=dock_did_restart \
+#   action="sudo yabai --load-sa"
 
 # get color values from pywal
 # source $HOME/.cache/wal/colors-yabai-argb.sh
-source /Users/seanoneil/.cache/wal/colors-yabai.sh
-transparent=0xFF
+# source /Users/seanoneil/.cache/wal/colors-yabai.sh
+# transparent=0xFF
 
 # global settings
 yabai -m config debug_output                 on
@@ -32,9 +32,9 @@ yabai -m config right_padding                0
 yabai -m config window_gap                   0
 
 # window opacity
-yabai -m config window_opacity on
-yabai -m config active_window_opacity 1.0
-yabai -m config normal_window_opacity $alpha
+# yabai -m config window_opacity on
+# yabai -m config active_window_opacity 1.0
+# yabai -m config normal_window_opacity $alpha
 
 # border
 # yabai -m config window_border               on

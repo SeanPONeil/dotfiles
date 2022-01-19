@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 # zmodload zsh/zprof
 # zmodload zsh/zpty
-# zmodload zsh/parameter
+zmodload zsh/parameter
 
-setopt histignorealldups sharehistory
+setopt histignorealldups sharehistory extended_glob
 
 dotfiles=(
   "$HOME/.exports"
