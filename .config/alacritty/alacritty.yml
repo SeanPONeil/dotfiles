@@ -22,6 +22,8 @@ working_directory: ~
 
 alt_sends_esc: false
 
+ipc_socket: true
+
 key_bindings:
   - { key: Key0,    mods: Control,    action: ResetFontSize }
   - { key: Equals,  mods: Control,    action: IncreaseFontSize }
