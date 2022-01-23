@@ -35,3 +35,5 @@
   defaultKeyCommand = ssh-add -L
 [fetch]
 	prune = false
+[rebase]
+	autosquash = true
