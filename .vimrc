@@ -172,7 +172,7 @@ nnoremap <silent> <C-p> :FZF<CR>
 " Fuzzy find Vim commands with alt - space
 nnoremap <A-@> :Commands<CR>
 
-set list          " Display whitespace characters
+" set list          " Display whitespace characters
 set splitbelow    " `:split`'s appear below
 set splitright    " `:vsplit`'s appear right
 set scrolloff=40  " always show 20 lines below my cursor
