@@ -19,4 +19,6 @@ HISTFILE=~/.history
 
 # Nerd Font symbol env vars
 . $HOME/.local/share/fonts/i_all.sh
-. "$HOME/.cargo/env"
+if [[ -f "$HOME/.cargo/env" ]]; then
+  . "$HOME/.cargo/env"
+fi
