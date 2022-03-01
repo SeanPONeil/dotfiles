@@ -12,6 +12,7 @@ zplug "plugins/gpg-agent",      from:oh-my-zsh
 zplug "plugins/ssh-agent",      from:oh-my-zsh
 
 zplug "lukechilds/zsh-nvm"
+zplug "matthieusb/zsh-sdkman"
 
 zplug "plugins/vi-mode",        from:oh-my-zsh
 zplug "plugins/autojump",       from:oh-my-zsh
