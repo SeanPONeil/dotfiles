@@ -34,6 +34,9 @@ symbol = ""
 disabled = true
 symbol = " "
 
+[kotlin]
+disabled = true
+
 [memory_usage]
 symbol = "  "
 
@@ -59,10 +62,10 @@ symbol = " "
 [terraform]
 disabled = true
 
-[env_var]
-variable = "SPRING_PROFILES_ACTIVE"
-style = "bold yellow"
-format = "using [$env_value]($style) "
+# [env_var]
+# variable = "SPRING_PROFILES_ACTIVE"
+# style = "bold yellow"
+# format = "using [$env_value]($style) "
 
 # [[env_var]]
 # variable = "NEO4J_DATABASE"

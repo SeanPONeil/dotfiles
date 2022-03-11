@@ -31,7 +31,7 @@ zplug "zdharma-continuum/zsh-diff-so-fancy", as:command, use:"bin/"
 
 zplug "zsh-users/zsh-completions"
 zplug "zdharma-continuum/fast-syntax-highlighting"
-# zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-autosuggestions"
 
 zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
 
