@@ -137,3 +137,7 @@ idea-server() {
     --name idea-projector \
     registry.jetbrains.team/p/prj/containers/projector-idea-u
 }
+
+dockly() {
+  docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock lirantal/dockly
+}
