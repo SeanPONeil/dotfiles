@@ -1,15 +1,4 @@
-if [[ -n "$SSH_CLIENT" ]]; then
-  zstyle :omz:plugins:ssh-agent agent-forwarding on
-fi
-if [[ $OSTYPE == *darwin* ]]; then
-  zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
-fi
-zstyle :omz:plugins:ssh-agent identities id_ed25519
-
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
-
-zplug "plugins/gpg-agent",      from:oh-my-zsh
-zplug "plugins/ssh-agent",      from:oh-my-zsh
 
 zplug "lukechilds/zsh-nvm"
 zplug "matthieusb/zsh-sdkman"

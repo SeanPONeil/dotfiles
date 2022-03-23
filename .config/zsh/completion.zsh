@@ -21,7 +21,6 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':completion:*:*:docker:*'   option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
-
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 # setopt no_list_ambiguous

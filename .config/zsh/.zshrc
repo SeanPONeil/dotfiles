@@ -41,5 +41,6 @@ zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+eval "$(op completion zsh)"; compdef _op op
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
