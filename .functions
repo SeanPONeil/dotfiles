@@ -63,4 +63,8 @@ docker-sock-ssh-mount() {
   docker context use ssh-forwarding
 }
 
+kali() {
+  docker run -ti --rm --privileged --net host --mount src=kali-root,dst=/root --mount src=kali-postgres,dst=/var/lib/postgresql kali
+}
+
 # vim: set filetype=zsh :
