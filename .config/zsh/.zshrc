@@ -26,6 +26,8 @@ unset f
 
 [ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
 
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
 fi
