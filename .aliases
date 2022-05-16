@@ -72,3 +72,5 @@ alias ag="rg"
 # alias rsync="rsync -ah"
 
 alias gcl="gitlab-ci-local"
+
+alias mvn="mvnd "
