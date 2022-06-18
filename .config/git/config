@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
   name = Sean ONeil
-  email = oneilse14@gmail.com
+  email = sean.oneil@logicgate.com
 [pull]
 	rebase = true
 [alias]
