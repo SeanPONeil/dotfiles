@@ -24,8 +24,7 @@ done
 unset f
 # unsetopt null_glob
 
-[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+export SSH_AUTH_SOCK=$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
@@ -42,9 +41,11 @@ zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
 source <(lab completion zsh)
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+eval "$(op completion zsh)"; compdef _op op
 
 # zprof
