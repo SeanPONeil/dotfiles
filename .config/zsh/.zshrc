@@ -24,7 +24,13 @@ done
 unset f
 # unsetopt null_glob
 
-export SSH_AUTH_SOCK=$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
+
+if [[ $(uname) == "Darwin" ]]; then
+  export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+else
+  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+fi
 
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
@@ -40,9 +46,6 @@ fi
 zplug load
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-source <(lab completion zsh)
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
