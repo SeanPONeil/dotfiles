@@ -8,8 +8,10 @@ cursor:
 
 draw_bold_text_with_bright_colors: false
 
+ipc_socket: true
+
 window:
-  dynamic_padding:  true
+  dynamic_padding: false
   # padding:
     # x: 3
     # y: 0

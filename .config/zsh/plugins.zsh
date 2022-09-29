@@ -10,19 +10,14 @@ zplug "plugins/colorize",       from:oh-my-zsh
 zplug "plugins/cp",             from:oh-my-zsh
 zplug "plugins/gnu-utils",      from:oh-my-zsh
 
-zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-
 zplug "gradle/gradle-completion"
 
 zplug "Tarrasch/zsh-autoenv"
 zplug "reegnz/jq-zsh-plugin"
-zplug "zdharma-continuum/zsh-diff-so-fancy", as:command, use:"bin/"
 
 zplug "zsh-users/zsh-completions"
 zplug "zdharma-continuum/fast-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-
-zplug "TheLocehiliosan/yadm", use:"completion/zsh/_yadm", as:command, defer:2
 
 zplug "docker/cli", use:"contrib/completion/zsh/_docker"
 

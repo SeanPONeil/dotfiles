@@ -25,5 +25,9 @@ CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 # setopt no_list_ambiguous
 
-fpath=($ZDOTDIR/completions /usr/local/share/zsh-completions $fpath)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
+FPATH=$ZDOTDIR/completions:$FPATH
 
