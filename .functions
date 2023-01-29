@@ -67,4 +67,8 @@ kali() {
   docker run -ti --rm --privileged --net host --mount src=kali-root,dst=/root --mount src=kali-postgres,dst=/var/lib/postgresql kali
 }
 
+# docker-gradle() {
+#  docker run --rm -u gradle -v "$PWD":/home/gradle/project -v "$HOME/.cache/gradle_ro_dep_cache":/mnt/gradle_ro_dep_cache -e "GRADLE_RO_DEP_CACHE=/mnt/gradle_ro_dep_cache" -w /home/gradle/project -it gradle:7-jdk11 gradle test
+#  }
+
 # vim: set filetype=zsh :

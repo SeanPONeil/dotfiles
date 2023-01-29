@@ -74,3 +74,5 @@ alias ag="rg"
 alias gcl="gitlab-ci-local"
 
 alias mvn="mvnd "
+
+alias gifify='docker run -it --rm -v $(pwd):/data maxogden/gifify '

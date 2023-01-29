@@ -12,9 +12,9 @@ ipc_socket: true
 
 window:
   dynamic_padding: false
-  # padding:
-    # x: 3
-    # y: 0
+  padding:
+    x: 2
+    y: 0
 
 scrolling:
   history: 30000
