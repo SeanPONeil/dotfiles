@@ -13,13 +13,10 @@ zplug "plugins/gnu-utils",      from:oh-my-zsh
 zplug "gradle/gradle-completion"
 
 zplug "Tarrasch/zsh-autoenv"
-zplug "reegnz/jq-zsh-plugin"
 
 zplug "zsh-users/zsh-completions"
 zplug "zdharma-continuum/fast-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-
-zplug "docker/cli", use:"contrib/completion/zsh/_docker"
 
 zplug "$ZDOTDIR/completions",             from:local
 if [[ $OSTYPE == *darwin* ]]; then
@@ -31,8 +28,5 @@ fi
 
 
 zplug "Aloxaf/fzf-tab"
-
-zplug "alacritty/alacritty", \
-  use:"extra/completions/_alacritty"
 
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'

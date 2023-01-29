@@ -11,13 +11,12 @@ Plug 'tpope/vim-eunuch'       " unix commands (especially :SudoWrite)
 Plug 'tpope/vim-vinegar'      " better netrw
 Plug 'tpope/vim-fugitive'     " git functions
 Plug 'tpope/vim-commentary'   " add coments with `gcc`
-Plug 'folke/noice.nvim'
-Plug 'MunifTanjim/nui.nvim'
-Plug 'rcarriga/nvim-notify'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'tamago324/nlsp-settings.nvim'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'rcarriga/nvim-notify'
 
 Plug 'ryanoasis/vim-devicons' " always last
 
@@ -34,8 +33,7 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-lua vim.opt.termguicolors = true
-lua require("noice").setup()
+set termguicolors
 
 set completeopt=menu,menuone,noselect
 

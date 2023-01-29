@@ -3,11 +3,11 @@
 # zmodload zsh/zpty
 # zmodload zsh/parameter
 
-HISTFILE=~/.zsh_history
+HISTFILE=~/.history
 HISTSIZE=10000
 SAVEHIST=1000
 
-setopt histignorealldups INC_APPEND_HISTORY_TIME extended_glob
+setopt histignorealldups inc_append_history_time extended_glob
 
 dotfiles=(
   "$HOME/.exports"
