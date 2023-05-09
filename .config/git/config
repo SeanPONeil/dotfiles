@@ -8,11 +8,16 @@
   patch = !git --no-pager diff --no-color
 [color]
   ui = true
+  status = auto
+  diff = auto
+  branch = auto
+  grep = auto
 [interactive]
   diffFilter = delta --color-only
 [commit]
   trustExitCode = true
 [core]
+  editor = nvim
   excludesfile = ~/.config/git/gitignore_global
   pager = delta
   trustctime = false
@@ -37,5 +42,5 @@
 	prune = true
 [rebase]
 	autosquash = true
-[merge]
-	conflictstyle = zdiff3
+[push]
+	autoSetupRemote = true

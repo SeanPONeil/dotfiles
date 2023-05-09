@@ -1,3 +1,4 @@
 set show-changes = true
 
 source ~/.config/tig/vim.tigrc
+source ~/.config/tig/chocolate.theme.tigrc

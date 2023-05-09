@@ -76,3 +76,5 @@ alias gcl="gitlab-ci-local"
 alias mvn="mvnd "
 
 alias gifify='docker run -it --rm -v $(pwd):/data maxogden/gifify '
+
+alias nvminit='export NVM_DIR="${HOME}/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'

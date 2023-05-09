@@ -6,29 +6,23 @@ import:
 cursor:
   style: Block
 
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 ipc_socket: true
 
 window:
-  dynamic_padding: false
+  dynamic_padding: true
+  opacity: 0.95
   padding:
-    x: 2
-    y: 0
+    x: 4
+    y: 4
+  startup_mode: Windowed
 
 scrolling:
-  history: 30000
-  multiplier: 5
+  history: 10000
+  multiplier: 3
 
 working_directory: ~
 
 alt_sends_esc: false
-
-ipc_socket: true
-
-key_bindings:
-  - { key: Key0,    mods: Control,    action: ResetFontSize }
-  - { key: Equals,  mods: Control,    action: IncreaseFontSize }
-  - { key: Plus,     mods: Control,    action: IncreaseFontSize }
-  - { key: Minus,   mods: Control,    action: DecreaseFontSize }
 

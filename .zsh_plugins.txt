@@ -1,0 +1,18 @@
+lukechilds/zsh-nvm kind:defer
+matthieusb/zsh-sdkman
+ohmyzsh/ohmyzsh path:plugins/autojump
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/colorize
+ohmyzsh/ohmyzsh path:plugins/gradle kind:defer
+ohmyzsh/ohmyzsh path:plugins/sdk kind:defer
+ohmyzsh/ohmyzsh path:plugins/starship
+Tarrasch/zsh-autoenv
+zsh-users/zsh-completions
+
+zsh-users/zsh-autosuggestions kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer
+softmoth/zsh-vim-mode
+
+
+Aloxaf/fzf-tab
+

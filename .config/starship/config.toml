@@ -5,10 +5,10 @@ disabled = true
 [battery]
 disabled = true
 
-[character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
-vicmd_symbol = "[<](bold green)"
+# [character]
+# success_symbol = "[>](bold green)"
+# error_symbol = "[<](bold red)"
+# vicmd_symbol = "[<](bold cyan)"
 
 [dart]
 symbol = " "
@@ -22,7 +22,8 @@ disabled = false
 only_with_files = true
 
 [git_branch]
-symbol = " "
+# symbol = " "
+symbol = ""
 
 [gcloud]
 disabled = true

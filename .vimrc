@@ -17,7 +17,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'tamago324/nlsp-settings.nvim'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'rcarriga/nvim-notify'
-
+Plug 'memgraph/cypher.vim'
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()

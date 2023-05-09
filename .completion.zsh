@@ -23,11 +23,9 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
-# setopt no_list_ambiguous
+setopt no_list_ambiguous
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 fi
-
-FPATH=$ZDOTDIR/completions:$FPATH
 

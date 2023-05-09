@@ -1,8 +1,16 @@
 font:
-  size: 14
+  size: 11
   normal:
-    family: Tamzen Nerd Font
-    style:  Medium
+    family: Berkeley Mono
+    style: Regular
   bold:
-    family: Tamzen Nerd Font
-    style:  Medium
+    family: Berkeley Mono
+    style: Bold
+  italic:
+    family: Berkeley Mono
+    style: Italic
+  bold_italic:
+    family: Berkeley Mono
+    style: Bold Italic
+
+  builtin_box_drawing: true
