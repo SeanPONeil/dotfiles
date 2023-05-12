@@ -11,13 +11,13 @@ export NVM_LAZY_LOAD=true
 
 setopt histignorealldups inc_append_history_time extended_glob
 
+if [[ $(uname) == "Linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [[ $(uname) == "Darwin" ]]; then
-  source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-else
-  source ${ZDOTDIR:-~}/.antidote/antidote.zsh
-fi
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 autoload -Uz compinit && compinit
