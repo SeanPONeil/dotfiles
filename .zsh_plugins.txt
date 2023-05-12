@@ -12,6 +12,7 @@ zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer
 softmoth/zsh-vim-mode
+zpm-zsh/clipboard
 
 
 Aloxaf/fzf-tab
