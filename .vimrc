@@ -20,6 +20,7 @@ Plug 'rcarriga/nvim-notify'
 Plug 'memgraph/cypher.vim'
 Plug 'craigmac/vim-mermaid'
 Plug 'zhaozg/vim-diagram'
+Plug 'habamax/vim-asciidoctor'
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()
