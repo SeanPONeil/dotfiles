@@ -15,6 +15,10 @@ if [[ $(uname) == "Linux" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+if [[ $(uname) == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
@@ -54,3 +58,7 @@ fi
 eval "$(direnv hook zsh)"
 
 # zprof
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

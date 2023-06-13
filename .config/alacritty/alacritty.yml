@@ -12,14 +12,14 @@ ipc_socket: true
 
 window:
   dynamic_padding: true
-  opacity: 0.9
+  opacity: 1
   padding:
     x: 4
     y: 4
   startup_mode: Windowed
 
 scrolling:
-  history: 10000
+  history: 100000
   multiplier: 3
 
 working_directory: ~

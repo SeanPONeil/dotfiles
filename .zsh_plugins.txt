@@ -16,4 +16,5 @@ zpm-zsh/clipboard
 
 
 Aloxaf/fzf-tab
+unixorn/fzf-zsh-plugin
 

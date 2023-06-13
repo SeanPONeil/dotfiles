@@ -10,3 +10,12 @@ export NEO4J_PASSWORD=localhost
 if [[ $(uname) == "Linux" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
+
+if [[ $(uname) == "Darwin" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/sean/Library/Application Support/JetBrains/Toolbox/scripts"
+
