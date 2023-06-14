@@ -1,6 +1,5 @@
 import:
   - ~/.config/alacritty/current_theme.yml
-  - ~/.config/alacritty/font.yml
   - ~/.config/alacritty/decorations.yml
 
 cursor:
@@ -9,6 +8,13 @@ cursor:
 draw_bold_text_with_bright_colors: true
 
 ipc_socket: true
+
+font:
+  size: 14
+  normal:
+    family: ProggyClean Nerd Font Mono
+    style: Regular
+  builtin_box_drawing: true
 
 window:
   dynamic_padding: true
