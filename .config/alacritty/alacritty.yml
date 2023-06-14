@@ -12,7 +12,7 @@ ipc_socket: true
 font:
   size: 14
   normal:
-    family: ProggyClean Nerd Font Mono
+    family: Tamzen Nerd Font
     style: Regular
   builtin_box_drawing: true
 
