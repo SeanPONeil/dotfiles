@@ -47,6 +47,7 @@ disabled = true
 
 [package]
 symbol = " "
+disabled = true
 
 [python]
 symbol = " "
@@ -61,6 +62,9 @@ symbol = " "
 symbol = " "
 
 [terraform]
+disabled = true
+
+[gradle]
 disabled = true
 
 # [env_var]
