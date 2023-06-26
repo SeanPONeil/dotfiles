@@ -14,7 +14,6 @@ zdharma-continuum/fast-syntax-highlighting kind:defer
 softmoth/zsh-vim-mode
 zpm-zsh/clipboard
 
-
-Aloxaf/fzf-tab
 unixorn/fzf-zsh-plugin
+Aloxaf/fzf-tab
 
