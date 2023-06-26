@@ -1,3 +1,9 @@
 set show-changes = true
 
+
 source ~/.config/tig/vim.tigrc
+
+color cursor        default cyan  bold
+color title-blur		default blue
+color title-focus		default blue  bold
+
