@@ -19,8 +19,6 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
@@ -66,3 +64,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Add JBang to environment
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

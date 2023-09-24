@@ -64,8 +64,8 @@ symbol = " "
 [terraform]
 disabled = true
 
-[gradle]
-disabled = true
+# [gradle]
+# disabled = true
 
 # [env_var]
 # variable = "SPRING_PROFILES_ACTIVE"
