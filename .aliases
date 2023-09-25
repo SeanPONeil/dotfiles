@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-alias ls="exa"
+alias ls="eza "
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
@@ -80,3 +80,5 @@ alias gifify='docker run -it --rm -v $(pwd):/data maxogden/gifify '
 alias nvminit='export NVM_DIR="${HOME}/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
 alias cypherfmt="jbang format-cypher@neo4j "
+
+alias yless="jless --yaml"

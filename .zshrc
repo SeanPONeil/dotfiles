@@ -9,6 +9,8 @@ export SAVEHIST=1000
 
 export NVM_LAZY_LOAD=true
 
+export SDKMAN_AUTOCOMPLETE_FLOAT=1
+
 setopt histignorealldups inc_append_history_time extended_glob
 
 if [[ $(uname) == "Linux" ]]; then
