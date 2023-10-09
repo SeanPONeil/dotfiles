@@ -69,3 +69,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
+source <(pkgx --shellcode)  #docs.pkgx.sh/shellcode

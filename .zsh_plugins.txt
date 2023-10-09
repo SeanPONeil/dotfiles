@@ -7,7 +7,7 @@ ohmyzsh/ohmyzsh path:plugins/gradle kind:defer
 ohmyzsh/ohmyzsh path:plugins/sdk kind:defer
 ohmyzsh/ohmyzsh path:plugins/starship
 Tarrasch/zsh-autoenv
-zsh-users/zsh-completions
+zsh-users/zsh-completions kind:defer
 
 zsh-users/zsh-autosuggestions kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer

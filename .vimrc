@@ -22,6 +22,7 @@ Plug 'craigmac/vim-mermaid'
 Plug 'zhaozg/vim-diagram'
 Plug 'habamax/vim-asciidoctor'
 Plug 'alaviss/nim.nvim'
+Plug 'udalov/kotlin-vim'
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()
@@ -63,6 +64,7 @@ syntax on
 
 set noshowmode
 set showcmd
+set nocompatible
 
 " enable line numbers
 set number
