@@ -82,3 +82,7 @@ alias nvminit='export NVM_DIR="${HOME}/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$
 alias cypherfmt="jbang format-cypher@neo4j "
 
 alias yless="jless --yaml"
+
+alias neo4j="sdk use java 11.0.20-tem && neo4j "
+
+alias neo4jlogs="tail -f $NEO4J_HOME/logs/query.log"
