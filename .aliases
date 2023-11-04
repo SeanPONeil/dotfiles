@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 alias ls="eza "
+alias exa="eza "
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '
@@ -83,6 +84,6 @@ alias cypherfmt="jbang format-cypher@neo4j "
 
 alias yless="jless --yaml"
 
-alias neo4j="sdk use java 11.0.20-tem && neo4j "
+alias neo4j="JAVA_HOME=$(sdk home java 11.0.20-tem) neo4j "
 
 alias neo4jlogs="tail -f $NEO4J_HOME/logs/query.log"
