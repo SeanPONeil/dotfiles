@@ -2,6 +2,7 @@
 
 alias ls="eza "
 alias exa="eza "
+alias diff="colordiff "
 
 # Always enable colored `grep` output
 alias grep='grep --color=auto '

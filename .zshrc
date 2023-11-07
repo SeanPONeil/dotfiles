@@ -1,7 +1,11 @@
 #!/usr/bin/env zsh
 # zmodload zsh/zprof
-zmodload zsh/zpty
-zmodload zsh/parameter
+# zmodload zsh/zpty
+# zmodload zsh/parameter
+# zmodload zsh/terminfo
+# zmodload zsh/zutil
+# zmodload zsh/computil
+# zmodload zsh/curses
 
 export HISTFILE=~/.history
 export HISTSIZE=10000
