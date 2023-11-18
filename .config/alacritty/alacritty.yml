@@ -12,8 +12,7 @@ ipc_socket: true
 font:
   size: 12
   normal:
-    family: Tamzen Nerd Font
-    style: Regular
+    family: monospace
   builtin_box_drawing: true
 
 window:
