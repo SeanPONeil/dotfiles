@@ -5,6 +5,7 @@ ohmyzsh/ohmyzsh path:plugins/colorize
 ohmyzsh/ohmyzsh path:plugins/gradle kind:defer
 ohmyzsh/ohmyzsh path:plugins/sdk kind:defer
 ohmyzsh/ohmyzsh path:plugins/starship
+ohmyzsh/ohmyzsh path:plugins/aws
 Tarrasch/zsh-autoenv
 zsh-users/zsh-completions kind:defer
 

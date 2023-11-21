@@ -3,6 +3,7 @@
 [user]
   name = Sean O'Neil
   email = oneilse14@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJJ293QI+NdDxENLHV242HW+wxHgxmjM91q3CjUJtq4
 [pull]
 	rebase = true
 [alias]
@@ -17,6 +18,7 @@
   diffFilter = delta --color-only
 [commit]
   trustExitCode = true
+	gpgsign = true
 [core]
   editor = nvim
   excludesfile = ~/.config/git/gitignore_global
@@ -39,6 +41,7 @@
   format = ssh
 [gpg "ssh"]
   defaultKeyCommand = ssh-add -L
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [fetch]
 	prune = true
 [rebase]
