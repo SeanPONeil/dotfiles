@@ -58,8 +58,8 @@ alias mitmweb="mitmweb --set confdir=$HOME/.config/mitmproxy"
 
 alias mux="tmuxinator"
 
-if [[ "$(command -v nvim)" ]]; then
-  alias vim="nvim"
+if [[ "$(command -v lvim)" ]]; then
+  alias vim="lvim"
 fi
 
 
