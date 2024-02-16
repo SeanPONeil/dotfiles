@@ -15,12 +15,12 @@
   branch = auto
   grep = auto
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta
 [commit]
   trustExitCode = true
 	gpgsign = true
 [core]
-  editor = nvim
+  editor = lvim
   excludesfile = ~/.config/git/gitignore_global
   pager = delta
   trustctime = false
@@ -46,7 +46,15 @@
 	prune = true
 [rebase]
 	autosquash = true
+  autostash = true
+  updateRefs = true
 [push]
 	autoSetupRemote = true
 [rerere]
-	enabled = true
+  enabled = true
+[diff]
+  algorithm = histogram
+[branch]
+  sort = -committerdate
+[merge]
+	conflictstyle = diff3
