@@ -18,6 +18,7 @@ lvim.builtin.treesitter.ensure_installed = {
 ------------------------
 lvim.plugins = {
   "lunarvim/colorschemes",
+  "junegunn/fzf.vim",
   "nvim-lua/plenary.nvim",
   "nvim-telescope/telescope.nvim",
   "nvim-treesitter/nvim-treesitter",

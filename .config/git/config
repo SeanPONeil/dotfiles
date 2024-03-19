@@ -15,7 +15,7 @@
   branch = auto
   grep = auto
 [interactive]
-  diffFilter = delta
+  diffFilter = delta --color-only
 [commit]
   trustExitCode = true
 	gpgsign = true
@@ -27,6 +27,7 @@
 	untrackedcache = true
 [delta]
   features = line-numbers decorations
+  navigate = true
 [init]
   defaultBranch = main
 [url "ssh://git@github.com/"]
@@ -34,7 +35,7 @@
 [url "ssh://git@logicgate.gitlab.com/"]
   insteadOf = https://logicgate.gitlab.com/
 [diff]
-	colorMoved = zebra
+	colorMoved = default
 [checkout]
   defaultRemote = origin
 [gpg]
@@ -57,4 +58,7 @@
 [branch]
   sort = -committerdate
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
+  tool = lvimdiff
+[mergetool.lvimdiff]
+cmd = lvim -f -d -c '$wincmd w | wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"

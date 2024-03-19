@@ -32,21 +32,19 @@ style = "Block"
 
 [font]
 builtin_box_drawing = true
-size = 12
+size = 14
 
 [font.normal]
-family = "Tamzen Nerd Font"
+family = "ProggyClean Nerd Font"
 
 [scrolling]
 history = 100000
 multiplier = 3
 
 [window]
-decorations = "none"
+blur = true
+decorations = "transparent"
 dynamic_padding = true
-opacity = 1
+padding = { x = 6, y = 7 }
+opacity = 0.9
 startup_mode = "Windowed"
-
-[window.padding]
-x = 4
-y = 4

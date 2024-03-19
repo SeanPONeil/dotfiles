@@ -58,9 +58,7 @@ alias mitmweb="mitmweb --set confdir=$HOME/.config/mitmproxy"
 
 alias mux="tmuxinator"
 
-if [[ "$(command -v lvim)" ]]; then
-  alias vim="lvim"
-fi
+alias vim="lvim"
 
 
 # Make `pip3 install --user` install packages to .local on os x`
@@ -84,4 +82,6 @@ alias nvminit='export NVM_DIR="${HOME}/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$
 alias cypherfmt="jbang format-cypher@neo4j "
 
 alias yless="jless --yaml"
+
+alias redocly="docker run --rm -v $PWD:/spec redocly/cli "
 

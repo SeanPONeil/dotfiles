@@ -75,3 +75,7 @@ export PATH="$HOME/.jbang/bin:$PATH"
 
 source <(pkgx --shellcode)  #docs.pkgx.sh/shellcode
 
+if command -v ngrok &>/dev/null; then
+  eval "$(ngrok completion)"
+fi
+
