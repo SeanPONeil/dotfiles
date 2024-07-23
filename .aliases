@@ -85,3 +85,4 @@ alias yless="jless --yaml"
 
 alias redocly="docker run --rm -v $PWD:/spec redocly/cli "
 
+alias curl="wcurl"

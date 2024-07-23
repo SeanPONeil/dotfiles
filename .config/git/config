@@ -2,7 +2,7 @@
   path = ~/.config/delta/themes.gitconfig
 [user]
   name = Sean O'Neil
-  email = oneilse14@gmail.com
+  email = sean.oneil@logicgate.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJJ293QI+NdDxENLHV242HW+wxHgxmjM91q3CjUJtq4
 [pull]
 	rebase = true
@@ -62,3 +62,9 @@
   tool = lvimdiff
 [mergetool.lvimdiff]
 cmd = lvim -f -d -c '$wincmd w | wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
+[url "ssh://git@gitlab.logicgate.com/"]
+	insteadOf = https://gitlab.logicgate.com/
+[url "ssh://git@gitlab.logicgate.dev/"]
+	insteadOf = https://gitlab.logicgate.dev/
+[url "git@gitlab.logicgate.com:"]
+	insteadOf = https://gitlab.logicgate.com/

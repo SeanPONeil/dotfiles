@@ -43,8 +43,8 @@ multiplier = 3
 
 [window]
 blur = true
-decorations = "transparent"
+decorations = "none"
 dynamic_padding = true
 padding = { x = 6, y = 7 }
-opacity = 0.9
+opacity = 1.0
 startup_mode = "Windowed"

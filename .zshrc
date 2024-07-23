@@ -65,9 +65,6 @@ eval "$(direnv hook zsh)"
 
 # zprof
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Add JBang to environment
 alias j!=jbang
@@ -79,3 +76,23 @@ if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
 
+if command -v op &>/dev/null; then
+  eval "$(op completion zsh)"
+fi
+
+if [ ! -d ~/.tfenv ]; then
+  curl -sL -o /tmp/tfenv.tar.gz https://github.com/tfutils/tfenv/archive/v2.2.2.tar.gz
+  tar xf /tmp/tfenv.tar.gz
+  mv tfenv-* ~/.tfenv
+fi
+export PATH=$PATH:~/.tfenv/bin
+
+export PATH=$PATH:~/go/bin
+export GO111MODULE=on
+export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
+source /Users/sean/.config/op/plugins.sh
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
