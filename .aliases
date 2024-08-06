@@ -58,7 +58,7 @@ alias mitmweb="mitmweb --set confdir=$HOME/.config/mitmproxy"
 
 alias mux="tmuxinator"
 
-alias vim="lvim"
+alias vim="nvim"
 
 
 # Make `pip3 install --user` install packages to .local on os x`
