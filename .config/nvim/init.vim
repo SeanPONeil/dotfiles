@@ -14,6 +14,12 @@ Plug 'tpope/vim-commentary'   " add coments with `gcc`
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'tamago324/nlsp-settings.nvim'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'rcarriga/nvim-notify'
@@ -22,6 +28,7 @@ Plug 'craigmac/vim-mermaid'
 Plug 'zhaozg/vim-diagram'
 Plug 'habamax/vim-asciidoctor'
 Plug 'alaviss/nim.nvim'
+Plug '2kabhishek/nerdy.nvim'
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()
@@ -83,8 +90,8 @@ set nobackup
 set noswapfile
 set nowritebackup
 
-" Map fzf to ctrl - space
-nnoremap <silent> <C-p> :FZF<CR>
+" Map Telescope to ctrl - p
+nnoremap <silent> <C-p> :Telescope<CR>
 
 " set list          " Display whitespace characters
 set splitbelow    " `:split`'s appear below
@@ -114,3 +121,4 @@ set ttimeout
 set ttimeoutlen=100
 set timeoutlen=3000
 
+lua require('init')

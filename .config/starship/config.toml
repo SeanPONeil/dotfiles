@@ -1,5 +1,5 @@
 [aws]
-disabled = true
+disabled = false
 symbol = " "
 
 [battery]
@@ -36,14 +36,15 @@ disabled = true
 symbol = " "
 
 [kotlin]
+symbol = " "
 disabled = true
 
 [memory_usage]
 symbol = "  "
 
 [nodejs]
-symbol = " "
-disabled = true
+symbol = " "
+disabled = false
 
 [package]
 symbol = " "
@@ -62,7 +63,6 @@ symbol = " "
 symbol = " "
 
 [terraform]
-disabled = true
 
 [gradle]
 disabled = true

@@ -86,3 +86,7 @@ alias yless="jless --yaml"
 alias redocly="docker run --rm -v $PWD:/spec redocly/cli "
 
 alias curl="wcurl"
+
+alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm chenzj/dfimage"
+
+alias mmdc="npx -p @mermaid-js/mermaid-cli mmdc"
