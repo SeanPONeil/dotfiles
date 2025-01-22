@@ -29,6 +29,7 @@ Plug 'zhaozg/vim-diagram'
 Plug 'habamax/vim-asciidoctor'
 Plug 'alaviss/nim.nvim'
 Plug '2kabhishek/nerdy.nvim'
+Plug 'mechatroner/rainbow_csv'
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()

@@ -70,8 +70,6 @@ eval "$(direnv hook zsh)"
 alias j!=jbang
 export PATH="$HOME/.jbang/bin:$PATH"
 
-source <(pkgx --shellcode)  #docs.pkgx.sh/shellcode
-
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
 fi
@@ -91,4 +89,3 @@ export PATH=$PATH:~/go/bin
 export GO111MODULE=on
 export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 source /Users/sean/.config/op/plugins.sh
-
