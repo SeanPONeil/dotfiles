@@ -2,7 +2,7 @@
   path = ~/.config/delta/themes.gitconfig
 [user]
   name = Sean O'Neil
-  email = sean.oneil@logicgate.com
+  email = oneilse14@gmail.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJJ293QI+NdDxENLHV242HW+wxHgxmjM91q3CjUJtq4
 [pull]
 	rebase = true
@@ -20,7 +20,7 @@
   trustExitCode = true
 	gpgsign = true
 [core]
-  editor = lvim
+  editor = vim
   excludesfile = ~/.config/git/gitignore_global
   pager = delta
   trustctime = false
@@ -42,7 +42,7 @@
   format = ssh
 [gpg "ssh"]
   defaultKeyCommand = ssh-add -L
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	program = /opt/1Password/op-ssh-sign
 [fetch]
 	prune = true
 [rebase]
@@ -58,8 +58,7 @@
 [branch]
   sort = -committerdate
 [merge]
-	conflictstyle = zdiff3
-  tool = lvimdiff
+  tool = vimdiff
 [mergetool.lvimdiff]
 cmd = lvim -f -d -c '$wincmd w | wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
 [url "ssh://git@gitlab.logicgate.com/"]

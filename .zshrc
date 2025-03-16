@@ -25,8 +25,6 @@ if [[ $(uname) == "Darwin" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
@@ -78,14 +76,14 @@ if command -v op &>/dev/null; then
   eval "$(op completion zsh)"
 fi
 
-if [ ! -d ~/.tfenv ]; then
-  curl -sL -o /tmp/tfenv.tar.gz https://github.com/tfutils/tfenv/archive/v2.2.2.tar.gz
-  tar xf /tmp/tfenv.tar.gz
-  mv tfenv-* ~/.tfenv
-fi
+# if [ ! -d ~/.tfenv ]; then
+#   curl -sL -o /tmp/tfenv.tar.gz https://github.com/tfutils/tfenv/archive/v2.2.2.tar.gz
+#   tar xf /tmp/tfenv.tar.gz
+#   mv tfenv-* ~/.tfenv
+# fi
 export PATH=$PATH:~/.tfenv/bin
 
 export PATH=$PATH:~/go/bin
 export GO111MODULE=on
 export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
-source /Users/sean/.config/op/plugins.sh
+# source /Users/sean/.config/op/plugins.sh
