@@ -7,12 +7,8 @@ export TZ='America/Detroit'
 export NEO4J_USERNAME=neo4j
 export NEO4J_PASSWORD=localhost
 
-if [[ $(uname) == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 if [[ $(uname) == "Darwin" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$(brew shellenv)"
 fi
 
 

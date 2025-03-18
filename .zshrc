@@ -17,18 +17,23 @@ export SDKMAN_AUTOCOMPLETE_FLOAT=1
 
 setopt histignorealldups inc_append_history_time extended_glob
 
+# if [[ $(uname) == "Linux" ]]; then
+#  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# fi
+# 
+# if [[ $(uname) == "Darwin" ]]; then
+#   eval "$(/opt/homebrew/bin/brew shellenv)"
+# fi
+
 if [[ $(uname) == "Linux" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-if [[ $(uname) == "Darwin" ]]; then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+rm -f ~/.zcompdump; compinit
 
 dotfiles=(
   "$HOME/.exports"

@@ -31,7 +31,7 @@ style = "Block"
 
 [font]
 builtin_box_drawing = true
-size = 14
+size = 16
 
 [font.normal]
 family = "ProggyClean Nerd Font"
