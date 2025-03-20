@@ -67,3 +67,5 @@ cmd = lvim -f -d -c '$wincmd w | wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
 	insteadOf = https://gitlab.logicgate.dev/
 [url "git@gitlab.logicgate.com:"]
 	insteadOf = https://gitlab.logicgate.com/
+[pager]
+	diff = diffnav
