@@ -4,7 +4,7 @@
 # zmodload zsh/parameter
 # zmodload zsh/terminfo
 # zmodload zsh/zutil
-# zmodload zsh/computil
+zmodload zsh/computil
 # zmodload zsh/curses
 
 export HISTFILE=~/.history
@@ -32,9 +32,6 @@ fi
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-autoload -Uz compinit
-rm -f ~/.zcompdump; compinit
-
 dotfiles=(
   "$HOME/.exports"
   "$HOME/.aliases"
@@ -59,6 +56,8 @@ if [[ $(uname) == "Darwin" ]]; then
 else
   export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
 fi
+
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
