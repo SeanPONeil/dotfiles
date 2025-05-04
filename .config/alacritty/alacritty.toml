@@ -34,7 +34,7 @@ builtin_box_drawing = true
 size = 16
 
 [font.normal]
-family = "ProggyClean Nerd Font"
+family = "JetbrainsMono Nerd Font"
 
 [scrolling]
 history = 100000
