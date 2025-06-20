@@ -14,6 +14,8 @@ Plug 'tpope/vim-commentary'   " add coments with `gcc`
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'mason-org/mason.nvim',
+Plug 'rmagatti/auto-session',
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/plenary.nvim'
@@ -21,7 +23,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tamago324/nlsp-settings.nvim'
-Plug 'williamboman/nvim-lsp-installer'
 Plug 'rcarriga/nvim-notify'
 Plug 'memgraph/cypher.vim'
 Plug 'craigmac/vim-mermaid'
@@ -30,9 +31,11 @@ Plug 'habamax/vim-asciidoctor'
 Plug 'alaviss/nim.nvim'
 Plug '2kabhishek/nerdy.nvim'
 Plug 'mechatroner/rainbow_csv'
+Plug 'b0o/schemastore.nvim',
 Plug 'ryanoasis/vim-devicons' " always last
 
 call plug#end()
+
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -45,39 +48,7 @@ if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-set termguicolors
-
-set completeopt=menu,menuone,noselect
-
-" Show a few lines of context around the cursor. Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
-
-" Do incremental searching.
-set incsearch
-
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-" Resize vim panes when host terminal is resized
-autocmd VimResized * wincmd =
-
-set endofline
-set fixendofline
-
-filetype on
-filetype plugin indent on
-syntax on
-
-set noshowmode
-set showcmd
-
-" enable line numbers
-set number
-
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command! W w !sudo tee % > /dev/null
+set completeopt+=menu,menuone,popup,preview,fuzzy
 
 " Normal clipboard behavior
 if has('unnamedplus')
@@ -121,5 +92,7 @@ inoremap kj <esc>
 set ttimeout
 set ttimeoutlen=100
 set timeoutlen=3000
+
+
 
 lua require('init')

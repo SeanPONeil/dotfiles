@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
-# zstyle ':completion:*' menu no
+zstyle ':completion:*' menu no
 
 # enable completion cache (required for gradle-completion)
 zstyle ':completion:*' use-cache on
@@ -27,8 +27,4 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 setopt no_list_ambiguous
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-fi
 

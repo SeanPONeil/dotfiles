@@ -31,7 +31,7 @@ style = "Block"
 
 [font]
 builtin_box_drawing = true
-size = 16
+size = 12
 
 [font.normal]
 family = "JetbrainsMono Nerd Font"

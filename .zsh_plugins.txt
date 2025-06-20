@@ -1,12 +1,4 @@
-# Completions
 mattmc3/ez-compinit
-zsh-users/zsh-completions kind:fpath path:src
-
-# Keybindings
-belak/zsh-utils path:editor
-
-# History
-belak/zsh-utils path:history
 
 lukechilds/zsh-nvm kind:defer
 
@@ -22,6 +14,9 @@ ohmyzsh/ohmyzsh path:plugins/dotenv
 ohmyzsh/ohmyzsh path:plugins/zsh-autosuggestions kind:defer
 ohmyzsh/ohmyzsh path:plugins/zsh-syntax-highlighting kind:defer
 ohmyzsh/ohmyzsh path:plugins/fast-syntax-highlighting kind:defer
+
+# Completions
+zsh-users/zsh-completions kind:fpath path:src
 
 softmoth/zsh-vim-mode
 zpm-zsh/clipboard

@@ -29,6 +29,9 @@ if [[ -e "${HOME}/Android/Sdk" ]]; then
   export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH         # Android command line tools
 fi
 
+# add op-ssh-sign to path on macos
+export PATH="$PATH:/Applications/1Password.app/Contents/MacOS"
+
 export LESSOPEN="|$(which lesspipe.sh) %s"
 
 export GOPATH=$(go env GOPATH)
