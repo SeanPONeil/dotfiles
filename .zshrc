@@ -60,9 +60,9 @@ dotfiles=(
   "$HOME/.aliases"
   "$HOME/.path"
   "$HOME/.dockerfunc"
-  "$HOME/.extra"
   "$HOME/.functions"
   "$HOME/.encrypted"
+  "$HOME/.extra"
 )
 # setopt null_glob
 for f in $dotfiles; do
@@ -118,5 +118,12 @@ export PATH=$PATH:~/go/bin
 export GO111MODULE=on
 export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 
-export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
+[ -f ~/.kube/clusters] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
 # source /Users/sean/.config/op/plugins.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/sean/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
