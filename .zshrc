@@ -121,7 +121,6 @@ export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 [ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
 # source /Users/sean/.config/op/plugins.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/sean/.docker/completions $fpath)
 autoload -Uz compinit
