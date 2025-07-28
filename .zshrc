@@ -118,7 +118,7 @@ export PATH=$PATH:~/go/bin
 export GO111MODULE=on
 export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 
-[ -f ~/.kube/clusters] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
+[ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
 # source /Users/sean/.config/op/plugins.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
