@@ -30,7 +30,7 @@ if [[ $(uname) == "Linux" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
+# zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
 zstyle ':completion:*' menu no
@@ -120,6 +120,3 @@ export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 
 [ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
 # source /Users/sean/.config/op/plugins.sh
-
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
