@@ -1,25 +1,19 @@
 mattmc3/ez-compinit
+zsh-users/zsh-completions kind:fpath path:src
+zpm-zsh/clipboard
+lukechilds/zsh-nvm
 
-lukechilds/zsh-nvm kind:defer
+ahmetb/kubectx path:completion kind:fpath
 
 getantidote/use-omz
 ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/extract
-ohmyzsh/ohmyzsh path:plugins/fzf
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
-ohmyzsh/ohmyzsh path:plugins/sdk kind:defer
+ohmyzsh/ohmyzsh path:plugins/sdk
 ohmyzsh/ohmyzsh path:plugins/starship
 ohmyzsh/ohmyzsh path:plugins/aws
 ohmyzsh/ohmyzsh path:plugins/dotenv
-ohmyzsh/ohmyzsh path:plugins/zsh-autosuggestions kind:defer
-ohmyzsh/ohmyzsh path:plugins/zsh-syntax-highlighting kind:defer
-ohmyzsh/ohmyzsh path:plugins/fast-syntax-highlighting kind:defer
+ohmyzsh/ohmyzsh path:plugins/fzf
 
-# Completions
-zsh-users/zsh-completions kind:fpath path:src
-
-softmoth/zsh-vim-mode
-zpm-zsh/clipboard
-
-Aloxaf/fzf-tab
+aloxaf/fzf-tab
 

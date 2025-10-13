@@ -26,7 +26,6 @@
   trustctime = false
 	untrackedcache = true
 [delta]
-  features = line-numbers decorations
   navigate = true
 [init]
   defaultBranch = main
@@ -58,7 +57,7 @@
 [branch]
   sort = -committerdate
 [merge]
-  tool = vimdiff
+  tool = zdiff3
 [mergetool.lvimdiff]
 cmd = lvim -f -d -c '$wincmd w | wincmd J' "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
 [url "ssh://git@gitlab.logicgate.com/"]

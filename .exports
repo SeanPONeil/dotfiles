@@ -45,7 +45,6 @@ if [[ "$(command -v nvim)" ]]; then
 fi
 
 # fzf customization
-
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
   --preview 'bat -n --color=always {}'

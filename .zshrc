@@ -1,12 +1,12 @@
 #!/usr/bin/env zsh
 # zmodload zsh/zprof
 # zmodload zsh/zpty
-# zmodload zsh/parameter
-# zmodload zsh/terminfo
-# zmodload zsh/zutil
-# zmodload zsh/computil
+zmodload zsh/parameter
+zmodload zsh/terminfo
+zmodload zsh/zutil
+zmodload zsh/computil
 zmodload zsh/complist
-# zmodload zsh/curses
+zmodload zsh/curses
 
 export HISTFILE=~/.history
 export HISTSIZE=10000
@@ -52,11 +52,11 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 setopt no_list_ambiguous
+. $HOME/.exports
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 dotfiles=(
-  "$HOME/.exports"
   "$HOME/.aliases"
   "$HOME/.path"
   "$HOME/.dockerfunc"
@@ -119,4 +119,3 @@ export GO111MODULE=on
 export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
 
 [ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
-# source /Users/sean/.config/op/plugins.sh
