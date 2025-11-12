@@ -52,8 +52,12 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 setopt no_list_ambiguous
+
 . $HOME/.exports
+
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+
 antidote load
 
 dotfiles=(

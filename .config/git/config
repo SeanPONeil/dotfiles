@@ -3,7 +3,7 @@
 [user]
   name = Sean O'Neil
   email = oneilse14@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEJJ293QI+NdDxENLHV242HW+wxHgxmjM91q3CjUJtq4
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJIZ/n+mAbQvs8uMoudyffqXYDsNiICklDF2RDlH5u3/
 [pull]
 	rebase = true
 [alias]
