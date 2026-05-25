@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+alias ssh="TERM=xterm-256color ssh"
+
 alias ls="eza "
 alias exa="eza "
 alias diff="colordiff "
@@ -77,8 +79,6 @@ alias gifify='docker run -it --rm -v $(pwd):/data maxogden/gifify '
 
 alias nvminit='export NVM_DIR="${HOME}/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 
-alias cypherfmt="jbang format-cypher@neo4j "
-
 alias yless="jless --yaml"
 
 alias redocly="docker run --rm -v $PWD:/spec redocly/cli "
@@ -86,3 +86,5 @@ alias redocly="docker run --rm -v $PWD:/spec redocly/cli "
 alias dfimage="docker run -v /var/run/docker.sock:/var/run/docker.sock --rm chenzj/dfimage"
 
 alias mmdc="npx -p @mermaid-js/mermaid-cli mmdc"
+
+alias cypherfmt="npx -p @neo4j-cypher/language-support@next cypherfmt"
