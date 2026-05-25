@@ -47,3 +47,8 @@ padding = { x = 6, y = 7 }
 opacity = 1.0
 startup_mode = "Windowed"
 
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b\r"

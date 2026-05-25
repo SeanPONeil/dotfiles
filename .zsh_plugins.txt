@@ -2,6 +2,7 @@ mattmc3/ez-compinit
 zsh-users/zsh-completions kind:fpath path:src
 zpm-zsh/clipboard
 lukechilds/zsh-nvm
+matthieusb/zsh-sdkman
 
 ahmetb/kubectx path:completion kind:fpath
 

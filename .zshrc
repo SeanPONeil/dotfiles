@@ -12,8 +12,6 @@ export HISTFILE=~/.history
 export HISTSIZE=10000
 export SAVEHIST=1000
 
-export NVM_LAZY_LOAD=true
-
 export SDKMAN_AUTOCOMPLETE_FLOAT=1
 
 setopt histignorealldups inc_append_history_time extended_glob
@@ -86,9 +84,8 @@ fi
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 # SDKMAN!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+export TERMCOLOR=truecolor
 
 if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
   return
