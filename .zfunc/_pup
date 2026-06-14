@@ -1,0 +1,13 @@
+#compdef pup
+# pup shell completions — managed by 'pup completions zsh --install'
+# Automatically refreshes when pup is updated. Do not edit.
+local _pup_cache="${XDG_CACHE_HOME:-$HOME/.cache}/pup/completions.zsh"
+local _pup_stamp; _pup_stamp="$(pup --version 2>/dev/null)" || return 1
+if [[ "$(head -1 "$_pup_cache" 2>/dev/null)" != "# $_pup_stamp" ]]; then
+    mkdir -p "${_pup_cache:h}"
+    { printf '# %s\n' "$_pup_stamp"; pup completions zsh; } \
+        >| "$_pup_cache" 2>/dev/null || return 1
+fi
+# Source the cache — this redefines _pup with the real completion function.
+source "$_pup_cache" 2>/dev/null || return 1
+_pup "$@"

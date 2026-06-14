@@ -18,3 +18,5 @@ ohmyzsh/ohmyzsh path:plugins/fzf
 
 aloxaf/fzf-tab
 
+$HOME/.zfunc  kind:fpath
+
