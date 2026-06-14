@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
 alias ssh="TERM=xterm-256color ssh"
-
 alias ls="eza "
 alias exa="eza "
 alias diff="colordiff "
