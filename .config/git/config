@@ -15,14 +15,14 @@
   branch = auto
   grep = auto
 [interactive]
-  diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [commit]
   trustExitCode = true
 	gpgsign = true
 [core]
   editor = vim
   excludesfile = ~/.config/git/gitignore_global
-  pager = delta
+	pager = delta
   trustctime = false
 	untrackedcache = true
 [delta]
