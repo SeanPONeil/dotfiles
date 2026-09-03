@@ -28,6 +28,8 @@ if [[ $(uname) == "Linux" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+export NODE_EXTRA_CA_CERTS=~/.corporate-ca.pem
+
 # zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 # force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix

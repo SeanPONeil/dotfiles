@@ -1,3 +1,5 @@
+export PATH="$PATH:/Users/sean/.docker/bin"
+
 export PLATFORM=$(uname)
 export TZ='America/Detroit'
 
