@@ -1,5 +1,22 @@
 #!/usr/bin/env zsh
 
+portkill() {
+  if [[ -z "$1" ]]; then
+    echo "usage: portkill <port>" >&2
+    return 1
+  fi
+
+  local pids
+  pids=$(lsof -t -i:"$1" -sTCP:LISTEN)
+
+  if [[ -z "$pids" ]]; then
+    echo "nothing listening on port $1"
+    return 1
+  fi
+
+  echo "$pids" | xargs kill && echo "killed: ${pids//$'\n'/ }"
+}
+
 # Determine size of a file or total size of a directory
 fs(){
   if du -b /dev/null > /dev/null 2>&1; then
@@ -14,67 +31,5 @@ fs(){
     du $arg -- .[^.]* *
   fi
 }
-
-wal() {
-  #  if [[ $(uname) == "Darwin" ]]; then
-  #   command wal -e -s -t -o ~/bin/wal-set $@
-  #  else
-  #    command wal -o wal-set $@
-  #  fi
-  command wal -o $HOME/.config/wal/bin/post $@
-}
-
-timeshell(){
-  echo "\$SHELL: $SHELL"
-  shell=${1-$SHELL}
-  for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
-}
-
-json(){
-  if [[ $# -eq 0 ]]; then
-    # No argument passed, use stdin
-    cat - | python3 -m json.tool
-  elif [[ -n "$1" ]]; then
-    python3 -m json.tool $1
-  else
-    return 1
-  fi
-}
-
-exportenv() {
-  set -av
-  . $1
-  set +av
-}
-
-hextorgb() {
-  hex="$1"
-  hex=${hex#"#"}
-  printf "%d %d %d\n" 0x${hex:0:2} 0x${hex:2:2} 0x${hex:4:2}
-}
-
-splitpath(){
-  kscript -t 'lines.split(":").print(System.getProperty("line.separator"))'
-}
-
-docker-sock-ssh-mount() {
-  rm /tmp/docker-ssh.sock
-  ssh -fnNT -L /tmp/docker-ssh.sock:/var/run/docker.sock $1
-  docker context use ssh-forwarding
-}
-
-kali() {
-  docker run -ti --rm --privileged --net host --mount src=kali-root,dst=/root --mount src=kali-postgres,dst=/var/lib/postgresql kali
-}
-
-jacoco-paths() {
-  find "$(pwd -P)" -path "**/src/main/java" -or -path "**/src/main/kotlin" -type d
-}
-
-
-
-# docker-gradle() {
-#  docker run --rm -u gradle -v "$PWD":/home/gradle/project -v "$HOME/.cache/gradle_ro_dep_cache":/mnt/gradle_ro_dep_cache -e "GRADLE_RO_DEP_CACHE=/mnt/gradle_ro_dep_cache" -w /home/gradle/project -it gradle:7-jdk11 gradle test
-#  }
 
 # vim: set filetype=zsh :

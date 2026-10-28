@@ -1,5 +1,49 @@
 #!/usr/bin/env zsh
-# zmodload zsh/zprof
+
+export HISTFILE=~/.history
+export HISTSIZE=10000
+export SAVEHIST=1000
+
+export SDKMAN_AUTOCOMPLETE_FLOAT=1
+
+if [[ $(uname) == "Linux" ]]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+export NODE_EXTRA_CA_CERTS=/etc/ssl/cert.pem
+
+. $HOME/.exports
+
+# Dotfiles that only set environment
+for f in "$HOME/.path" "$HOME/.encrypted" "$HOME/.extra"; do
+  if [[ -f "$f" ]]; then
+    . "$f"
+  fi
+done
+unset f
+
+if [[ $(uname) == "Darwin" ]]; then
+  export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+else
+  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+fi
+
+export TERMCOLOR=truecolor
+
+export PATH="$HOME/.jbang/bin:$PATH"
+export PATH=$PATH:~/.tfenv/bin
+
+export PATH=$PATH:~/go/bin
+export GO111MODULE=on
+export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
+
+[ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+  return
+fi
+
 # zmodload zsh/zpty
 zmodload zsh/parameter
 zmodload zsh/terminfo
@@ -8,27 +52,7 @@ zmodload zsh/computil
 zmodload zsh/complist
 zmodload zsh/curses
 
-export HISTFILE=~/.history
-export HISTSIZE=10000
-export SAVEHIST=1000
-
-export SDKMAN_AUTOCOMPLETE_FLOAT=1
-
 setopt histignorealldups inc_append_history_time extended_glob
-
-# if [[ $(uname) == "Linux" ]]; then
-#  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# fi
-# 
-# if [[ $(uname) == "Darwin" ]]; then
-#   eval "$(/opt/homebrew/bin/brew shellenv)"
-# fi
-
-if [[ $(uname) == "Linux" ]]; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-export NODE_EXTRA_CA_CERTS=~/.corporate-ca.pem
 
 # zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
 zstyle ':antidote:bundle' use-friendly-names 'yes'
@@ -53,54 +77,23 @@ CASE_SENSITIVE="false"
 # setopt MENU_COMPLETE
 setopt no_list_ambiguous
 
-. $HOME/.exports
-
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 
 antidote load
 
-dotfiles=(
-  "$HOME/.aliases"
-  "$HOME/.path"
-  "$HOME/.dockerfunc"
-  "$HOME/.functions"
-  "$HOME/.encrypted"
-  "$HOME/.extra"
-)
-# setopt null_glob
-for f in $dotfiles; do
+for f in "$HOME/.aliases" "$HOME/.dockerfunc" "$HOME/.functions"; do
   if [[ -f "$f" ]]; then
     . "$f"
   fi
 done
 unset f
-# unsetopt null_glob
-
-if [[ $(uname) == "Darwin" ]]; then
-  export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-else
-  export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-fi
 
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-# SDKMAN!
-
-export TERMCOLOR=truecolor
-
-if [[ -n "$INTELLIJ_ENVIRONMENT_READER" ]]; then
-  return
-fi
-
 eval "$(direnv hook zsh)"
 
-# zprof
-
-
-# Add JBang to environment
 alias j!=jbang
-export PATH="$HOME/.jbang/bin:$PATH"
 
 if command -v ngrok &>/dev/null; then
   eval "$(ngrok completion)"
@@ -109,16 +102,3 @@ fi
 if command -v op &>/dev/null; then
   eval "$(op completion zsh)"
 fi
-
-# if [ ! -d ~/.tfenv ]; then
-#   curl -sL -o /tmp/tfenv.tar.gz https://github.com/tfutils/tfenv/archive/v2.2.2.tar.gz
-#   tar xf /tmp/tfenv.tar.gz
-#   mv tfenv-* ~/.tfenv
-# fi
-export PATH=$PATH:~/.tfenv/bin
-
-export PATH=$PATH:~/go/bin
-export GO111MODULE=on
-export GOPRIVATE=gitlab.logicgate.com,gitlab.logicgate.dev
-
-[ -f ~/.kube/clusters ] && export KUBECONFIG=$(find ~/.kube/clusters -type f | tr '\n' ':' | sed 's/:$//')
